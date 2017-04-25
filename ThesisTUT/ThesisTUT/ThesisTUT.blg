@@ -1,0 +1,84 @@
+This is BibTeX, Version 0.99d (TeX Live 2016/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: ThesisTUT.aux
+A level-1 auxiliary file: Introduction.aux
+The style file: IEEEtranS.bst
+I couldn't open database file ThesisReferences.bib
+---line 4 of file Introduction.aux
+ : \bibdata{ThesisReferences
+ :                          }
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: TheoreticalBackground.aux
+Illegal, another \bibstyle command---line 23 of file TheoreticalBackground.aux
+ : \bibstyle
+ :          {IEEEtranS}
+I'm skipping whatever remains of this command
+Illegal, another \bibdata command---line 24 of file TheoreticalBackground.aux
+ : \bibdata
+ :         {ThesisReferences}
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: Implementation.aux
+Illegal, another \bibstyle command---line 31 of file ThesisTUT.aux
+ : \bibstyle
+ :          {IEEEtranS}
+I'm skipping whatever remains of this command
+Illegal, another \bibdata command---line 32 of file ThesisTUT.aux
+ : \bibdata
+ :         {thesis_refs}
+I'm skipping whatever remains of this command
+I found no database files---while reading file ThesisTUT.aux
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--I didn't find a database entry for "Hardesty2013"
+Warning--I didn't find a database entry for "thesisguide13"
+-- IEEEtranS.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+** Sorting version - not for normal IEEE work.
+
+Done.
+You've used 0 entries,
+            4566 wiz_defined-function locations,
+            909 strings with 8129 characters,
+and the built_in function-call counts, 105 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 19
+:= -- 27
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 3
+int.to.chr$ -- 0
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 23
+num.names$ -- 0
+pop$ -- 0
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 1
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 6
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 22
+(There were 6 error messages)

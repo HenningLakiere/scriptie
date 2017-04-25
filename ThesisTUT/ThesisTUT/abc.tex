@@ -1,0 +1,72 @@
+Hoi ik 
+
+\section{Introduction}
+	\subsection{Matrix multiplication}
+Before explaining why we chose a matrix multiplication, we will show how a matrix A and B are multiplied in equation \ref{eq:matrixMultiplication}
+\begin{equation} \label{eq:matrixMultiplication}
+	 \begin{bmatrix}
+	1 & 2 \\[0.2em]
+	3 & 4
+	\end{bmatrix}
+	*
+	 \begin{bmatrix}
+	5 & 6 \\[0.2em]
+	7 & 8
+	\end{bmatrix}
+	=
+	 \begin{bmatrix}
+	1*5+2*7 & 1*6+2*8 \\[0.2em]
+	13*5+4*7 & 3*6+4*8
+	\end{bmatrix}
+	=
+	 \begin{bmatrix}
+	19 & 22 \\[0.2em]
+	93 & 50
+	\end{bmatrix}
+\end{equation}
+When a problem is hard, people commonly divide the hard problem in multiple smaller/easier problems. Using matrices is one of those easier ways to deal with data, that's why the most common tools in electrical engineering and computer science are rectangular grids of numbers known as matrices. The numbers in a matrix can represent data, and they can also represent mathematical equations. In many time-sensitive engineering applications, multiplying matrices can give quick but good approximations of much more complicated calculations \cite{Hardesty2013}. So the first reason why a matrix multiplication was chosen is the importance of calculations with matrices.\\
+The second reason consist of the increasing computations when a matrix grows. The relation between the size of the matrix and the calculation is the following:
+\begin{equation} \label{eq:1}
+amountOfCalculations = (2*size-1)*size^2
+\end{equation}
+\begin{equation}
+	M =	\begin{bmatrix}
+	A & B \\[0.2em]
+	.. & ..
+	\end{bmatrix}
+\end{equation}
+\begin{equation}
+	N =	\begin{bmatrix}
+	F & .. \\[0.2em]
+	G & ..
+	\end{bmatrix}
+\end{equation}
+\begin{equation} \label{eq:R1}
+	R1 =	\begin{bmatrix}
+	A*F+B*G & .. \\[0.2em]
+	.. & ..
+	\end{bmatrix}
+\end{equation}
+Deriving equation \ref{eq:1}. First we count the amount of calculations to calculate the first element of the result matrix R1, when processing the matrix multiplication M * N. The amount of calculations is 3, 1 addition of 2 multiplications. When processing the same calculation for a matrix of a bigger size, for example size 5, result matrix \ref{eq:R2} will be calculated. In result matrix R2, 4 additions and 5 multiplications are calculated. Resulting in 4 * 5 calculations in the first element of result matrix R2 with size 5. The number of elements in the matrix is equal to size * size. When you put this all in a formula, we get equation \ref{eq:1}.
+\begin{equation} \label{eq:R2}
+	R2 =	\begin{bmatrix}
+	A*F+B*G+C*H+D*I+E*J & .. & .. & .. & .. \\[0.5em]
+	.. & .. & .. & .. & .. \\[0.5em]
+	.. & .. & .. & .. & .. \\[0.5em]
+	.. & .. & .. & .. & .. \\[0.5em]
+	.. & .. & .. & .. & ..
+	\end{bmatrix}
+\end{equation}
+%\subsection
+	\subsection{Parallel computing}
+%\subsection
+	\subsection{SoC}
+		\subsubsection{FPGA}
+		\subsubsection{HPS}
+		\subsubsection{Bridges}
+			\paragraph{lwHPS2FPGA}
+			\paragraph{HPS2FPGA}
+			\paragraph{FPGA2HPS}
+		\subsubsection{Quartus}
+			\paragraph{Linux RHEL}
+			\paragraph{Windows 10}

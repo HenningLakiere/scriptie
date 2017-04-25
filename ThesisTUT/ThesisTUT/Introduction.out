@@ -1,0 +1,14 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Matrix multiplication}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Parallel computing}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{SoC}{chapter.1}% 4
+\BOOKMARK [2][-]{subsection.1.3.1}{FPGA}{section.1.3}% 5
+\BOOKMARK [2][-]{subsection.1.3.2}{HPS}{section.1.3}% 6
+\BOOKMARK [2][-]{subsection.1.3.3}{Bridges}{section.1.3}% 7
+\BOOKMARK [2][-]{subsection.1.3.4}{Quartus}{section.1.3}% 8
+\BOOKMARK [2][-]{subsection.1.3.5}{Bluetooth}{section.1.3}% 9
+\BOOKMARK [2][-]{subsection.1.3.6}{Web socket}{section.1.3}% 10
+\BOOKMARK [0][-]{chapter.2}{Implementation}{}% 11
+\BOOKMARK [1][-]{section.2.1}{SoC}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.1.1}{coding}{section.2.1}% 13
+\BOOKMARK [2][-]{subsection.2.1.2}{Bluetooth connection}{section.2.1}% 14
