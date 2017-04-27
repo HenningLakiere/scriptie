@@ -19,10 +19,10 @@ Parallel computing, on the other hand, is the simultaneous use of multiple compu
 		\caption{Workflow parallel computing}
 		\label{fig:ParallelC}
 	\end{figure}\\
-With multiple compute units for one task, we will shorten the completion time aswell have potential cost savings. It also allows us to solve larger/complex problems since a single computer could suffer from limited memory. And last, we are able to access non-local resources in a network that wouldn't be accessable from a local computer.\\ It is easy to conclude that the concept of parallel computing was to have a more efficient way to handle with large sets of data such as images or simulations that involve multiple parameters. It's also easier to handle with complex data for example in algorithms.
+With multiple compute units for one task, we will shorten the completion time aswell have potential cost savings. It also allows us to solve larger/complex problems since a single computer could suffer from limited memory. And last, we are able to access non-local resources in a network that wouldn't be accessable from a local computer.\\ It is easy to conclude that the concept of parallel computing was to have a more efficient way to handle with large sets of data such as images or simulations that involve multiple parameters. It's also easier to handle with complex data for example in algorithms \cite{barney2012parallel}.
 
 	\subsection{Classification of parallel computing}
-Parallel computing systems can be seperated into different classes. According to Flynn's taxonomy we can roughly place any of these systems in one of the four classes he defined. The classifications are determined by two factors: instruction stream and data stream which both have two possible states being single or multiple. Figure \ref{fig:flynnTaxonomy} represents a matrix of the four possible classes from the Flynn's taxonomy.
+Parallel computing systems can be seperated into different classes. According to Flynn's taxonomy, we can roughly place any of these systems in one of the four classes he defined. This classification was first studied and proposed by Michael Flynn in 1972 \cite{Unit2COPC}. The classifications are determined by two factors: instruction stream and data stream which both have two possible states being single or multiple. Figure \ref{fig:flynnTaxonomy} represents a matrix of the four possible classes from the Flynn's taxonomy \cite{barney2012parallel}.
 
 	\begin{figure}[h]
 		\centering
@@ -43,13 +43,14 @@ Data is disctributed amongst multiple processors who all execute the same instru
 	\begin{itemize}
 		\item MISD
 	\end{itemize}
-Each processing unit operates on the data independently via separate instruction streams
+Each processing unit operates on the data independently via separate instruction streams while a single data stream is fed into multiple processing untis (figure \ref{fig:misd}). This class knows very few applications. An example of an application is the use of multiple cryptography algorithms attempting to crack a single coded message.
 	
 	\begin{itemize}
 		\item MIMD
 	\end{itemize}
+This time every processing unit is able to execute a different instruction stream on a different data stream (figure \ref{fig:mimd}). This means that any instruction can be applied on any data package for every compute unit. Most supercomputers, networked parallel computer clusters and "grids" can be classified as a MIMD compute system. Also, many MIMD architectures include SIMD execution sub-components.
 
-\begin{figure*}[h]
+\begin{figure}[h]
 	\centering
 	\begin{subfigure}[t]{0.4\textwidth}
 		\centering
@@ -72,16 +73,34 @@ Each processing unit operates on the data independently via separate instruction
 		\caption{MIMD}\label{fig:mimd}
 	\end{subfigure}
 	\caption{Architecture classes from Flynn's taxonomy}\label{fig:archFlynnTax}
-		
-		
-	
-\end{figure*}
+\end{figure}
 
-	\subsection{Amdahl's law and Gustafson's law}
-		\begin{itemize}
-			\item Amdahl's Law
-		\end{itemize}
-Amdahl's Law 
+	\subsection{Amdahl's law}
+Amdahl's Law can be used to theoretically calculate how much a computation can be sped up by running part of it in parallel, versus using only one serial processor \cite{amdahlslaw}. A program can be split up in two parts, a part that cannot be parallelized (A) and a part that can be parallelized (B). The speedup factor S for both parts can be calculated by dividing the execution time for serial computation T(1) by the execution time for parallel computation T(j), with j the amount of processing units.
+\begin{equation}
+	S = \frac{T(1)}{T(j)}
+\end{equation}
+Since A is a serial computation, the amount of processing units j equals 1. And thus the speedup factor for A is also 1. Part A can only be executed faster by optimizing the code. Let's call this optimization factor O. For part B, we define the number of compute units by N. The total execution time then equals:
+\begin{equation}
+	T = \frac{A}{O} + \frac{B}{N}	
+\end{equation}
+Part B can also be interpreted as the total program minus part A. Note that non-parallelizable part A benefits from the optimization mentioned earlier:
+\begin{equation}
+	B = \frac{1-A}{O}
+\end{equation}
+The total execution time T with variables O and N then equals:
+\begin{equation}
+	T(0, N) = \frac{A}{O} + (\frac{1-A}{O})/N
+\end{equation}
+The total program speedup S can be calculated with Amdahl's law by comparing the execution time of the old program T with the execution time of the new program T(O, N):
+\begin{equation}
+	S  = \frac{T}{T(O, N)}
+\end{equation}
+
+
+
+
+	
 
 	\subsection{OpenCL}\label{subsec:OpenCL}
 
