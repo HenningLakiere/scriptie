@@ -1,0 +1,68 @@
+\begin{tikzpicture}[
+  node distance=7mm,
+  title/.style={font=\fontsize{6}{6}\color{black!50}\ttfamily},
+  typetag/.style={rectangle, draw=black!50, font=\scriptsize\ttfamily, anchor=west}
+]
+	\tikzstyle{workgroup1} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{workgroup2} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{localMemory1} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{localMemory2} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{computeUnit1} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+
+	\node[matrix] (workItem1A) {
+		\draw (0.3,0.3) circle (0.5) node {A*B}; \\
+	};
+	\node[matrix,right of=workItem1A, node distance=12mm] (workItem1B) {
+		\draw (0.3,0.3) circle (0.5) node {C*D}; \\
+	};
+	\node (localMemory1) [localMemory1, above of=workItem1A, node distance=12mm, xshift=6mm] {Class board};
+	\node (workgroup1) [workgroup1, label={[name=workgroup1label] Class 1}, anchor=south, fit={(workItem1A) (workItem1B) (localMemory1)}] {};
+	
+	\node[matrix, right of=workItem1A, node distance=35mm] (workItem2A) {
+		\draw (0.3,0.3) circle (0.5) node {E*F}; \\
+	};
+	\node[matrix,right of=workItem2A, node distance=12mm] (workItem2B) {
+		\draw (0.3,0.3) circle (0.5) node {G*H}; \\
+	};
+	\node (localMemory2) [localMemory2, above of=workItem2A, node distance=12mm, xshift=6mm] {Class board};
+	\node (workgroup2) [workgroup2, label={[name=workgroup2label] Class 2}, anchor=south, fit={(workItem2A) (workItem2B) (localMemory2)}] {};
+
+	\node (computeUnit1) [computeUnit1, label={[name=computeUnit1label] Department 1}, anchor=south, fit={(workgroup1) (workgroup1label) (workgroup2) (workgroup2label)}] {};
+	
+	\tikzstyle{workgroup3} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{workgroup4} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{localMemory3} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{localMemory4} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{computeUnit2} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+	
+	\node[matrix, right of=workItem2B, node distance=30mm] (workItem3A) {
+		\draw (0.3,0.3) circle (0.5) node {E*F}; \\
+	};
+	\node[matrix, right of=workItem3A, node distance=12mm] (workItem3B) {
+		\draw (0.3,0.3) circle (0.5) node {I*J}; \\
+	};
+
+	\node (localMemory3) [localMemory3, above of=workItem3A, node distance=12mm, xshift=6mm] {Class board};
+	\node (workgroup3) [workgroup3, label={[name=workgroup3label] Class 3}, anchor=south, fit={(workItem3A) (workItem3B) (localMemory3)}] {};
+	
+	\node[matrix, right of=workItem3B, node distance=23mm] (workItem4A) {
+		\draw (0.3,0.3) circle (0.5) node {K*L}; \\
+	};
+	\node[matrix, right of=workItem4A, node distance=12mm] (workItem4B) {
+		\draw (0.3,0.3) circle (0.5) node {M*N}; \\
+	};
+	\node (localMemory4) [localMemory4, above of=workItem4A, node distance=12mm, xshift=6mm] {Class board};
+	\node (workgroup4) [workgroup4, label={[name=workgroup4label] Class 4}, anchor=south, fit={(workItem4A) (workItem4B) (localMemory4)}] {};
+
+	\node (computeUnit2) [computeUnit2, label={[name=computeUnit2label] Department 2}, anchor=south, fit={(workgroup3) (workgroup3label) (workgroup4) (workgroup4label)}] {};
+	
+	
+	\tikzstyle{globalMemory} = [rectangle, rounded corners, minimum width=14cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{device} = [rectangle, rounded corners, minimum width=10cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{platform} = [rectangle, rounded corners, minimum width=10cm, minimum height=1cm,text centered, draw=black]
+	
+	\node (globalMemory) [globalMemory, above of=computeUnit1, node distance=32mm, xshift=3.75cm] {AB + CD + EF + GH};
+	\node (device) [device, label={[name=deviceLabel] School}, anchor=south, fit={(globalMemory) (computeUnit1) (computeUnit1label) (computeUnit2) (computeUnit2label)}] {};
+	\node (platform) [platform, label={Campus}, anchor=south, fit={(device) (deviceLabel)}] {};
+		
+\end{tikzpicture}

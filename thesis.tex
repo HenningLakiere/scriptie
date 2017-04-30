@@ -98,11 +98,25 @@ The total program speedup S can be calculated with Amdahl's law by comparing the
 \end{equation}
 
 
-
-
+	\section{OpenCL}\label{subsec:OpenCL}
 	
+	\section{Bluetooth}
+Bluetooth is a form of wireless communication and was developed in 1994 by L. M. Ericsson of Sweden. It is a radio frequency (RF) technology using the 2.5GHz industrial, scientific and medical (ISM) band. It can be used to transmit data or voice commuication over short-distances. Bluetooth adapters can be found in nearly every new smartphone and laptop device. It's easy to use and setup and finds uses in a lot of sectors for example home heating systems, entertaining devices,... .Bluetooth is designed to be a low cost for about 10\$ per unit. the down side of this is the short connection range and the limited transmission speed of around 780 kb/s\cite{Bluetooth}.\\
 
-	\subsection{OpenCL}\label{subsec:OpenCL}
+\subsection{Connection process}
+For a Bluetooth connection to exist, their has to be atleast one master and one slave device. In order for these devices to connect with each other, they require the same communication protocol.
+
+\subsection{Bluetooth stack}
+When a group of two or more Bluetooth devices are sharing information together, they form a kind of mini computer network called a piconet. Other devices can join or leave an existing piconet at any time. The master device acts as the overall controller of the network, while the slave devices obey its instructions. Two or more separate piconets can also join up and share information forming what is called a scatternet as shown in figure \ref{fig:scatternet}.
+http://www.oracle.com/technetwork/systems/bluetoothintro-156415.html
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[scale=0.6]{images/scatternet.pdf}
+\caption{Example of a Bluetooth scatternet}\label{fig:scatternet}
+\end{figure}
+
+	\section{Websocket server}
 
 
 

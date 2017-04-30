@@ -1,0 +1,113 @@
+\begin{tikzpicture}[
+  node distance=7mm,
+  title/.style={font=\fontsize{6}{6}\color{black!50}\ttfamily},
+  typetag/.style={rectangle, draw=black!50, font=\scriptsize\ttfamily, anchor=west}
+]
+	\tikzstyle{workgroup1} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{workgroup2} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{localMemory1} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{localMemory2} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{computeUnit1} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+
+%	\node[matrix] (A) {
+%		\draw (0,0) rectangle (1,1); 
+%		\node at (0.5,0.5) {A}; \\
+%	};	
+
+
+	\node[matrix] (workItem1A) {
+		\draw (0.3,0.3) circle (0.2);
+		\fill (0.3,0.3) circle (0.09); \\
+	};
+	\node[matrix,right of=workItem1A, node distance=7mm] (workItem1B) {
+		\draw (0.3,0.3) circle (0.2);
+		\fill (0.3,0.3) circle (0.09); \\
+	};
+	\node[matrix,right of=workItem1B, node distance=7mm] (workItem1C) {
+		\draw (0.3,0.3) circle (0.2);
+		\fill (0.3,0.3) circle (0.09); \\
+	};
+	\node[matrix,right of=workItem1C, node distance=7mm] (workItem1D) {
+		\draw (0.3,0.3) circle (0.2);
+		\fill (0.3,0.3) circle (0.09); \\
+	};
+	\node (localMemory1) [localMemory1, above of=workItem1C, node distance=12mm, xshift=-3mm] {Local memory};
+	\node (workgroup1) [workgroup1, label={[name=workgroup1label] Workgroup1}, anchor=south, fit={(workItem1A) (workItem1B) (workItem1C) (workItem1D) (localMemory1)}] {};
+	
+	\node[matrix, right of=workItem1D, node distance=1.5cm] (workItem2A) {
+		\draw (0.3,0.3) circle (0.2);
+		\fill (0.3,0.3) circle (0.09); \\
+	};
+	\node[matrix,right of=workItem2A, node distance=7mm] (workItem2B) {
+		\draw (0.3,0.3) circle (0.2);
+		\fill (0.3,0.3) circle (0.09); \\
+	};
+	\node[matrix,right of=workItem2B, node distance=7mm] (workItem2C) {
+		\draw (0.3,0.3) circle (0.2);
+		\fill (0.3,0.3) circle (0.09); \\
+	};
+	\node[matrix,right of=workItem2C, node distance=7mm] (workItem2D) {
+		\draw (0.3,0.3) circle (0.2);
+		\fill (0.3,0.3) circle (0.09); \\
+	};
+	\node (localMemory2) [localMemory2, above of=workItem2C, node distance=12mm, xshift=-3mm] {Local memory};
+	\node (workgroup2) [workgroup2, label={[name=workgroup2label] Workgroup2}, anchor=south, fit={(workItem2A) (workItem2B) (workItem2C) (workItem2D) (localMemory2)}] {};
+
+	\node (computeUnit1) [computeUnit1, label={[name=computeUnit1label] Compute unit 1}, anchor=south, fit={(workgroup1) (workgroup1label) (workgroup2) (workgroup2label)}] {};
+	
+	\tikzstyle{workgroup3} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{workgroup4} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{localMemory3} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{localMemory4} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{computeUnit2} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+	
+	\node[matrix, right of=workItem2D, node distance=1.8cm] (workItem3A) {
+		\draw (0.3,0.3) circle (0.2);
+		\fill (0.3,0.3) circle (0.09); \\
+	};
+	\node[matrix, right of=workItem3A, node distance=7mm] (workItem3B) {
+		\draw (0.3,0.3) circle (0.2);
+		\fill (0.3,0.3) circle (0.09); \\
+	};
+	\node[matrix, right of=workItem3B, node distance=7mm] (workItem3C) {
+		\draw (0.3,0.3) circle (0.2);
+		\fill (0.3,0.3) circle (0.09); \\
+	};
+	\node[matrix, right of=workItem3C, node distance=7mm] (workItem3D) {
+		\draw (0.3,0.3) circle (0.2);
+		\fill (0.3,0.3) circle (0.09); \\
+	};
+	\node (localMemory3) [localMemory3, above of=workItem3C, node distance=12mm, xshift=-3mm] {Local memory};
+	\node (workgroup3) [workgroup3, label={[name=workgroup3label] Workgroup3}, anchor=south, fit={(workItem3A) (workItem3B) (workItem3C) (workItem3D) (localMemory3)}] {};
+	
+	\node[matrix, right of=workItem3D, node distance=1.5cm] (workItem4A) {
+		\draw (0.3,0.3) circle (0.2);
+		\fill (0.3,0.3) circle (0.09); \\
+	};
+	\node[matrix,right of=workItem4A, node distance=7mm] (workItem4B) {
+		\draw (0.3,0.3) circle (0.2);
+		\fill (0.3,0.3) circle (0.09); \\
+	};
+	\node[matrix, right of=workItem4B, node distance=7mm] (workItem4C) {
+		\draw (0.3,0.3) circle (0.2);
+		\fill (0.3,0.3) circle (0.09); \\
+	};
+	\node[matrix, right of=workItem4C, node distance=7mm] (workItem4D) {
+		\draw (0.3,0.3) circle (0.2);
+		\fill (0.3,0.3) circle (0.09); \\
+	};
+	\node (localMemory4) [localMemory4, above of=workItem4C, node distance=12mm, xshift=-3mm] {Local memory};
+	\node (workgroup4) [workgroup4, label={[name=workgroup4label] Workgroup4}, anchor=south, fit={(workItem4A) (workItem4B) (workItem4C) (workItem4D) (localMemory4)}] {};
+
+	\node (computeUnit2) [computeUnit2, label={[name=computeUnit2label] Compute unit 2}, anchor=south, fit={(workgroup3) (workgroup3label) (workgroup4) (workgroup4label)}] {};
+	
+	
+	\tikzstyle{globalMemory} = [rectangle, rounded corners, minimum width=14cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{device} = [rectangle, rounded corners, minimum width=10cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{platform} = [rectangle, rounded corners, minimum width=10cm, minimum height=1cm,text centered, draw=black]
+	
+	\node (globalMemory) [globalMemory, above of=computeUnit1, node distance=32mm, xshift=3.75cm] {Global memory};
+	\node (device) [device, label={[name=deviceLabel] Vendors device}, anchor=south, fit={(globalMemory) (computeUnit1) (computeUnit1label) (computeUnit2) (computeUnit2label)}] {};
+	\node (platform) [platform, label={Vendors platform}, anchor=south, fit={(device) (deviceLabel)}] {};
+		
+\end{tikzpicture}

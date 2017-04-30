@@ -1,0 +1,16 @@
+\begin{tikzpicture}[node distance=2cm]
+	%defines
+	\tikzstyle{systemDesign} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{ioIntegration} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{designDescription} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{synthesis} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{arrow} = [thick,->,>=stealth]
+	%chart
+	\node (systemDesign) [systemDesign] {Analysis \& Synthesis};
+	\node (ioIntegration) [ioIntegration, below of=systemDesign] {Fitter (Place \& Route)};
+	\node (designDescription) [designDescription, below of=ioIntegration] {Assembler (Generate programming files)};
+	\node (synthesis) [synthesis, below of=designDescription] {Time Quest Analysis};
+	\draw [arrow] (systemDesign) -- (ioIntegration);
+	\draw [arrow] (ioIntegration) -- (designDescription);
+	\draw [arrow] (designDescription) -- (synthesis);
+\end{tikzpicture}

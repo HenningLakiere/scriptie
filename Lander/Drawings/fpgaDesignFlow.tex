@@ -1,0 +1,19 @@
+\begin{tikzpicture}[node distance=2cm]
+	%defines
+	\tikzstyle{systemDesign} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{ioIntegration} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{designDescription} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{synthesis} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{designVerification} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black]
+	\tikzstyle{arrow} = [thick,->,>=stealth]
+	%chart
+	\node (systemDesign) [systemDesign] {System Design};
+	\node (ioIntegration) [ioIntegration, below of=systemDesign] {I/O integration with rest of the system};
+	\node (designDescription) [designDescription, below of=ioIntegration] {Design Description};
+	\node (synthesis) [synthesis, below of=designDescription] {Synthesis};
+	\node (designVerification) [designVerification, below of=synthesis] {Design Verification};
+	\draw [arrow] (systemDesign) -- (ioIntegration);
+	\draw [arrow] (ioIntegration) -- (designDescription);
+	\draw [arrow] (designDescription) -- (synthesis);
+	\draw [arrow] (synthesis) -- (designVerification);
+\end{tikzpicture}

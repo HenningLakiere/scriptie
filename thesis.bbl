@@ -35,4 +35,7 @@ J.~Jenkov. (2015) Amdahl's law. [Online]. Available:
   \url{http://tutorials.jenkov.com/java-concurrency/amdahls-law.html}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Bluetooth}
+T.~Saggu, ``Bluetooth technology,'' \emph{S.U.S.CET}.
+
 \end{thebibliography}
