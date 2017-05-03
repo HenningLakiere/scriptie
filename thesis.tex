@@ -102,34 +102,58 @@ The total program speedup S can be calculated with Amdahl's law by comparing the
 \end{equation}
 
 
-	\section{OpenCL}\label{subsec:OpenCL}
+\section{OpenCL}\label{subsec:OpenCL}
 	
-	\section{Bluetooth}
-Bluetooth is a form of wireless communication and was developed in 1994 by L. M. Ericsson of Sweden. It is a radio frequency (RF) technology using the 2.4GHz industrial, scientific and medical (ISM) band, the same band where you can find ZigBee and WiFi aswell. It can be used to transmit data or voice communication over short-distances. Bluetooth adapters can be found in nearly every new smartphone and laptop device. It's easy to use, to setup and it finds uses in a lot of appliances, for example home heating systems, entertaining devices,... .Bluetooth is designed to be a low cost for about 10\$ per unit. the down side of this is the short connection range and the limited transmission speed of around 780 kb/s\cite{bluetoothTech}.\\
+\section{Bluetooth}
+Bluetooth is a form of wireless communication and was developed in 1994 by L. M. Ericsson of Sweden. It is a radio frequency (RF) technology using the 2.4GHz industrial, scientific and medical (ISM) band, the same band where you can find ZigBee and WiFi aswell. It can be used to transmit data or voice communication over short-distances. Bluetooth radios can be found in nearly every new smartphone and laptop device. It's easy to use, to setup and it has a lot of applications, for example home heating systems, entertaining devices and so on. Bluetooth is designed to be low cost, for about 10\$ per unit. The down side of this, is the short connection range and the limited transmission speed of around 780 kb/s\cite{bluetoothTech}.\\
 
-\subsection{Master, slave and piconet}
-For a Bluetooth connection to exist, their has to be atleast one master and one slave device. They use what is called the master/slave model. A master device can be connected to up to seven slave devices while a slave can only connect to one master device. A network of one master and one to seven slaves is called a piconet. The master device will coordinate all the communication throughout the piconet. All slave devices are allowed to exchange data with the master device when granted premission, but can't communicate with other slaves in the piconet. Furthermore, deIn order for these devices to connect with each other, they require the same communication protocol. A device in one piconet can also exist as part of another piconet and can function as either a slave or a master in each piconet. This form of overlapping is called a scatternet \cite{introBluetooth}. An example of a piconets forming a scatternet is shown in figure \ref{fig:scatternet}.
+	\subsection{Bluetooth benefits}
+The introduction of bluetooth allowed for many new appliacations in several areas. Even today it is still widely used, mostly for multimedia devices, smartwatches, keyboards, mices, printers. The following list explains some benefits for three general areas for Bluetooth:
+		\paragraph{Data and voice acces points.}
+Bluetooth allows a wireless connection between devices through which they can communicate. With Bluetooth, the devices are able to trasmit voice and data packages in real-time.
+		\paragraph{Cable replacement.}
+Some wired connections between devices require special cables or adapters. Bluetooth eliminates this hastle since any device can connect to another with the right communication protocol. The range of this connection is approximately 10m and doesn't require the devices to be in line of sight. With an optional amplifier the range can be extended to 100m.
+		\paragraph{Ad hoc networking.}
+Devices with a bluetooth radio can establish instant connections with each other as soon they come into range.
+
+
+	\subsection{Master, slave and piconet}
+For a Bluetooth connection to exist, their has to be atleast one master and one slave device. They use what is called the master/slave model. A master device can be connected to up to seven slave devices while a slave can only connect to one master device. A network of one master and one to seven slaves is called a piconet. The master device will coordinate all the communication throughout the piconet. All slave devices are allowed to exchange data with the master device when granted premission, but can't communicate with other slaves in the piconet. The connection between each device is encoded and protected to prevent other devices from eavesdropping and to prevent interference between other devices. Furthermore, in order for these devices to connect with each other, they require the same communication protocol. A device in one piconet can also exist as part of another piconet and can function as either a slave or a master in each piconet. This form of overlapping is called a scatternet \cite{introBluetooth}. An example of two piconets forming a scatternet is shown in figure \ref{fig:scatternet}.
 
 \begin{figure}[h]
 	\centering	
-	\includegraphics[scale=0.49]{images/scatternet.pdf} 
+	\includegraphics[scale=0.60]{images/scatternet.pdf} 
 	\caption{Piconets and Scatternets}\label{fig:scatternet}
-\end{figure}[h]
+\end{figure}
 
-The piconet/scatternet allows the devices to share the same physical area, allowing the network to make an efficient use of the bandwidth. A Bluetooth system can use up to 80 different frequencies using a frequency hopping scheme with a carrier spacing of 1MHz. This allows a bandwidth of 80MHz. Without frequency hopping scheme, every single channel would have a bandwidth of 1MHz at their disposal. With frequency hopping, the sequence will define a logical channel. This allows to have an available bandwidth of 1MHz at any given time, with a maximum of eight devices sharing the bandwidth.
+The piconet/scatternet allows the devices to share the same physical area, allowing the network to make an efficient use of the bandwidth. A Bluetooth system can use up to 79 different frequencies using a frequency hopping (from 2.402 to 2.480 GHz) \cite{bluetoothStack} scheme with a carrier spacing of 1MHz. This allows a bandwidth of 80MHz. Without frequency hopping scheme, every single channel would have a bandwidth of 1MHz at their disposal. With frequency hopping, the sequence will define a logical channel. This allows to have an available bandwidth of 1MHz at any given time, with a maximum of eight devices sharing the bandwidth. This 80 MHz bandwidth can be shared by several different logical channels. Though, this can cause signal collisions when devices in different piconets, on different logical channels have the same hop frequency at a given time. Signal collisions degrade the performance, so we can state that the more piconets we have, the more collisions occur, the lower our total performance will be \cite{introBluetooth}.
 
-
-
-\subsection{Bluetooth stack}
-When a group of two or more Bluetooth devices are sharing information together, they form a kind of mini computer network called a piconet. Other devices can join or leave an existing piconet at any time. The master device acts as the overall controller of the network, while the slave devices obey its instructions. Two or more separate piconets can also join up and share information forming what is called a scatternet as shown in figure \ref{fig:scatternet}.
-http://www.oracle.com/technetwork/systems/bluetoothintro-156415.html
-
-
-
-	\section{Websocket server}
+	\subsection{Protocol architecture}
+The bluetooth protocol architecture consists of four basic layers: core protocols, cable replacement, telephony control protocols and adopted protocols. Figure \ref{fig:bluetoothStack} shows the architecture of the Bluetooth protocol stack.
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{images/bluetoothStack.pdf}
+\caption{Bluetooth protocol stack}\label{fig:bluetoothStack}
+\end{figure}
 
 
+		\paragraph{Core protocols.}
+The core protocol is a five-layer stack. Every layer in the stack has its own responibilites that are mentioned below.
 
+\begin{itemize}
+		\item The \textit{radio} layer is the wireless connection that specifies certain details about the air interface, including frequency, the use of frequency hopping, modulation scheme and transmit power. 
+		\item The \textit{baseband} layer is responsible for the packet transmission to the radio layer. As mentioned before these packet can contain data or voice. For the data packages, asynchronous connectionless (ACL) links are used while voice packages are transmitted with synchronous connection-oriented (SCO) links. The baseband layer maintains both ACL and SCO links. It is important for data packages to be transmitted correctly to maintain data integrity, while it is not a problem in case some voice packages get lost. That is why SCO packages are never retransmitted. If you would retransmit voice packages, every next package would suffer from a time delay restraining us from having real-time communication.
+		\item The \textit{Link manager protocol (LMP)} uses the links setup by the baseband and manages the connection between Bluetooth devices. Furthermore, it is responsible for monitoring service quality, security aspects such as device authentication, encryption plus the control and negotiation of baseband packet sizes.
+		\item The \textit{Host controller interface (HCI)} is the layer between the hardware and the software. The L2CAP layer and the layers above it are implented in the software while all other layers under the HCI (LMP, baseband, radio) are part of the hardware. the HCI driver acts as a physical bus that connects the hardware with software. It is possible to access the L2CAP layer directly by the application making it easier for application programmers. This makes the HCI an unnecessary component in some cases.
+		\item The \textit{Logical link control and adaptation protocol (L2CAP)} receives application data and transforms this to the Bluetooth format. Furthermore, Quality of Service (QoS) parameters are exchanged at this layer \cite{bluetoothStack}.
+		\item According to \cite{bluetoothStack}, the \textit{Service discovery protocol (SDP)} is not a part of the Core protocols. Though, it contains all the information, services and charasteristics  in order to establish a connection between two or more bluetooth devices. The LMP uses the SDP's first to find out what services are available from the acces point. Then information from the SDP is obtained by the LMP to create a L2CAP channel.
+\end{itemize}
+		
+	\paragraph{Cable replacement.}
+The RFCOMM seen in figure \ref{fig:bluetoothStack} is the cable replacement protocol. It is a virtual serial port that is designed to replace cable technology. Serial ports are common types of communication interfaces used with computing ang communication devices \cite{introBluetooth}. So with RFCOMM we eliminate the need for serial ports for communication between two devices, assuming both are equiped with a Bluetooth radio.
+
+
+\section{Websocket server}
 
 \bibliographystyle{IEEEtran}
 \bibliography{References}

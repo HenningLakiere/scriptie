@@ -41,7 +41,14 @@ T.~Saggu, ``Bluetooth technology,'' \emph{S.U.S.CET}.
 \bibitem{introBluetooth}
 \BIBentryALTinterwordspacing
 W.~Stallings. (2001) Introduction to bluetooth. [Online]. Available:
-  \url{http://www.informit.com/articles/article.aspx?p=23760\&seqNum=4}
+  \url{http://www.informit.com/articles/article.aspx?p=23760}
+\BIBentrySTDinterwordspacing
+
+\bibitem{bluetoothStack}
+\BIBentryALTinterwordspacing
+Q.~H. Mahmoud. (2003) Wireless application programming with j2me and bluetooth.
+  [Online]. Available:
+  \url{http://www.oracle.com/technetwork/systems/index-156651.html}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}
