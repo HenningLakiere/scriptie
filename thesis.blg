@@ -12,48 +12,48 @@ Database file #1: References.bib
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 Warning--empty author and editor in Unit2COPC
-Warning--empty year in Bluetooth
+Warning--empty year in bluetoothTech
 
 Done.
-You've used 4 entries,
+You've used 5 entries,
             4087 wiz_defined-function locations,
-            841 strings with 7642 characters,
-and the built_in function-call counts, 1396 in all, are:
-= -- 94
-> -- 13
+            847 strings with 7787 characters,
+and the built_in function-call counts, 1744 in all, are:
+= -- 122
+> -- 17
 < -- 0
-+ -- 7
-- -- 3
-* -- 63
-:= -- 266
-add.period$ -- 8
-call.type$ -- 4
-change.case$ -- 3
++ -- 9
+- -- 4
+* -- 72
+:= -- 333
+add.period$ -- 10
+call.type$ -- 5
+change.case$ -- 4
 chr.to.int$ -- 0
-cite$ -- 6
-duplicate$ -- 116
-empty$ -- 147
-format.name$ -- 3
-if$ -- 293
+cite$ -- 7
+duplicate$ -- 143
+empty$ -- 181
+format.name$ -- 4
+if$ -- 369
 int.to.chr$ -- 0
-int.to.str$ -- 4
-missing$ -- 21
-newline$ -- 37
-num.names$ -- 3
-pop$ -- 65
+int.to.str$ -- 5
+missing$ -- 28
+newline$ -- 42
+num.names$ -- 4
+pop$ -- 87
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 106
+skip$ -- 134
 stack$ -- 0
 substring$ -- 2
-swap$ -- 57
+swap$ -- 74
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 4
+type$ -- 5
 warning$ -- 2
-while$ -- 3
-width$ -- 5
-write$ -- 53
+while$ -- 4
+width$ -- 6
+write$ -- 63
 (There were 2 warnings)

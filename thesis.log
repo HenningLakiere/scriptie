@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.24)  30 APR 2017 14:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.24)  2 MAY 2017 15:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -168,7 +168,7 @@ Package pdftex.def Info: images/serialProblem.pdf used on input line 11.
 File: images/parallelProblem.pdf Graphic file (type pdf)
 
 <use images/parallelProblem.pdf>
-Package pdftex.def Info: images/parallelProblem.pdf used on input line 18.
+Package pdftex.def Info: images/parallelProblem.pdf used on input line 19.
 (pdftex.def)             Requested size: 274.21964pt x 149.35535pt.
 
 
@@ -181,83 +181,79 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: images/flynnsTaxonomy.pdf Graphic file (type pdf)
 
 <use images/flynnsTaxonomy.pdf>
-Package pdftex.def Info: images/flynnsTaxonomy.pdf used on input line 29.
+Package pdftex.def Info: images/flynnsTaxonomy.pdf used on input line 32.
 (pdftex.def)             Requested size: 234.87692pt x 145.04152pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 35.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 38.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 35.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 38.
  [2 <./images/parallelProblem.pdf> <./images/flynnsTaxonomy.pdf>]
 <images/sisd.pdf, id=39, 401.5pt x 401.5pt>
 File: images/sisd.pdf Graphic file (type pdf)
  <use images/sisd.pdf>
-Package pdftex.def Info: images/sisd.pdf used on input line 57.
+Package pdftex.def Info: images/sisd.pdf used on input line 61.
 (pdftex.def)             Requested size: 120.45091pt x 120.45091pt.
 
 <images/simd.pdf, id=40, 401.5pt x 401.5pt>
 File: images/simd.pdf Graphic file (type pdf)
  <use images/simd.pdf>
-Package pdftex.def Info: images/simd.pdf used on input line 62.
+Package pdftex.def Info: images/simd.pdf used on input line 66.
 (pdftex.def)             Requested size: 120.45091pt x 120.45091pt.
 
 <images/misd.pdf, id=41, 401.5pt x 401.5pt>
 File: images/misd.pdf Graphic file (type pdf)
  <use images/misd.pdf>
-Package pdftex.def Info: images/misd.pdf used on input line 67.
+Package pdftex.def Info: images/misd.pdf used on input line 71.
 (pdftex.def)             Requested size: 120.45091pt x 120.45091pt.
 
 <images/mimd.pdf, id=42, 401.5pt x 401.5pt>
 File: images/mimd.pdf Graphic file (type pdf)
  <use images/mimd.pdf>
-Package pdftex.def Info: images/mimd.pdf used on input line 72.
+Package pdftex.def Info: images/mimd.pdf used on input line 76.
 (pdftex.def)             Requested size: 120.45091pt x 120.45091pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 80.
+(Font)              <10.95> on input line 84.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 80.
+(Font)              <8> on input line 84.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 80.
+(Font)              <6> on input line 84.
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
 [4 <./images/sisd.pdf> <./images/simd.pdf> <./images/misd.pdf> <./images/mimd.p
-df>]
-Missing character: There is no â in font cmbx12!
-Missing character: There is no € in font cmbx12!
-Missing character: There is no ¢ in font cmbx12!
- <images/scatternet.pdf, id=82, 408.52625pt x 290.08376pt>
+df>] <images/scatternet.pdf, id=82, 408.52625pt x 290.08376pt>
 File: images/scatternet.pdf Graphic file (type pdf)
 
 <use images/scatternet.pdf>
-Package pdftex.def Info: images/scatternet.pdf used on input line 114.
-(pdftex.def)             Requested size: 245.11765pt x 174.05159pt.
+Package pdftex.def Info: images/scatternet.pdf used on input line 115.
+(pdftex.def)             Requested size: 200.17961pt x 142.14227pt.
  [5 <./images/scatternet.pdf>] (./thesis.bbl
 [6]) [7
 
 ] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 2723 strings out of 493013
- 43389 string characters out of 6135682
- 104475 words of memory out of 5000000
- 6254 multiletter control sequences out of 15000+600000
+ 2724 strings out of 493013
+ 43409 string characters out of 6135682
+ 104478 words of memory out of 5000000
+ 6255 multiletter control sequences out of 15000+600000
  8541 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,8n,40p,742b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,8n,40p,990b,445s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
 0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on thesis.pdf (7 pages, 216940 bytes).
+Output written on thesis.pdf (7 pages, 219307 bytes).
 PDF statistics:
  116 PDF objects out of 1000 (max. 8388607)
  71 compressed objects within 1 object stream
