@@ -7,7 +7,7 @@
 \section{parallel computing}
 	\subsection{What is parallel computing}
 The problem when facing large calculations is that they require a lot of computing power and time. Performing these calculations can be done in different types of computation but the most common ones are serial and parallel computation. Serial computing means, you have one compute unit (e.g. a single core CPU) available to deal with all the calculations that have to be done on a certain set of data. The problem will be broken into multiple smaller subproblems that will be solved by a certain instruction. The single compute unit has to perform the instruction on every subproblem to solve the main problem as shown in figure \ref{fig:SerialC}.
-	\begin{figure}[h]
+	\begin{figure}[ht]
 		\centering
 		\includegraphics[scale=.4]{images/serialProblem.pdf}
 		\caption{Workflow serial computing}
@@ -15,7 +15,7 @@ The problem when facing large calculations is that they require a lot of computi
 	\end{figure}
 
 Parallel computing, on the other hand, is the simultaneous use of multiple compute units (CPU+GPU), or a compute resource, to solve a computational problem. We break apart the main problem in smaller subproblems as we did with serial computing. Each part is further broken down to a series of instructions again.Now, since there are multiple compute units, we can distribute the subproblems among all these compute units. Every unit can now perform the instruction on their given subproblems simultaneously as shown in figure \ref{fig:ParallelC}. One compute resource can constist of multiple compute units, for example it can include multiple processors or it is just a number of computers connected by a network.
-	\begin{figure}[h]
+	\begin{figure}[ht]
 		\centering
 		\includegraphics[scale=.4]{images/parallelProblem.pdf}
 		\caption{Workflow parallel computing}
@@ -28,7 +28,7 @@ It is easy to conclude that the concept of parallel computing was to have a more
 	\subsection{Classification of parallel computing}
 Parallel computing systems can be seperated into different classes. According to Flynn's taxonomy, we can roughly place any of these systems in one of the four classes he defined. This classification was first studied and proposed by Michael Flynn in 1972 \cite{Unit2COPC}. The classifications are determined by two factors: instruction stream and data stream which both have two possible states being single or multiple. Figure \ref{fig:flynnTaxonomy} represents a matrix of the four possible classes from the Flynn's taxonomy \cite{barney2012parallel}.
 
-	\begin{figure}[h]
+	\begin{figure}[ht]
 		\centering
 		\includegraphics[scale=.5]{images/flynnsTaxonomy.pdf}
 		\caption{Four possible classifications according to Flynn's Taxonomy}
@@ -55,7 +55,7 @@ Each processing unit operates on the data independently via separate instruction
 	\end{itemize}
 This time every processing unit is able to execute a different instruction stream on a different data stream (figure \ref{fig:mimd}). This means that any instruction can be applied on any data package for every compute unit. Most supercomputers, networked parallel computer clusters and "grids" can be classified as a MIMD compute system. Also, many MIMD architectures include SIMD execution sub-components.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 	\centering
 	\begin{subfigure}[t]{0.4\textwidth}
 		\centering
@@ -121,7 +121,7 @@ Devices with a Bluetooth radio can establish instant connections with each other
 	\subsection{Master, slave and piconet}
 For a Bluetooth connection to exist, their has to be atleast one master and one slave device. They use what is called the master/slave model. A master device can be connected to up to seven slave devices while a slave can only connect to one master device. A network of one master and one to seven slaves is called a piconet. The master device will coordinate all the communication throughout the piconet. All slave devices are allowed to exchange data with the master device when granted premission, but can't communicate with other slaves in the piconet. The connection between each device is encoded and protected to prevent other devices from eavesdropping and to prevent interference between other devices. Furthermore, in order for these devices to connect with each other, they require the same communication protocol. A device in one piconet can also exist as part of another piconet and can function as either a slave or a master in each piconet. This form of overlapping is called a scatternet \cite{introBluetooth}. An example of two piconets forming a scatternet is shown in figure \ref{fig:scatternet}.
 
-	\begin{figure}[h]
+	\begin{figure}[ht]
 		\centering	
 		\includegraphics[scale=0.60]{images/scatternet.pdf} 
 		\caption{Piconets and Scatternets}\label{fig:scatternet}
@@ -171,20 +171,18 @@ Adopted protocols are protocols developed by other organizations. They are 'adop
 \section{Web sockets}
 Web sockets are used for fast, real-time communication between a server and a client. The HTTP model, which is also a communication protocol between a server and a client, allowed the client only to request data from the server. While the server was only able to fulfill these requests. Web sockets on the other hand, allows bidirectional communication, or bidi communication, between the server and the client. This means both client and server can request data and also respond to these requests. The main point of web sockets is to have true concurrency and to focus on the optimization of performance when it comes to communication and exchanging data.
 
-	\subsection{Web socket handshake}
-To communicate over web socket, the server and the client first have to connect with each other. The establishment of a web socket connection is done by a web socket handshake. Handshaking is the exchange of information between two devices and the agreement about which protocol will be used to exchange data after the connection is established. A well known example of this is the TCP three-way-handshake. The client sends a synchronization message (SYN) to the server as a request to synchronize with the server. If the server receives this message and allows the client to synchronize with it, it will send a similar SYN message and an acknowledgement message (ACK) to let the client know that it has received the request. When the client receives the SYN-ACK message, it will send an ACK message back to the server to acknowledge that it has received the server's message. The TCP connection is established whenever the server receives the ACK message from the client.
-The web socket handshake is quite similar. The client sends a handshake request to the server, and the server will respond with a similar handshake request as seen in figure \ref{fig:WebSocketHandshaking}. The handshake request from the client-side is shown in listing \ref{lst:clientHandshake}, while the response from the server is shown in listing \ref{lst:serverHandshake}.
+	\subsection{Web socket communication}
+		\paragraph{Handshake.}
+To communicate over web socket, the server and the client first have to connect with each other. The establishment of a web socket connection is done by a web socket handshake. Handshaking is the exchange of information between two devices and the agreement about which protocol will be used to exchange data after the connection is established. A well known example of this is the TCP three-way-handshake. The client sends a synchronization message (SYN) to the server as a request to synchronize with the server. If the server receives this message and allows the client to synchronize with it, it will send a similar SYN message and an acknowledgement message (ACK) to let the client know that it has received the request. When the client receives the SYN-ACK message, it will send an ACK message back to the server to acknowledge that it has received the server's message. The TCP connection is established whenever the server receives the ACK message from the client.\\
+The web socket handshake is quite similar. The client sends a handshake request to the server, and the server will respond with a similar handshake request as seen in figure \ref{fig:WebSocketHandshaking}. The desktop, smartphone and tablet in figure \ref{fig:WebSocketHandshaking} represent the clients that are connected to the server. The handshake request from the client-side is shown in listing \ref{lst:clientHandshake}, while the response from the server is shown in listing \ref{lst:serverHandshake}.
 \begin{lstlisting}[caption={Client's request for websocket handshake},captionpos=b, label={lst:clientHandshake}, language=c, float=h]
    GET /chat HTTP/1.1
-   Host: server.example.com
+   Host: example.com:8000
    Upgrade: websocket
    Connection: Upgrade
    Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
-   Origin: http://example.com
-   Sec-WebSocket-Protocol: chat, superchat
    Sec-WebSocket-Version: 13
 \end{lstlisting}
-
 \begin{lstlisting}[caption={Server's response for websocket handshake},captionpos=b, label={lst:serverHandshake}, language=c, float=h]
    HTTP/1.1 101 Switching Protocols
    Upgrade: websocket
@@ -192,13 +190,13 @@ The web socket handshake is quite similar. The client sends a handshake request 
    Sec-WebSocket-Accept: HSmrc0sMlYUkAGmm5OPpG2HaGWk=
    Sec-WebSocket-Protocol: chat
 \end{lstlisting}
+Listing \ref{lst:clientHandshake}, that is send by the client, is a pretty standard HTTP request. It is build with multiple headers, some of which are mandotory for a request to be valid. If one of the headers is not understood, the server will reply with "400 Bad Request" and it will close the socket afterwards \cite{BadRequest}. In some cases, it will also give a reason why handshake failed, although browser do not display these messages. If there is 
 
 
 
-	
 \begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{images/server.pdf}
+\includegraphics[scale=0.35]{images/server.pdf}
 \caption{Web socket handshaking}\label{fig:WebSocketHandshaking}
 \end{figure}
 
