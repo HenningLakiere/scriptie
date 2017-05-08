@@ -1,5 +1,6 @@
 \documentclass[a4paper, 11pt]{report}
 \usepackage{graphicx}
+\usepackage{listings} 
 \usepackage{subcaption}
 \begin{document}
 
@@ -13,16 +14,16 @@ The problem when facing large calculations is that they require a lot of computi
 		\label{fig:SerialC}
 	\end{figure}
 
-Parallel computing, on the other hand, is the simultaneous use of multiple compute units (CPU+GPU), or a compute resource, to solve a computational problem. We break apart the main problem in smaller subproblems as we did with serial computing. Each part is further broken down to a series of instructions again.Now, since there are multiple compute units, we can distribute the subproblems among all these compute units. Every unit can now perform the instruction on their given subproblems simultaneously as shown in figure \ref{fig:ParallelC}. One compute resource can constist of multiple compute units, for example it can include multiple processors or it's just a number of computers connected by a network.
+Parallel computing, on the other hand, is the simultaneous use of multiple compute units (CPU+GPU), or a compute resource, to solve a computational problem. We break apart the main problem in smaller subproblems as we did with serial computing. Each part is further broken down to a series of instructions again.Now, since there are multiple compute units, we can distribute the subproblems among all these compute units. Every unit can now perform the instruction on their given subproblems simultaneously as shown in figure \ref{fig:ParallelC}. One compute resource can constist of multiple compute units, for example it can include multiple processors or it is just a number of computers connected by a network.
 	\begin{figure}[h]
 		\centering
 		\includegraphics[scale=.4]{images/parallelProblem.pdf}
 		\caption{Workflow parallel computing}
 		\label{fig:ParallelC}
 	\end{figure}
-With multiple compute units for one task, we will shorten the completion time aswell have potential cost savings. It also allows us to solve larger/complex problems since a single computer could suffer from limited memory. And last, we are able to access non-local resources in a network that wouldn't be accessable from a local computer.
+With multiple compute units for one task, we will shorten the completion time aswell have potential cost savings. It also allows us to solve larger/complex problems since a single computer could suffer from limited memory. And last, we are able to access non-local resources in a network that would not be accessable from a local computer.
 
-It is easy to conclude that the concept of parallel computing was to have a more efficient way to handle with large sets of data such as images or simulations that involve multiple parameters. It's also easier to handle with complex data for example in algorithms \cite{barney2012parallel}.
+It is easy to conclude that the concept of parallel computing was to have a more efficient way to handle with large sets of data such as images or simulations that involve multiple parameters. It is also easier to handle with complex data for example in algorithms \cite{barney2012parallel}.
 
 	\subsection{Classification of parallel computing}
 Parallel computing systems can be seperated into different classes. According to Flynn's taxonomy, we can roughly place any of these systems in one of the four classes he defined. This classification was first studied and proposed by Michael Flynn in 1972 \cite{Unit2COPC}. The classifications are determined by two factors: instruction stream and data stream which both have two possible states being single or multiple. Figure \ref{fig:flynnTaxonomy} represents a matrix of the four possible classes from the Flynn's taxonomy \cite{barney2012parallel}.
@@ -37,7 +38,7 @@ Parallel computing systems can be seperated into different classes. According to
 	\begin{itemize}
 		\item SISD
 	\end{itemize}
-The SISD class will have a single processor executing a single data stream to operate on data stored in a single memory (figure \ref{fig:sisd}). This means that a parallel compute system cannot be classified as an SISD sytem, but Flynn's taxonomy wasn't made for just classifying parallel compute systems. It's usually old computers and other older compute units that can be classified as SISD.
+The SISD class will have a single processor executing a single data stream to operate on data stored in a single memory (figure \ref{fig:sisd}). This means that a parallel compute system cannot be classified as an SISD sytem, but Flynn's taxonomy wasn't made for just classifying parallel compute systems. It is usually old computers and other older compute units that can be classified as SISD.
 	
 	\begin{itemize}
 		\item SIMD
@@ -84,7 +85,7 @@ Amdahl's Law can be used to theoretically calculate how much a computation can b
 \begin{equation}
 	S = \frac{T(1)}{T(j)}
 \end{equation}
-Since A is a serial computation, the amount of processing units j equals 1. And thus the speedup factor for A is also 1. Part A can only be executed faster by optimizing the code. Let's call this optimization factor O. For part B, we define the number of compute units by N. The total execution time then equals:
+Since A is a serial computation, the amount of processing units j equals one. And thus the speedup factor for A is also one. Part A can only be executed faster by optimizing the code. Let's call this optimization factor O. For part B, we define the number of compute units by N. The total execution time then equals:
 \begin{equation}
 	T = \frac{A}{O} + \frac{B}{N}	
 \end{equation}
@@ -105,55 +106,111 @@ The total program speedup S can be calculated with Amdahl's law by comparing the
 \section{OpenCL}\label{subsec:OpenCL}
 	
 \section{Bluetooth}
-Bluetooth is a form of wireless communication and was developed in 1994 by L. M. Ericsson of Sweden. It is a radio frequency (RF) technology using the 2.4GHz industrial, scientific and medical (ISM) band, the same band where you can find ZigBee and WiFi aswell. It can be used to transmit data or voice communication over short-distances. Bluetooth radios can be found in nearly every new smartphone and laptop device. It's easy to use, to setup and it has a lot of applications, for example home heating systems, entertaining devices and so on. Bluetooth is designed to be low cost, for about 10\$ per unit. The down side of this, is the short connection range and the limited transmission speed of around 780 kb/s\cite{bluetoothTech}.\\
+Bluetooth is a form of wireless communication and was developed in 1994 by L. M. Ericsson of Sweden. It is a radio frequency (RF) technology using the 2.4GHz industrial, scientific and medical (ISM) band, the same band where you can find ZigBee and WiFi aswell. It can be used to transmit data or voice communication over short-distances. Bluetooth radios can be found in nearly every new smartphone and laptop device. It is easy to use, to setup and it has a lot of applications, for example home heating systems, entertaining devices and so on. Bluetooth is designed to be low cost, for about 10\$ per unit. The down side of this, is the short connection range and the limited transmission speed of around 780 kb/s\cite{bluetoothTech}.\\
 
 	\subsection{Bluetooth benefits}
-The introduction of bluetooth allowed for many new appliacations in several areas. Even today it is still widely used, mostly for multimedia devices, smartwatches, keyboards, mices, printers. The following list explains some benefits for three general areas for Bluetooth:
+The introduction of Bluetooth allowed for many new appliacations in several areas. Even today it is still widely used, mostly for multimedia devices, smartwatches, keyboards, mices, printers. The following list explains some benefits for three general areas for Bluetooth:
 		\paragraph{Data and voice acces points.}
 Bluetooth allows a wireless connection between devices through which they can communicate. With Bluetooth, the devices are able to trasmit voice and data packages in real-time.
 		\paragraph{Cable replacement.}
 Some wired connections between devices require special cables or adapters. Bluetooth eliminates this hastle since any device can connect to another with the right communication protocol. The range of this connection is approximately 10m and doesn't require the devices to be in line of sight. With an optional amplifier the range can be extended to 100m.
 		\paragraph{Ad hoc networking.}
-Devices with a bluetooth radio can establish instant connections with each other as soon they come into range.
+Devices with a Bluetooth radio can establish instant connections with each other as soon they come into range.
 
 
 	\subsection{Master, slave and piconet}
 For a Bluetooth connection to exist, their has to be atleast one master and one slave device. They use what is called the master/slave model. A master device can be connected to up to seven slave devices while a slave can only connect to one master device. A network of one master and one to seven slaves is called a piconet. The master device will coordinate all the communication throughout the piconet. All slave devices are allowed to exchange data with the master device when granted premission, but can't communicate with other slaves in the piconet. The connection between each device is encoded and protected to prevent other devices from eavesdropping and to prevent interference between other devices. Furthermore, in order for these devices to connect with each other, they require the same communication protocol. A device in one piconet can also exist as part of another piconet and can function as either a slave or a master in each piconet. This form of overlapping is called a scatternet \cite{introBluetooth}. An example of two piconets forming a scatternet is shown in figure \ref{fig:scatternet}.
 
-\begin{figure}[h]
-	\centering	
-	\includegraphics[scale=0.60]{images/scatternet.pdf} 
-	\caption{Piconets and Scatternets}\label{fig:scatternet}
-\end{figure}
+	\begin{figure}[h]
+		\centering	
+		\includegraphics[scale=0.60]{images/scatternet.pdf} 
+		\caption{Piconets and Scatternets}\label{fig:scatternet}
+	\end{figure}
 
 The piconet/scatternet allows the devices to share the same physical area, allowing the network to make an efficient use of the bandwidth. A Bluetooth system can use up to 79 different frequencies using a frequency hopping (from 2.402 to 2.480 GHz) \cite{bluetoothStack} scheme with a carrier spacing of 1MHz. This allows a bandwidth of 80MHz. Without frequency hopping scheme, every single channel would have a bandwidth of 1MHz at their disposal. With frequency hopping, the sequence will define a logical channel. This allows to have an available bandwidth of 1MHz at any given time, with a maximum of eight devices sharing the bandwidth. This 80 MHz bandwidth can be shared by several different logical channels. Though, this can cause signal collisions when devices in different piconets, on different logical channels have the same hop frequency at a given time. Signal collisions degrade the performance, so we can state that the more piconets we have, the more collisions occur, the lower our total performance will be \cite{introBluetooth}.
 
 	\subsection{Protocol architecture}
-The bluetooth protocol architecture consists of four basic layers: core protocols, cable replacement, telephony control protocols and adopted protocols. Figure \ref{fig:bluetoothStack} shows the architecture of the Bluetooth protocol stack.
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.5]{images/bluetoothStack.pdf}
-\caption{Bluetooth protocol stack}\label{fig:bluetoothStack}
-\end{figure}
+The Bluetooth protocol architecture consists of four basic layers: core protocols, cable replacement, telephony control protocols and adopted protocols. Figure \ref{fig:bluetoothStack} shows the architecture of the Bluetooth protocol stack.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.5]{images/bluetoothStack.pdf}
+		\caption{Bluetooth protocol stack}\label{fig:bluetoothStack}
+	\end{figure}
 
 
 		\paragraph{Core protocols.}
 The core protocol is a five-layer stack. Every layer in the stack has its own responibilites that are mentioned below.
 
-\begin{itemize}
-		\item The \textit{radio} layer is the wireless connection that specifies certain details about the air interface, including frequency, the use of frequency hopping, modulation scheme and transmit power. 
-		\item The \textit{baseband} layer is responsible for the packet transmission to the radio layer. As mentioned before these packet can contain data or voice. For the data packages, asynchronous connectionless (ACL) links are used while voice packages are transmitted with synchronous connection-oriented (SCO) links. The baseband layer maintains both ACL and SCO links. It is important for data packages to be transmitted correctly to maintain data integrity, while it is not a problem in case some voice packages get lost. That is why SCO packages are never retransmitted. If you would retransmit voice packages, every next package would suffer from a time delay restraining us from having real-time communication.
-		\item The \textit{Link manager protocol (LMP)} uses the links setup by the baseband and manages the connection between Bluetooth devices. Furthermore, it is responsible for monitoring service quality, security aspects such as device authentication, encryption plus the control and negotiation of baseband packet sizes.
-		\item The \textit{Host controller interface (HCI)} is the layer between the hardware and the software. The L2CAP layer and the layers above it are implented in the software while all other layers under the HCI (LMP, baseband, radio) are part of the hardware. the HCI driver acts as a physical bus that connects the hardware with software. It is possible to access the L2CAP layer directly by the application making it easier for application programmers. This makes the HCI an unnecessary component in some cases.
-		\item The \textit{Logical link control and adaptation protocol (L2CAP)} receives application data and transforms this to the Bluetooth format. Furthermore, Quality of Service (QoS) parameters are exchanged at this layer \cite{bluetoothStack}.
-		\item According to \cite{bluetoothStack}, the \textit{Service discovery protocol (SDP)} is not a part of the Core protocols. Though, it contains all the information, services and charasteristics  in order to establish a connection between two or more bluetooth devices. The LMP uses the SDP's first to find out what services are available from the acces point. Then information from the SDP is obtained by the LMP to create a L2CAP channel.
-\end{itemize}
+		\begin{itemize}
+			\item The \textit{radio} layer is the wireless connection that specifies certain details about the air interface, including frequency, the use of frequency hopping, modulation scheme and transmit power. 
+			\item The \textit{baseband} layer is responsible for the packet transmission to the radio layer. As mentioned before these packet can contain data or voice. For the data packages, asynchronous connectionless (ACL) links are used while voice packages are transmitted with synchronous connection-oriented (SCO) links. The baseband layer maintains both ACL and SCO links. It is important for data packages to be transmitted correctly to maintain data integrity, while it is not a problem in case some voice packages get lost. That is why SCO packages are never retransmitted. If you would retransmit voice packages, every next package would suffer from a time delay restraining us from having real-time communication.
+			\item The \textit{Link manager protocol (LMP)} uses the links setup by the baseband and manages the connection between Bluetooth devices. Furthermore, it is responsible for monitoring service quality, security aspects such as device authentication, encryption plus the control and negotiation of baseband packet sizes.
+			\item The \textit{Host controller interface (HCI)} is the layer between the hardware and the software. The L2CAP layer and the layers above it are implented in the software while all other layers under the HCI (LMP, baseband, radio) are part of the hardware. the HCI driver acts as a physical bus that connects the hardware with software. It is possible to access the L2CAP layer directly by the application making it easier for application programmers. This makes the HCI, in some cases, an unnecessary component.
+			\item The \textit{Logical link control and adaptation protocol (L2CAP)} receives application data and transforms this to the Bluetooth format. Furthermore, Quality of Service (QoS) parameters are exchanged at this layer \cite{bluetoothStack}.
+			\item According to \cite{bluetoothStack}, the \textit{Service discovery protocol (SDP)} is not a part of the Core protocols. Though, it contains all the information, services and charasteristics  in order to establish a connection between two or more Bluetooth devices. The LMP uses the SDP's first to find out what services are available from the acces point. Then information from the SDP is obtained by the LMP to create a L2CAP channel.
+		\end{itemize}
 		
-	\paragraph{Cable replacement.}
-The RFCOMM seen in figure \ref{fig:bluetoothStack} is the cable replacement protocol. It is a virtual serial port that is designed to replace cable technology. Serial ports are common types of communication interfaces used with computing ang communication devices \cite{introBluetooth}. So with RFCOMM we eliminate the need for serial ports for communication between two devices, assuming both are equiped with a Bluetooth radio.
+		\paragraph{Cable replacement.}
+The RFCOMM seen in figure \ref{fig:bluetoothStack} is the cable replacement protocol. It is a virtual serial port that is designed to replace cable technology. Serial ports are common types of communication interfaces used with computing ang communication devices \cite{introBluetooth}. So with RFCOMM we eliminate the need for serial ports for communication between two devices, assuming both are equiped with a Bluetooth radio. 
+EIA-232, once known as RS-232, is a widely used serial port interface standard. The RFCOMM will provide binary data transport and has to emulate EIA-232 control signal to the baseband layer.
+
+		\paragraph{Telephony control protocols.}
+Telephony control specifications (binary) or TCS BIN, is a bit-oriented protocol that is necessary to define the call control services in order to establish speech or data calls between the Bluetooth devices.
+
+		\paragraph{Adopted protocols.}
+Adopted protocols are protocols developed by other organizations. They are 'adopted' into the overall Bluetooth architecture. They are usually standard protocols well known in other applications than Bluetooth. Bluetooth's strategy is to only invent necessary protocols and use existing standard protocols whenever possible. The following standards are the adopted protocols:
+
+	\begin{itemize}
+		\item The \textit{PPP}, or point-to-point protocol is as a internet standard protocol for trasporting IP datagrams over point-to-point links.
+		\item \textit{TCP/UDP/IP}, are the foundation protocols of the TCP/IP protocol suite.
+		\item \textit{The object exchange protocol}, or OBEX, is a session level protocol made by the Infrared Data Association (IrDA). It is used for exchaning objects. OBEX comes with quite similar funcionalities as HTTP, but in a simpler way. There is also a model included in OBEX that is used for the representation of objects and operations.
+		\item Bluetooth also adopts the wireless application environment \textit{WAE} and the wireless application protocol \textit{WAP} into its architecture.	
+	\end{itemize}
 
 
-\section{Websocket server}
+\section{Web sockets}
+Web sockets are used for fast, real-time communication between a server and a client. The HTTP model, which is also a communication protocol between a server and a client, allowed the client only to request data from the server. While the server was only able to fulfill these requests. Web sockets on the other hand, allows bidirectional communication, or bidi communication, between the server and the client. This means both client and server can request data and also respond to these requests. The main point of web sockets is to have true concurrency and to focus on the optimization of performance when it comes to communication and exchanging data.
+
+	\subsection{Web socket handshake}
+To communicate over web socket, the server and the client first have to connect with each other. The establishment of a web socket connection is done by a web socket handshake. Handshaking is the exchange of information between two devices and the agreement about which protocol will be used to exchange data after the connection is established. A well known example of this is the TCP three-way-handshake. The client sends a synchronization message (SYN) to the server as a request to synchronize with the server. If the server receives this message and allows the client to synchronize with it, it will send a similar SYN message and an acknowledgement message (ACK) to let the client know that it has received the request. When the client receives the SYN-ACK message, it will send an ACK message back to the server to acknowledge that it has received the server's message. The TCP connection is established whenever the server receives the ACK message from the client.
+The web socket handshake is quite similar. The client sends a handshake request to the server, and the server will respond with a similar handshake request as seen in figure \ref{fig:WebSocketHandshaking}. The handshake request from the client-side is shown in listing \ref{lst:clientHandshake}, while the response from the server is shown in listing \ref{lst:serverHandshake}.
+\begin{lstlisting}[caption={Client's request for websocket handshake},captionpos=b, label={lst:clientHandshake}, language=c, float=h]
+   GET /chat HTTP/1.1
+   Host: server.example.com
+   Upgrade: websocket
+   Connection: Upgrade
+   Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
+   Origin: http://example.com
+   Sec-WebSocket-Protocol: chat, superchat
+   Sec-WebSocket-Version: 13
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Server's response for websocket handshake},captionpos=b, label={lst:serverHandshake}, language=c, float=h]
+   HTTP/1.1 101 Switching Protocols
+   Upgrade: websocket
+   Connection: Upgrade
+   Sec-WebSocket-Accept: HSmrc0sMlYUkAGmm5OPpG2HaGWk=
+   Sec-WebSocket-Protocol: chat
+\end{lstlisting}
+
+
+
+	
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{images/server.pdf}
+\caption{Web socket handshaking}\label{fig:WebSocketHandshaking}
+\end{figure}
+
+
+	\subsection{Web socket architecture}
+	
+	\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.3]{images/websocketsArchitecture.pdf}
+	\caption{WebSocket architecture}\label{fig:WebSocketArchitecture}
+	\end{figure}
+	
 
 \bibliographystyle{IEEEtran}
 \bibliography{References}

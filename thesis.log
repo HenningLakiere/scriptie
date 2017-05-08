@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.24)  4 MAY 2017 00:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.24)  8 MAY 2017 11:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -56,6 +56,31 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count89
+\lst@gtempboxa=\box26
+\lst@token=\toks15
+\lst@length=\count90
+\lst@currlwidth=\dimen105
+\lst@column=\count91
+\lst@pos=\count92
+\lst@lostspace=\dimen106
+\lst@width=\dimen107
+\lst@newlines=\count93
+\lst@lineno=\count94
+\lst@maxwidth=\dimen108
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count95
+\lst@skipnumbers=\count96
+\lst@framebox=\box27
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
 (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
 
@@ -65,46 +90,47 @@ Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
-\captionmargin=\dimen105
-\captionmargin@=\dimen106
-\captionwidth=\dimen107
-\caption@tempdima=\dimen108
-\caption@indent=\dimen109
-\caption@parindent=\dimen110
-\caption@hangindent=\dimen111
+\captionmargin=\dimen109
+\captionmargin@=\dimen110
+\captionwidth=\dimen111
+\caption@tempdima=\dimen112
+\caption@indent=\dimen113
+\caption@parindent=\dimen114
+\caption@hangindent=\dimen115
 )
-\c@ContinuedFloat=\count89
+\c@ContinuedFloat=\count97
+Package caption Info: listings package is loaded.
 )
-\c@subfigure=\count90
-\c@subtable=\count91
+\c@subfigure=\count98
+\c@subtable=\count99
 ) (./thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count92
-\scratchdimen=\dimen112
-\scratchbox=\box26
-\nofMPsegments=\count93
-\nofMParguments=\count94
-\everyMPshowfont=\toks15
-\MPscratchCnt=\count95
-\MPscratchDim=\dimen113
-\MPnumerator=\count96
-\makeMPintoPDFobject=\count97
-\everyMPtoPDFconversion=\toks16
+\scratchcounter=\count100
+\scratchdimen=\dimen116
+\scratchbox=\box28
+\nofMPsegments=\count101
+\nofMParguments=\count102
+\everyMPshowfont=\toks16
+\MPscratchCnt=\count103
+\MPscratchDim=\dimen117
+\MPnumerator=\count104
+\makeMPintoPDFobject=\count105
+\everyMPtoPDFconversion=\toks17
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -154,6 +180,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+\c@lstlisting=\count106
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
@@ -161,14 +188,14 @@ Package caption Info: End \AtBeginDocument code.
 File: images/serialProblem.pdf Graphic file (type pdf)
 
 <use images/serialProblem.pdf>
-Package pdftex.def Info: images/serialProblem.pdf used on input line 11.
+Package pdftex.def Info: images/serialProblem.pdf used on input line 12.
 (pdftex.def)             Requested size: 242.5017pt x 100.37321pt.
 
 <images/parallelProblem.pdf, id=2, 685.56125pt x 373.395pt>
 File: images/parallelProblem.pdf Graphic file (type pdf)
 
 <use images/parallelProblem.pdf>
-Package pdftex.def Info: images/parallelProblem.pdf used on input line 19.
+Package pdftex.def Info: images/parallelProblem.pdf used on input line 20.
 (pdftex.def)             Requested size: 274.21964pt x 149.35535pt.
 
 
@@ -181,51 +208,51 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: images/flynnsTaxonomy.pdf Graphic file (type pdf)
 
 <use images/flynnsTaxonomy.pdf>
-Package pdftex.def Info: images/flynnsTaxonomy.pdf used on input line 32.
+Package pdftex.def Info: images/flynnsTaxonomy.pdf used on input line 33.
 (pdftex.def)             Requested size: 234.87692pt x 145.04152pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 38.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 39.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 38.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 39.
  [2 <./images/parallelProblem.pdf> <./images/flynnsTaxonomy.pdf>]
 <images/sisd.pdf, id=39, 401.5pt x 401.5pt>
 File: images/sisd.pdf Graphic file (type pdf)
  <use images/sisd.pdf>
-Package pdftex.def Info: images/sisd.pdf used on input line 61.
+Package pdftex.def Info: images/sisd.pdf used on input line 62.
 (pdftex.def)             Requested size: 120.45091pt x 120.45091pt.
 
 <images/simd.pdf, id=40, 401.5pt x 401.5pt>
 File: images/simd.pdf Graphic file (type pdf)
  <use images/simd.pdf>
-Package pdftex.def Info: images/simd.pdf used on input line 66.
+Package pdftex.def Info: images/simd.pdf used on input line 67.
 (pdftex.def)             Requested size: 120.45091pt x 120.45091pt.
 
 <images/misd.pdf, id=41, 401.5pt x 401.5pt>
 File: images/misd.pdf Graphic file (type pdf)
  <use images/misd.pdf>
-Package pdftex.def Info: images/misd.pdf used on input line 71.
+Package pdftex.def Info: images/misd.pdf used on input line 72.
 (pdftex.def)             Requested size: 120.45091pt x 120.45091pt.
 
 <images/mimd.pdf, id=42, 401.5pt x 401.5pt>
 File: images/mimd.pdf Graphic file (type pdf)
  <use images/mimd.pdf>
-Package pdftex.def Info: images/mimd.pdf used on input line 76.
+Package pdftex.def Info: images/mimd.pdf used on input line 77.
 (pdftex.def)             Requested size: 120.45091pt x 120.45091pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 84.
+(Font)              <10.95> on input line 85.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 84.
+(Font)              <8> on input line 85.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 84.
+(Font)              <6> on input line 85.
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 108--109
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
 
  []
 
@@ -234,42 +261,69 @@ df>] [5] <images/scatternet.pdf, id=86, 408.52625pt x 290.08376pt>
 File: images/scatternet.pdf Graphic file (type pdf)
 
 <use images/scatternet.pdf>
-Package pdftex.def Info: images/scatternet.pdf used on input line 125.
+Package pdftex.def Info: images/scatternet.pdf used on input line 126.
 (pdftex.def)             Requested size: 245.11765pt x 174.05159pt.
 
 <images/bluetoothStack.pdf, id=87, 384.43625pt x 383.4325pt>
 File: images/bluetoothStack.pdf Graphic file (type pdf)
 
 <use images/bluetoothStack.pdf>
-Package pdftex.def Info: images/bluetoothStack.pdf used on input line 135.
+Package pdftex.def Info: images/bluetoothStack.pdf used on input line 136.
 (pdftex.def)             Requested size: 192.21765pt x 191.71577pt.
- [6 <./images/scatternet.pdf>] [7 <./images/bluetoothStack.pdf>] (./thesis.bbl 
-[8]
+ [6 <./images/scatternet.pdf>] [7 <./images/bluetoothStack.pdf>] [8]
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+) [9]
+<images/server.pdf, id=112, 398.99063pt x 415.5525pt>
+File: images/server.pdf Graphic file (type pdf)
+ <use images/server.pdf>
+Package pdftex.def Info: images/server.pdf used on input line 201.
+(pdftex.def)             Requested size: 199.49483pt x 207.77574pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/websocketsArchitecture.pdf, id=113, 783.92876pt x 627.34375pt>
+File: images/websocketsArchitecture.pdf Graphic file (type pdf)
+
+<use images/websocketsArchitecture.pdf>
+Package pdftex.def Info: images/websocketsArchitecture.pdf used on input line 2
+10.
+(pdftex.def)             Requested size: 235.18044pt x 188.20457pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+(./thesis.bbl [10] [11 <./images/server.pdf> <./images/websocketsArchitecture.p
+df>]
 Underfull \hbox (badness 1132) in paragraph at lines 49--53
 \OT1/cmr/m/n/10.95 ming with j2me and blue-tooth. [On-line]. Avail-able:
  []
 
-) [9
+) [12
 
 ] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 2733 strings out of 493013
- 43606 string characters out of 6135682
- 104489 words of memory out of 5000000
- 6262 multiletter control sequences out of 15000+600000
+ 4089 strings out of 493013
+ 63624 string characters out of 6135682
+ 145373 words of memory out of 5000000
+ 7598 multiletter control sequences out of 15000+600000
  8849 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,8n,40p,1145b,445s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,8n,51p,1145b,1104s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
 2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on thesis.pdf (9 pages, 243185 bytes).
+Output written on thesis.pdf (12 pages, 336021 bytes).
 PDF statistics:
- 133 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
+ 152 PDF objects out of 1000 (max. 8388607)
+ 94 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
