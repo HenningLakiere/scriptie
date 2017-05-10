@@ -131,7 +131,7 @@ The piconet/scatternet allows the devices to share the same physical area, allow
 
 	\subsection{Protocol architecture}
 The Bluetooth protocol architecture consists of four basic layers: core protocols, cable replacement, telephony control protocols and adopted protocols. Figure \ref{fig:bluetoothStack} shows the architecture of the Bluetooth protocol stack.
-	\begin{figure}[h]
+	\begin{figure}[ht]
 		\centering
 		\includegraphics[scale=0.5]{images/bluetoothStack.pdf}
 		\caption{Bluetooth protocol stack}\label{fig:bluetoothStack}
@@ -158,7 +158,7 @@ EIA-232, once known as RS-232, is a widely used serial port interface standard. 
 Telephony control specifications (binary) or TCS BIN, is a bit-oriented protocol that is necessary to define the call control services in order to establish speech or data calls between the Bluetooth devices.
 
 		\paragraph{Adopted protocols.}
-Adopted protocols are protocols developed by other organizations. They are 'adopted' into the overall Bluetooth architecture. They are usually standard protocols well known in other applications than Bluetooth. Bluetooth's strategy is to only invent necessary protocols and use existing standard protocols whenever possible. The following standards are the adopted protocols:
+Adopted protocols are protocols developed by other organizations. They are "adopted" into the overall Bluetooth architecture. They are usually standard protocols well known in other applications than Bluetooth. Bluetooth's strategy is to only invent necessary protocols and use existing standard protocols whenever possible. The following standards are the adopted protocols:
 
 	\begin{itemize}
 		\item The \textit{PPP}, or point-to-point protocol is as a internet standard protocol for trasporting IP datagrams over point-to-point links.
@@ -175,38 +175,96 @@ Web sockets are used for fast, real-time communication between a server and a cl
 		\paragraph{Handshake.}
 To communicate over web socket, the server and the client first have to connect with each other. The establishment of a web socket connection is done by a web socket handshake. Handshaking is the exchange of information between two devices and the agreement about which protocol will be used to exchange data after the connection is established. A well known example of this is the TCP three-way-handshake. The client sends a synchronization message (SYN) to the server as a request to synchronize with the server. If the server receives this message and allows the client to synchronize with it, it will send a similar SYN message and an acknowledgement message (ACK) to let the client know that it has received the request. When the client receives the SYN-ACK message, it will send an ACK message back to the server to acknowledge that it has received the server's message. The TCP connection is established whenever the server receives the ACK message from the client.\\
 The web socket handshake is quite similar. The client sends a handshake request to the server, and the server will respond with a similar handshake request as seen in figure \ref{fig:WebSocketHandshaking}. The desktop, smartphone and tablet in figure \ref{fig:WebSocketHandshaking} represent the clients that are connected to the server. The handshake request from the client-side is shown in listing \ref{lst:clientHandshake}, while the response from the server is shown in listing \ref{lst:serverHandshake}.
-\begin{lstlisting}[caption={Client's request for websocket handshake},captionpos=b, label={lst:clientHandshake}, language=c, float=h]
-   GET /chat HTTP/1.1
-   Host: example.com:8000
-   Upgrade: websocket
-   Connection: Upgrade
-   Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
-   Sec-WebSocket-Version: 13
-\end{lstlisting}
-\begin{lstlisting}[caption={Server's response for websocket handshake},captionpos=b, label={lst:serverHandshake}, language=c, float=h]
-   HTTP/1.1 101 Switching Protocols
-   Upgrade: websocket
-   Connection: Upgrade
-   Sec-WebSocket-Accept: HSmrc0sMlYUkAGmm5OPpG2HaGWk=
-   Sec-WebSocket-Protocol: chat
-\end{lstlisting}
-Listing \ref{lst:clientHandshake}, that is send by the client, is a pretty standard HTTP request. It is build with multiple headers, some of which are mandotory for a request to be valid. If one of the headers is not understood, the server will reply with "400 Bad Request" and it will close the socket afterwards \cite{BadRequest}. In some cases, it will also give a reason why handshake failed, although browser do not display these messages. If there is 
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.5]{images/server.pdf}
+		\caption{Web socket handshaking}\label{fig:WebSocketHandshaking}
+	\end{figure}
+	\begin{lstlisting}[caption={Client's request for websocket handshake},captionpos=b, label={lst:clientHandshake}, language=c, float=h]
+  1| GET /chat HTTP/1.1
+  2| Host: example.com:8000
+  3| Upgrade: websocket
+  4| Connection: Upgrade
+  5| Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
+  6| Sec-WebSocket-Version: 13
+	\end{lstlisting}\\
+Listing \ref{lst:clientHandshake}, the handshake request from the client, is a pretty standard HTTP request. It is build with multiple headers, some of which are mandotory for the request to be valid. If one of the headers is not understood, the server will reply with "400 Bad Request" and it will close the socket afterwards. In some cases, it will also give a reason why handshake failed, although browser do not display these messages. If there is a problem with version numbers, the server adds a "Sec-WebSocket-Version" header in the HTTP repsonse that contains the version it understands \cite{BadRequest}.
+	\begin{lstlisting}[caption={Server's response for websocket handshake},captionpos=b, label={lst:serverHandshake}, language=c, float=h]
+  1| HTTP/1.1 101 Switching Protocols
+  2| Upgrade: websocket
+  3| Connection: Upgrade
+  4| Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
+  5|
+	\end{lstlisting}
+When the server receives a request handshake from a client with all the necessary headers, it will reply with a HTTP response as shown in listing \ref{lst:serverHandshake}. The "Sec-WebSocket-Accept" header is derived from the "Sec-WebSocket-Key" header from the client's handshake request. To get it, we combine the "Sec-WebSocket-Key" header and "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" together. The second string is "a magic string". A magic string is predefined by the developer in a way where he will never expect this string to come from an external source. When the "Sec-WebSocket-Key" header and the magic string are combined, the SHA-1 hash is taken from the result, and the base64 encoding of the hash is returned \cite{BadRequest}. The SHA-1 is a cryptographic hash function, while base64 is a binary-to-text encoding scheme.
+
+		\paragraph{Data Frames.}
+The main advantage of websockets is bidi communication. So at any point in time, either the client or the server can send a message. Every data frame that is sent from the client to the server, or vice versa, follows the same format as seen in figure \ref{fig:dataFrame}.
+
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.5]{images/WebSocketDataFrame.pdf}
+		\caption{Standard WebSocket dataframe format}\label{fig:dataFrame}
+	\end{figure}
+
+	\begin{itemize}
+		\item {FIN: 1 bit}
+	\end{itemize}
+Depending on the value of this bit, it either tells the receiving end wether or not this is the final fragment of the message. If the bit equals "0", it's no the last fragment and the receiver will continue listening for more fragments. If the bit equals "1", it means it is the last fragment of the message and the server will consider the message being delivered.
+	\begin{itemize}
+		\item {RSV1, RSV2, RSV3:  1 bit each}
+	\end{itemize}
+All of these bits are reserved for websocket extensions. They should be "0" unless the client and server negotiated on wether or not a specific extension requires the use of any of the three bits. If any of these three bits is not zero while the client didn't negotiate on any of these bits being non-zero, the receiving end will "fail" the websocket connection.
+	\begin{itemize}
+		\item {Opcode:  4 bits}
+	\end{itemize}
+These 4 bits will define how the receiving end should interpret the data. If the receiving end does not understand the opcode it will, as in the previous case, fail" the websocket connection. The information about the the different opcodes is found in \cite{opcode}.
+	\begin{itemize}
+		\item[] {x0: continuation frame; this frame contains data that should be appended to the previous frame}
+		\item[] {x2: binary frame; this frame (and any following) contains binary data}
+		\item[] {x3 - x7: non-control reserved frames; these are reserved for possible}
+		\item[] {x8: close frame; this frame should end the connection}
+		\item[] {x9: ping frame}
+		\item[] {xA: pong frame}
+		\item[] {xB - xF: control reserved frames}
+	\end{itemize}
+	\begin{itemize}
+		\item {Mask bit: 1 bit}
+	\end{itemize}
+This bit tells wether or not the frame uses a mask. If this bit is set to "1", a masking key is included in the message.  This masking key is used to unmask the data in the payload. Every frame that is sent from the client to the server must have this bit set to "1".
+	\begin{itemize}
+		\item {Payload length: 7 bits, 7+16 bits, 7+64bits}
+	\end{itemize}
+The seven bits determine the length of the payload. If these seven bits equal 126, or "1111110", the actual length is determined by bits 16 to 31 (so 16 extra bits). These are the following 2 bytes. If the seven bits equal 127, or "1111111", the actual length is determined by bits 16 to 79 (so 64 extra bits). These are the following 8 bytes.
+
+	\begin{itemize}
+		\item {Masking key: 4 bytes}
+	\end{itemize}
+As mentioned previously, this field only exists if the mask bit is set to one. All the messages who have this field set to one, are masked by a 32-bit value. If the mask bit is set to zero, there will be no masking key in the first place.
+
+	\begin{itemize}
+		\item{Payload data: x+y bytes}
+	\end{itemize}
+The payload data is the combination of the extension data and the application data. These two are listed below.
+
+	\begin{itemize}
+		\item{Extension data: x bytes}
+	\end{itemize}
+The extension data is non-existent unless it was negotiated on the opening handshake between the server and the client. As mentioned earlier, the RSV1-3 bits are responsible for these extensions. 
+	
+	\begin{itemize}
+		\item{Application data: y byes}
+	\end{itemize}
 
 
-
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.35]{images/server.pdf}
-\caption{Web socket handshaking}\label{fig:WebSocketHandshaking}
-\end{figure}
 
 
 	\subsection{Web socket architecture}
 	
-	\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.3]{images/websocketsArchitecture.pdf}
-	\caption{WebSocket architecture}\label{fig:WebSocketArchitecture}
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.3]{images/websocketsArchitecture.pdf}
+		\caption{WebSocket architecture}\label{fig:WebSocketArchitecture}
 	\end{figure}
 	
 

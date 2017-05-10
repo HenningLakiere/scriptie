@@ -53,8 +53,14 @@ Q.~H. Mahmoud. (2003) Wireless application programming with j2me and bluetooth.
 
 \bibitem{BadRequest}
 \BIBentryALTinterwordspacing
-M.~Developers. (2017) Writing websocket servers. [Online]. Available:
+Mozilla. (2017) Writing websocket servers. [Online]. Available:
   \url{https://developer.mozilla.org/en-US/docs/Web/API/WebSockets\_API/Writing\_WebSocket\_servers}
+\BIBentrySTDinterwordspacing
+
+\bibitem{opcode}
+\BIBentryALTinterwordspacing
+J.~Lawson. (2012) Websockets, a guide. [Online]. Available:
+  \url{http://buildnewgames.com/websockets/}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}
