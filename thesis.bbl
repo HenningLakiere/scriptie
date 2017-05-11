@@ -51,6 +51,12 @@ Q.~H. Mahmoud. (2003) Wireless application programming with j2me and bluetooth.
   \url{http://www.oracle.com/technetwork/systems/index-156651.html}
 \BIBentrySTDinterwordspacing
 
+\bibitem{RFC6455}
+\BIBentryALTinterwordspacing
+A.~Melnikov. (2011) The websocket protocol. [Online]. Available:
+  \url{https://tools.ietf.org/html/rfc6455}
+\BIBentrySTDinterwordspacing
+
 \bibitem{BadRequest}
 \BIBentryALTinterwordspacing
 Mozilla. (2017) Writing websocket servers. [Online]. Available:

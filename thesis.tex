@@ -104,6 +104,8 @@ The total program speedup S can be calculated with Amdahl's law by comparing the
 
 
 \section{OpenCL}\label{subsec:OpenCL}
+
+
 	
 \section{Bluetooth}
 Bluetooth is a form of wireless communication and was developed in 1994 by L. M. Ericsson of Sweden. It is a radio frequency (RF) technology using the 2.4GHz industrial, scientific and medical (ISM) band, the same band where you can find ZigBee and WiFi aswell. It can be used to transmit data or voice communication over short-distances. Bluetooth radios can be found in nearly every new smartphone and laptop device. It is easy to use, to setup and it has a lot of applications, for example home heating systems, entertaining devices and so on. Bluetooth is designed to be low cost, for about 10\$ per unit. The down side of this, is the short connection range and the limited transmission speed of around 780 kb/s\cite{bluetoothTech}.\\
@@ -169,7 +171,7 @@ Adopted protocols are protocols developed by other organizations. They are "adop
 
 
 \section{Web sockets}
-Web sockets are used for fast, real-time communication between a server and a client. The HTTP model, which is also a communication protocol between a server and a client, allowed the client only to request data from the server. While the server was only able to fulfill these requests. Web sockets on the other hand, allows bidirectional communication, or bidi communication, between the server and the client. This means both client and server can request data and also respond to these requests. The main point of web sockets is to have true concurrency and to focus on the optimization of performance when it comes to communication and exchanging data.
+Web sockets are used for fast, real-time communication between a server and a client. The HTTP model, which is also a communication protocol between a server and a client, allowed the client only to request data from the server, while the server was only able to fulfill these requests. Web sockets on the other hand, allows bidirectional communication, or bidi communication, between the server and the client. This means both client and server can request data and also respond to these requests. The main point of web sockets is to have true concurrency and to focus on the optimization of performance when it comes to communication and exchanging data. The web socket protocol that will be discussed is also known as the RFC6455 model \cite{RFC6455}.
 
 	\subsection{Web socket communication}
 		\paragraph{Handshake.}
@@ -198,6 +200,14 @@ Listing \ref{lst:clientHandshake}, the handshake request from the client, is a p
 	\end{lstlisting}
 When the server receives a request handshake from a client with all the necessary headers, it will reply with a HTTP response as shown in listing \ref{lst:serverHandshake}. The "Sec-WebSocket-Accept" header is derived from the "Sec-WebSocket-Key" header from the client's handshake request. To get it, we combine the "Sec-WebSocket-Key" header and "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" together. The second string is "a magic string". A magic string is predefined by the developer in a way where he will never expect this string to come from an external source. When the "Sec-WebSocket-Key" header and the magic string are combined, the SHA-1 hash is taken from the result, and the base64 encoding of the hash is returned \cite{BadRequest}. The SHA-1 is a cryptographic hash function, while base64 is a binary-to-text encoding scheme.
 
+		\paragraph{WebSocket URI's}
+WebSocket defines two URI schemes. You can either use ws or the wss scheme. The ws (web socket) is a regular connection similar to http. While wss (web socket secure) is a secured connection similar to https. The schemes are build like the following:\\
+
+\indent	ws-URI = "ws:" "//" host [ ":" port ] path [ "?" query ]\\
+\indent	wss-URI = "wss:" "//" host [ ":" port ] path [ "?" query ]\\
+
+The most important components of the ws or wss are the host and its port. the host is determined by the servers ip address. While the port defines which port the server uses for the communication. If there is no specified port, the standard port for ws is 80, and the standard port for wss is 443
+		
 		\paragraph{Data Frames.}
 The main advantage of websockets is bidi communication. So at any point in time, either the client or the server can send a message. Every data frame that is sent from the client to the server, or vice versa, follows the same format as seen in figure \ref{fig:dataFrame}.
 
@@ -250,22 +260,29 @@ The payload data is the combination of the extension data and the application da
 	\begin{itemize}
 		\item{Extension data: x bytes}
 	\end{itemize}
-The extension data is non-existent unless it was negotiated on the opening handshake between the server and the client. As mentioned earlier, the RSV1-3 bits are responsible for these extensions. 
+The extension data is non-existent unless it was negotiated on the opening handshake between the server and the client. As mentioned earlier, the RSV1-3 bits are responsible for these extensions. Any extension that has been negotiated by the client and server must have a specified length of the "Extension data". It can also tell the receiving end on how to calculate this length. As said previously, th extension is part of the total payload data.
 	
 	\begin{itemize}
-		\item{Application data: y byes}
+		\item{Application data: y bytes}
 	\end{itemize}
+The application data contains the actual data that has be to transmitted. It takes up the remaining space in the frame after any extension data. The application data is, like the extension data, part of the payload data.
 
+	\paragraph{Sending and receiving data.}
+In order to send a message as a client, the server must perform the following steps:
 
+	\begin{enumerate}
+		\item The receiving end has to make sure the websocket is in an open state. 
+		\item hi
+	\end{enumerate}
+		
 
-
-	\subsection{Web socket architecture}
+	%*\subsection{Web socket architecture}
 	
-	\begin{figure}[ht]
-		\centering
-		\includegraphics[scale=0.3]{images/websocketsArchitecture.pdf}
-		\caption{WebSocket architecture}\label{fig:WebSocketArchitecture}
-	\end{figure}
+	%\begin{figure}[ht]
+	%	\centering
+	%	\includegraphics[scale=0.3]{images/websocketsArchitecture.pdf}
+	%	\caption{WebSocket architecture}\label{fig:WebSocketArchitecture}
+	%\end{figure}
 	
 
 \bibliographystyle{IEEEtran}

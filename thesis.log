@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.24)  10 MAY 2017 13:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.24)  11 MAY 2017 03:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -281,37 +281,34 @@ Overfull \hbox (1.35376pt too wide) in paragraph at lines 196--197
 [][][][][][][][][][][][][][][][] 
  []
 
-[9]
+[9] [10 <./images/server.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+ []
 
-[10 <./images/server.pdf>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--206
+
+ []
+
 <images/WebSocketDataFrame.pdf, id=120, 542.025pt x 279.0425pt>
 File: images/WebSocketDataFrame.pdf Graphic file (type pdf)
 
 <use images/WebSocketDataFrame.pdf>
-Package pdftex.def Info: images/WebSocketDataFrame.pdf used on input line 206.
+Package pdftex.def Info: images/WebSocketDataFrame.pdf used on input line 214.
 (pdftex.def)             Requested size: 271.01183pt x 139.5209pt.
- [11 <./images/WebSocketDataFrame.pdf>]
-[12] <images/websocketsArchitecture.pdf, id=131, 783.92876pt x 627.34375pt>
-File: images/websocketsArchitecture.pdf Graphic file (type pdf)
-
-<use images/websocketsArchitecture.pdf>
-Package pdftex.def Info: images/websocketsArchitecture.pdf used on input line 2
-56.
-(pdftex.def)             Requested size: 235.18044pt x 188.20457pt.
- (./thesis.bbl [13 <./images/websocketsArchitecture.pdf>]
+ [11] [12 <./images/WebSocketDataFrame.pdf>] (./thesis.bbl [13]
 Underfull \hbox (badness 1132) in paragraph at lines 49--53
 \OT1/cmr/m/n/10.95 ming with j2me and blue-tooth. [On-line]. Avail-able:
  []
 
 
-Underfull \hbox (badness 3138) in paragraph at lines 56--59
+Underfull \hbox (badness 3138) in paragraph at lines 62--65
 []\OT1/cmr/m/n/10.95 Mozilla. (2017) Writ-ing web-socket servers. [On-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--59
+Underfull \hbox (badness 10000) in paragraph at lines 62--65
 \OT1/cmr/m/n/10.95 line]. Avail-able: https://developer.mozilla.org/en-
  []
 
@@ -319,10 +316,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--59
 
 ] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 4091 strings out of 493013
- 63737 string characters out of 6135682
- 149657 words of memory out of 5000000
- 7599 multiletter control sequences out of 15000+600000
+ 4086 strings out of 493013
+ 63542 string characters out of 6135682
+ 150722 words of memory out of 5000000
+ 7595 multiletter control sequences out of 15000+600000
  8849 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,8n,51p,1145b,1084s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -332,10 +329,10 @@ Here is how much of TeX's memory you used:
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on thesis.pdf (14 pages, 360660 bytes).
+Output written on thesis.pdf (14 pages, 313498 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
- 102 compressed objects within 2 object streams
+ 159 PDF objects out of 1000 (max. 8388607)
+ 99 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
