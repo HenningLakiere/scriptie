@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.24)  11 MAY 2017 03:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.24)  12 MAY 2017 07:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -244,31 +244,34 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 85.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 85.
- [3]
-Underfull \hbox (badness 10000) in paragraph at lines 109--110
+ [3] [4 <./images/sisd.pdf> <./images/simd.pdf> <./images/misd.pdf> <./images/m
+imd.pdf>]
+Missing character: There is no â in font cmbx12!
+Missing character: There is no € in font cmbx12!
+Missing character: There is no ¢ in font cmbx12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
 
  []
 
-[4 <./images/sisd.pdf> <./images/simd.pdf> <./images/misd.pdf> <./images/mimd.p
-df>] [5] <images/scatternet.pdf, id=86, 408.52625pt x 290.08376pt>
+[5] <images/scatternet.pdf, id=86, 408.52625pt x 290.08376pt>
 File: images/scatternet.pdf Graphic file (type pdf)
 
 <use images/scatternet.pdf>
-Package pdftex.def Info: images/scatternet.pdf used on input line 126.
+Package pdftex.def Info: images/scatternet.pdf used on input line 133.
 (pdftex.def)             Requested size: 245.11765pt x 174.05159pt.
-
-<images/bluetoothStack.pdf, id=87, 384.43625pt x 383.4325pt>
+ [6 <./images/scatternet.pdf>]
+<images/bluetoothStack.pdf, id=94, 384.43625pt x 383.4325pt>
 File: images/bluetoothStack.pdf Graphic file (type pdf)
 
 <use images/bluetoothStack.pdf>
-Package pdftex.def Info: images/bluetoothStack.pdf used on input line 136.
+Package pdftex.def Info: images/bluetoothStack.pdf used on input line 143.
 (pdftex.def)             Requested size: 192.21765pt x 191.71577pt.
- [6 <./images/scatternet.pdf>] [7 <./images/bluetoothStack.pdf>] [8] <images/se
-rver.pdf, id=109, 398.99063pt x 415.5525pt>
+ [7 <./images/bluetoothStack.pdf>] [8]
+<images/server.pdf, id=109, 398.99063pt x 415.5525pt>
 File: images/server.pdf Graphic file (type pdf)
-
-<use images/server.pdf>
-Package pdftex.def Info: images/server.pdf used on input line 180.
+ <use images/server.pdf>
+Package pdftex.def Info: images/server.pdf used on input line 186.
 (pdftex.def)             Requested size: 199.49483pt x 207.77574pt.
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -277,49 +280,49 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
-Overfull \hbox (1.35376pt too wide) in paragraph at lines 196--197
+Overfull \hbox (1.35376pt too wide) in paragraph at lines 202--203
 [][][][][][][][][][][][][][][][] 
  []
 
-[9] [10 <./images/server.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
+[9]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[10 <./images/server.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 208--209
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--206
+Underfull \hbox (badness 10000) in paragraph at lines 210--212
 
  []
 
-<images/WebSocketDataFrame.pdf, id=120, 542.025pt x 279.0425pt>
+[11] <images/WebSocketDataFrame.pdf, id=123, 542.025pt x 279.0425pt>
 File: images/WebSocketDataFrame.pdf Graphic file (type pdf)
 
 <use images/WebSocketDataFrame.pdf>
-Package pdftex.def Info: images/WebSocketDataFrame.pdf used on input line 214.
+Package pdftex.def Info: images/WebSocketDataFrame.pdf used on input line 220.
 (pdftex.def)             Requested size: 271.01183pt x 139.5209pt.
- [11] [12 <./images/WebSocketDataFrame.pdf>] (./thesis.bbl [13]
-Underfull \hbox (badness 1132) in paragraph at lines 49--53
-\OT1/cmr/m/n/10.95 ming with j2me and blue-tooth. [On-line]. Avail-able:
- []
-
-
-Underfull \hbox (badness 3138) in paragraph at lines 62--65
+ [12 <./images/WebSocketDataFrame.pdf>]
+[13] (./thesis.bbl [14]
+Underfull \hbox (badness 2707) in paragraph at lines 67--70
 []\OT1/cmr/m/n/10.95 Mozilla. (2017) Writ-ing web-socket servers. [On-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--65
+Underfull \hbox (badness 10000) in paragraph at lines 67--70
 \OT1/cmr/m/n/10.95 line]. Avail-able: https://developer.mozilla.org/en-
  []
 
-) [14
+) [15
 
 ] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 4086 strings out of 493013
- 63542 string characters out of 6135682
- 150722 words of memory out of 5000000
- 7595 multiletter control sequences out of 15000+600000
+ 4087 strings out of 493013
+ 63559 string characters out of 6135682
+ 152333 words of memory out of 5000000
+ 7596 multiletter control sequences out of 15000+600000
  8849 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,8n,51p,1145b,1084s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -329,10 +332,10 @@ Here is how much of TeX's memory you used:
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on thesis.pdf (14 pages, 313498 bytes).
+Output written on thesis.pdf (15 pages, 314915 bytes).
 PDF statistics:
- 159 PDF objects out of 1000 (max. 8388607)
- 99 compressed objects within 1 object stream
+ 163 PDF objects out of 1000 (max. 8388607)
+ 101 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

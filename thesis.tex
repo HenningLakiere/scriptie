@@ -6,7 +6,7 @@
 
 \section{parallel computing}
 	\subsection{What is parallel computing}
-The problem when facing large calculations is that they require a lot of computing power and time. Performing these calculations can be done in different types of computation but the most common ones are serial and parallel computation. Serial computing means, you have one compute unit (e.g. a single core CPU) available to deal with all the calculations that have to be done on a certain set of data. The problem will be broken into multiple smaller subproblems that will be solved by a certain instruction. The single compute unit has to perform the instruction on every subproblem to solve the main problem as shown in figure \ref{fig:SerialC}.
+The problem when facing large calculations is that they require a lot of computing power and thus time. Performing these calculations can be done with 2 types of computation, serial and parallel computing. Serial computing means, you have one compute unit (e.g. a single core CPU) available that performs all instructions on a certain set of data. This set of data will be broken into multiple smaller subparts that will be solved by a certain instruction. The single compute unit performs the instruction on every subpart in order to solve the whole part as shown in figure \ref{fig:SerialC}.
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[scale=.4]{images/serialProblem.pdf}
@@ -14,19 +14,19 @@ The problem when facing large calculations is that they require a lot of computi
 		\label{fig:SerialC}
 	\end{figure}
 
-Parallel computing, on the other hand, is the simultaneous use of multiple compute units (CPU+GPU), or a compute resource, to solve a computational problem. We break apart the main problem in smaller subproblems as we did with serial computing. Each part is further broken down to a series of instructions again.Now, since there are multiple compute units, we can distribute the subproblems among all these compute units. Every unit can now perform the instruction on their given subproblems simultaneously as shown in figure \ref{fig:ParallelC}. One compute resource can constist of multiple compute units, for example it can include multiple processors or it is just a number of computers connected by a network.
+Parallel computing, on the other hand, is the simultaneous use of multiple compute units, or a compute resource, to solve a computational problem. This compute recourse can be a CPU with multiple cores, a combination of a CPU with different compute accelorators such as a GPU or even a whole network of computers and servers. We break apart the main problem in smaller subproblems as we did with serial computing. Now, since there are multiple compute units, we can distribute the subproblems among all these compute units. Every unit can now perform an instruction on their given subproblem simultaneously as shown in figure \ref{fig:ParallelC}.
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[scale=.4]{images/parallelProblem.pdf}
 		\caption{Workflow parallel computing}
 		\label{fig:ParallelC}
 	\end{figure}
-With multiple compute units for one task, we will shorten the completion time aswell have potential cost savings. It also allows us to solve larger/complex problems since a single computer could suffer from limited memory. And last, we are able to access non-local resources in a network that would not be accessable from a local computer.
+With multiple compute units executing one task, we will shorten the completion time and even have a potential cost saving. It also allows us to solve larger/complex problems since a single computer could suffer from limited memory. And last, we are able to access non-local resources in a network that would not be accessable from a local computer.
 
-It is easy to conclude that the concept of parallel computing was to have a more efficient way to handle with large sets of data such as images or simulations that involve multiple parameters. It is also easier to handle with complex data for example in algorithms \cite{barney2012parallel}.
+It is easy to conclude that the concept of parallel computing was to have a more efficient way to handle with large sets of data such as huge databases, images or simulations that involve multiple parameters. It is also easier to handle with complex data for example in algorithms \cite{barney2012parallel}.
 
 	\subsection{Classification of parallel computing}
-Parallel computing systems can be seperated into different classes. According to Flynn's taxonomy, we can roughly place any of these systems in one of the four classes he defined. This classification was first studied and proposed by Michael Flynn in 1972 \cite{Unit2COPC}. The classifications are determined by two factors: instruction stream and data stream which both have two possible states being single or multiple. Figure \ref{fig:flynnTaxonomy} represents a matrix of the four possible classes from the Flynn's taxonomy \cite{barney2012parallel}.
+Parallel computing systems can be seperated into different classes. According to Flynn's taxonomy, we can roughly place any of these systems in one of the four classes he defined. This classification was first studied and proposed by Michael Flynn in 1972 \cite{Unit2COPC}. The classifications are determined by two factors: instruction stream and data stream which both have two possible states being single or multiple. Figure \ref{fig:flynnTaxonomy} represents a the four possible classes from the Flynn's taxonomy \cite{barney2012parallel}.
 
 	\begin{figure}[ht]
 		\centering
@@ -38,12 +38,12 @@ Parallel computing systems can be seperated into different classes. According to
 	\begin{itemize}
 		\item SISD
 	\end{itemize}
-The SISD class will have a single processor executing a single data stream to operate on data stored in a single memory (figure \ref{fig:sisd}). This means that a parallel compute system cannot be classified as an SISD sytem, but Flynn's taxonomy wasn't made for just classifying parallel compute systems. It is usually old computers and other older compute units that can be classified as SISD.
+The SISD class will have a single core processor executing a single data stream to operate on data stored in a single memory (figure \ref{fig:sisd}). This means that a parallel compute system cannot be classified as an SISD sytem, but Flynn's taxonomy wasn't made for just classifying parallel compute systems. It is usually old computers and other older compute units that can be classified as SISD.
 	
 	\begin{itemize}
 		\item SIMD
 	\end{itemize}
-Data is disctributed amongst multiple processors who all execute the same instruction (figure \ref{fig:simd}). Since we have access to multiple compute units, parallel computing can be categorized in this class. Furthermore, this is the class where we can categorize our subject of the thesis in since we have a large set of data divided over multiple data streams (MD) and only one instruction stream (SI) since all processing units will perform the same instruction on the data. The SIMD class contains most modern computers, particularly those with a graphics processor unit (GPU).
+Data is distributed amongst multiple processors who all execute the same instruction on this data (figure \ref{fig:simd}). Since we have access to multiple compute units, parallel computing can be categorized in this class. Furthermore, this is the class where we can categorize our subject of the thesis in since we have a large set of data divided over multiple data streams (MD) and only one instruction stream (SI) since all processing units will perform the same instruction on the data. The SIMD class contains the most modern computers, particularly those with a graphics processor unit (GPU).
 
 	\begin{itemize}
 		\item MISD
@@ -81,7 +81,7 @@ This time every processing unit is able to execute a different instruction strea
 \end{figure}
 
 	\subsection{Amdahl's law}
-Amdahl's Law can be used to theoretically calculate how much a computation can be sped up by running part of it in parallel, versus using only one serial processor \cite{amdahlslaw}. A program can be split up in two parts, a part that cannot be parallelized (A) and a part that can be parallelized (B). The speedup factor S for both parts can be calculated by dividing the execution time for serial computation T(1) by the execution time for parallel computation T(j), with j the amount of processing units.
+Amdahl's Law can be used to theoretically calculate how much a computation can be speed up by running part of it in parallel, versus using only one serial processor \cite{amdahlslaw}. A program can be split up in two parts, a part that cannot be parallelized (A) and a part that can be parallelized (B). The speedup factor S for both parts can be calculated by dividing the execution time for serial computation T(1) by the execution time for parallel computation T(j), with j the amount of processing units.
 \begin{equation}
 	S = \frac{T(1)}{T(j)}
 \end{equation}
@@ -104,14 +104,19 @@ The total program speedup S can be calculated with Amdahl's law by comparing the
 
 
 \section{OpenCL}\label{subsec:OpenCL}
+Companies worldwide constantly strive to improve computational performance. They start using GPUs and other compute accelerators that behave as a coprocessor to process parallel workload. In order for these heterogeneous architectures to function properly, we need software that supports heterogeneous computing on hardware platforms from different vendors. To make this possible, developers use toolkits such as Threading Building Blocks (TBB), OpenMP, Compute Unified Device Architecture (CUDA), and others \cite{stone2010opencl}.
+	\subsection{OpenCL history}
 
+	\subsection{OpenCL C language}
+	
+	\subsection{•}
 
 	
 \section{Bluetooth}
-Bluetooth is a form of wireless communication and was developed in 1994 by L. M. Ericsson of Sweden. It is a radio frequency (RF) technology using the 2.4GHz industrial, scientific and medical (ISM) band, the same band where you can find ZigBee and WiFi aswell. It can be used to transmit data or voice communication over short-distances. Bluetooth radios can be found in nearly every new smartphone and laptop device. It is easy to use, to setup and it has a lot of applications, for example home heating systems, entertaining devices and so on. Bluetooth is designed to be low cost, for about 10\$ per unit. The down side of this, is the short connection range and the limited transmission speed of around 780 kb/s\cite{bluetoothTech}.\\
+Bluetooth is a form of wireless communication that was developed in 1994 by L. M. Ericsson of Sweden. It is a radio frequency (RF) technology using the 2.4GHz industrial, scientific and medical (ISM) band, the same band where you can find ZigBee and WiFi aswell. It can be used to transmit data or voice communication over short-distances. Bluetooth radios can be found in nearly every new smartphone and laptop device. It is easy to use, to setup and it has a lot of applications, for example home heating systems, entertaining devices and so on. Bluetooth is designed to be low cost, for about 10\$ per unit. The down side of this, is the short connection range and the limited transmission speed of around 780 kb/s\cite{bluetoothTech}.\\
 
 	\subsection{Bluetooth benefits}
-The introduction of Bluetooth allowed for many new appliacations in several areas. Even today it is still widely used, mostly for multimedia devices, smartwatches, keyboards, mices, printers. The following list explains some benefits for three general areas for Bluetooth:
+The introduction of Bluetooth allowed for many new appliacations in several areas. Even today it is still widely used, mostly for multimedia devices, smartwatches, keyboards, mices, printers. The following list explains some benefits for three general areas:
 		\paragraph{Data and voice acces points.}
 Bluetooth allows a wireless connection between devices through which they can communicate. With Bluetooth, the devices are able to trasmit voice and data packages in real-time.
 		\paragraph{Cable replacement.}
@@ -139,13 +144,12 @@ The Bluetooth protocol architecture consists of four basic layers: core protocol
 		\caption{Bluetooth protocol stack}\label{fig:bluetoothStack}
 	\end{figure}
 
-
 		\paragraph{Core protocols.}
 The core protocol is a five-layer stack. Every layer in the stack has its own responibilites that are mentioned below.
 
 		\begin{itemize}
 			\item The \textit{radio} layer is the wireless connection that specifies certain details about the air interface, including frequency, the use of frequency hopping, modulation scheme and transmit power. 
-			\item The \textit{baseband} layer is responsible for the packet transmission to the radio layer. As mentioned before these packet can contain data or voice. For the data packages, asynchronous connectionless (ACL) links are used while voice packages are transmitted with synchronous connection-oriented (SCO) links. The baseband layer maintains both ACL and SCO links. It is important for data packages to be transmitted correctly to maintain data integrity, while it is not a problem in case some voice packages get lost. That is why SCO packages are never retransmitted. If you would retransmit voice packages, every next package would suffer from a time delay restraining us from having real-time communication.
+			\item The \textit{baseband} layer is responsible for the packet transmission to the radio layer. As mentioned before this data can contain data or voice packages. For the data packages, asynchronous connectionless (ACL) links are used while voice packages are transmitted with synchronous connection-oriented (SCO) links. The baseband layer maintains both ACL and SCO links. It is important for data packages to be transmitted correctly to maintain data integrity, while it is not a problem in case some voice packages get lost. That is why SCO packages are never retransmitted. If you would retransmit voice packages, every next package would suffer from a time delay restraining us from having real-time communication.
 			\item The \textit{Link manager protocol (LMP)} uses the links setup by the baseband and manages the connection between Bluetooth devices. Furthermore, it is responsible for monitoring service quality, security aspects such as device authentication, encryption plus the control and negotiation of baseband packet sizes.
 			\item The \textit{Host controller interface (HCI)} is the layer between the hardware and the software. The L2CAP layer and the layers above it are implented in the software while all other layers under the HCI (LMP, baseband, radio) are part of the hardware. the HCI driver acts as a physical bus that connects the hardware with software. It is possible to access the L2CAP layer directly by the application making it easier for application programmers. This makes the HCI, in some cases, an unnecessary component.
 			\item The \textit{Logical link control and adaptation protocol (L2CAP)} receives application data and transforms this to the Bluetooth format. Furthermore, Quality of Service (QoS) parameters are exchanged at this layer \cite{bluetoothStack}.
@@ -160,10 +164,10 @@ EIA-232, once known as RS-232, is a widely used serial port interface standard. 
 Telephony control specifications (binary) or TCS BIN, is a bit-oriented protocol that is necessary to define the call control services in order to establish speech or data calls between the Bluetooth devices.
 
 		\paragraph{Adopted protocols.}
-Adopted protocols are protocols developed by other organizations. They are "adopted" into the overall Bluetooth architecture. They are usually standard protocols well known in other applications than Bluetooth. Bluetooth's strategy is to only invent necessary protocols and use existing standard protocols whenever possible. The following standards are the adopted protocols:
+Adopted protocols are protocols developed by other organizations. They are "adopted" into the overall Bluetooth architecture. They are usually standard protocols well known in applications other than Bluetooth. Bluetooth's strategy is to only invent necessary protocols and use existing standard protocols whenever possible. The following standards are the adopted protocols:
 
 	\begin{itemize}
-		\item The \textit{PPP}, or point-to-point protocol is as a internet standard protocol for trasporting IP datagrams over point-to-point links.
+		\item The \textit{PPP}, or point-to-point protocol is as a internet standard protocol for transporting IP datagrams over point-to-point links.
 		\item \textit{TCP/UDP/IP}, are the foundation protocols of the TCP/IP protocol suite.
 		\item \textit{The object exchange protocol}, or OBEX, is a session level protocol made by the Infrared Data Association (IrDA). It is used for exchaning objects. OBEX comes with quite similar funcionalities as HTTP, but in a simpler way. There is also a model included in OBEX that is used for the representation of objects and operations.
 		\item Bluetooth also adopts the wireless application environment \textit{WAE} and the wireless application protocol \textit{WAP} into its architecture.	
@@ -190,7 +194,7 @@ The web socket handshake is quite similar. The client sends a handshake request 
   5| Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
   6| Sec-WebSocket-Version: 13
 	\end{lstlisting}\\
-Listing \ref{lst:clientHandshake}, the handshake request from the client, is a pretty standard HTTP request. It is build with multiple headers, some of which are mandotory for the request to be valid. If one of the headers is not understood, the server will reply with "400 Bad Request" and it will close the socket afterwards. In some cases, it will also give a reason why handshake failed, although browser do not display these messages. If there is a problem with version numbers, the server adds a "Sec-WebSocket-Version" header in the HTTP repsonse that contains the version it understands \cite{BadRequest}.
+Listing \ref{lst:clientHandshake}, the handshake request from the client, is a pretty standard HTTP request. It is build with multiple headers, some of which are mandotory for the request to be valid. If one of the headers is not understood, the server will reply with "400 Bad Request" and it will close the socket afterwards. In some cases, it will also give a reason why the handshake failed, although browsers do not display these messages. If there is a problem with version numbers, the server adds a "Sec-WebSocket-Version" header in the HTTP response that contains the version it understands \cite{BadRequest}.
 	\begin{lstlisting}[caption={Server's response for websocket handshake},captionpos=b, label={lst:serverHandshake}, language=c, float=h]
   1| HTTP/1.1 101 Switching Protocols
   2| Upgrade: websocket
@@ -206,7 +210,7 @@ WebSocket defines two URI schemes. You can either use ws or the wss scheme. The 
 \indent	ws-URI = "ws:" "//" host [ ":" port ] path [ "?" query ]\\
 \indent	wss-URI = "wss:" "//" host [ ":" port ] path [ "?" query ]\\
 
-The most important components of the ws or wss are the host and its port. the host is determined by the servers ip address. While the port defines which port the server uses for the communication. If there is no specified port, the standard port for ws is 80, and the standard port for wss is 443
+The most important components of the ws or wss are the host and its port. The host is determined by the servers IP address. While the port defines which port the server uses for the communication. If there is no specified port, the standard port used for ws is 80, and the standard port used for wss is 443.
 		
 		\paragraph{Data Frames.}
 The main advantage of websockets is bidi communication. So at any point in time, either the client or the server can send a message. Every data frame that is sent from the client to the server, or vice versa, follows the same format as seen in figure \ref{fig:dataFrame}.
@@ -220,7 +224,7 @@ The main advantage of websockets is bidi communication. So at any point in time,
 	\begin{itemize}
 		\item {FIN: 1 bit}
 	\end{itemize}
-Depending on the value of this bit, it either tells the receiving end wether or not this is the final fragment of the message. If the bit equals "0", it's no the last fragment and the receiver will continue listening for more fragments. If the bit equals "1", it means it is the last fragment of the message and the server will consider the message being delivered.
+Depending on the value of this bit, it either tells the receiving end wether or not this is the final fragment of the message. If the bit equals "0", it is not the last fragment and the receiver will continue listening for more fragments. If the bit equals "1", it means it is the last fragment of the message and the server will consider the message being delivered.
 	\begin{itemize}
 		\item {RSV1, RSV2, RSV3:  1 bit each}
 	\end{itemize}
@@ -228,7 +232,7 @@ All of these bits are reserved for websocket extensions. They should be "0" unle
 	\begin{itemize}
 		\item {Opcode:  4 bits}
 	\end{itemize}
-These 4 bits will define how the receiving end should interpret the data. If the receiving end does not understand the opcode it will, as in the previous case, fail" the websocket connection. The information about the the different opcodes is found in \cite{opcode}.
+These 4 bits will define how the receiving end should interpret the data. If the receiving end does not understand the opcode it will, as in the previous case, "fail" the websocket connection. The information about the the different opcodes is found at \cite{opcode}.
 	\begin{itemize}
 		\item[] {x0: continuation frame; this frame contains data that should be appended to the previous frame}
 		\item[] {x2: binary frame; this frame (and any following) contains binary data}
@@ -272,7 +276,7 @@ In order to send a message as a client, the server must perform the following st
 
 	\begin{enumerate}
 		\item The receiving end has to make sure the websocket is in an open state. 
-		\item hi
+		\item last part of web socket that i have to finish......
 	\end{enumerate}
 		
 
