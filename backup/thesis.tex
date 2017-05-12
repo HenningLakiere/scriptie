@@ -209,7 +209,7 @@ When the server receives a request handshake from a client with all the necessar
 		\paragraph{WebSocket URI's}
 WebSocket defines two URI schemes. You can either use ws or the wss scheme. The ws (web socket) is a regular connection similar to http. While wss (web socket secure) is a secured connection similar to https. The schemes are built like the following:\\
 
-\indent	ws-URI  = "ws:" "//" host [ ":" port ] path [ "?" query ]\\
+\indent	ws-URI = "ws:" "//" host [ ":" port ] path [ "?" query ]\\
 \indent	wss-URI = "wss:" "//" host [ ":" port ] path [ "?" query ]\\
 
 The most important components of the ws or wss are the host and its port. The host is determined by the server's IP address, while the port defines which port the server uses for the communication. If there is no specified port, the standard port used for ws is 80, and the standard port used for wss is 443.
@@ -295,17 +295,9 @@ In order to send a message as a client, the server must perform the following st
 If we want to communicate between the devices, we have to define a set of rules that each one of the devices have to follow. These rules should be made in a way that 100\% of the transmitted data will arrive at the receiving end. For example, if data gets lost through transmission, the device on the receiving end will not receive all the necessary data. This can be prevented by adding some sort of characters that will define what the received message should look like. If the received message looks incorrect, the receiving device has to respond by asking to resend this piece of data. We are trying out two different communication technologies so we have to set up a communication protocol for each one of them since they both have different performance aspects.
 
 	\subsection{Bluetooth protocol}
-To define a set of rules we first analyzed how good the Bluetooth transmission is. We did some testing and came to the conclusion that there was quite a lot of data loss. We first tried sending eight characters at once but nearly 80\% of the time there was atleast one of the characters missing. Missing one number would mean that the matrix we need is incorrect and this would lead to an incorrect outcome. We did some further testing and realized it was the best option to send four numbers at a time. With this we can set up our first rule. The first rule being, we let both devices know that they should always send four numbers at once. Both devices also know they should receive four numbers. If this is not the case we have to resend the message.
-In order to make sure all characters would arrive at the receiving end, we added an extra character ':' at the end of each message. This character lets the receiving end know that it is the end of a message. If we would not define the end of a message and a number would be missing, the receiving end would wait for the next number to come through. The problem is that the next number would be part of the next message causing the all numbers to be messed up with each other. An example of a message would look like this: 4372: .
-Now for the communication, we start off by connecting both devices with Bluetooth. As soon as the devices are connected with each other, the SoC will send message "C" to the Android phone notifying it is ready to receive the two matrices. As soon as the phone receives message "C", it will start sending the first number or in some cases a part of the number. In case the message is received correctly, the SoC sends the message "O" to let the phone know the message was received. Figure \ref{fig:correctMessage} shows an example of how a correct message should look like.
-
-\begin{figure}[ht]
-\centering
-\includegraphics[scale=0.8]{images/CorrectMsg.pdf}
-\caption{Correct message transfer}\label{fig:correctMessage}
-\end{figure}
-
-
+To define a set of rules we first analyzed how good the Bluetooth transmission is. We did some testing and came to the conclusion that there was quite a lot of data loss. We first tried sending eight characters at once but nearly 80\% of the time there was atleast one of the characters missing. Missing one number would mean that the matrix we need is incorrect and this would lead to an incorrect outcome. We did some further testing and realized it was the best option to send four numbers at a time.
+In order to make sure all characters would arrive at the receiving end, we added an extra character ':' at the end of each message. An example of a message would look like this: 4372: .
+Now for the communication, we start off by connecting both devices with Bluetooth. As soon as the devices are connected to each other, the SoC will send a message to the Android phone that it is ready to receive the two matrices. This is message 'C' in figure bla
 
 
 

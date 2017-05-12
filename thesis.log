@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.24)  12 MAY 2017 07:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.24)  12 MAY 2017 16:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -250,7 +250,7 @@ Missing character: There is no â in font cmbx12!
 Missing character: There is no € in font cmbx12!
 Missing character: There is no ¢ in font cmbx12!
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
  []
 
@@ -258,20 +258,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 116--117
 File: images/scatternet.pdf Graphic file (type pdf)
 
 <use images/scatternet.pdf>
-Package pdftex.def Info: images/scatternet.pdf used on input line 133.
+Package pdftex.def Info: images/scatternet.pdf used on input line 135.
 (pdftex.def)             Requested size: 245.11765pt x 174.05159pt.
  [6 <./images/scatternet.pdf>]
 <images/bluetoothStack.pdf, id=94, 384.43625pt x 383.4325pt>
 File: images/bluetoothStack.pdf Graphic file (type pdf)
 
 <use images/bluetoothStack.pdf>
-Package pdftex.def Info: images/bluetoothStack.pdf used on input line 143.
+Package pdftex.def Info: images/bluetoothStack.pdf used on input line 145.
 (pdftex.def)             Requested size: 192.21765pt x 191.71577pt.
  [7 <./images/bluetoothStack.pdf>] [8]
 <images/server.pdf, id=109, 398.99063pt x 415.5525pt>
 File: images/server.pdf Graphic file (type pdf)
  <use images/server.pdf>
-Package pdftex.def Info: images/server.pdf used on input line 186.
+Package pdftex.def Info: images/server.pdf used on input line 188.
 (pdftex.def)             Requested size: 199.49483pt x 207.77574pt.
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -280,7 +280,7 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
-Overfull \hbox (1.35376pt too wide) in paragraph at lines 202--203
+Overfull \hbox (1.35376pt too wide) in paragraph at lines 204--205
 [][][][][][][][][][][][][][][][] 
  []
 
@@ -289,12 +289,12 @@ Overfull \hbox (1.35376pt too wide) in paragraph at lines 202--203
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [10 <./images/server.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 208--209
+Underfull \hbox (badness 10000) in paragraph at lines 210--211
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 210--212
+Underfull \hbox (badness 10000) in paragraph at lines 212--214
 
  []
 
@@ -302,10 +302,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 210--212
 File: images/WebSocketDataFrame.pdf Graphic file (type pdf)
 
 <use images/WebSocketDataFrame.pdf>
-Package pdftex.def Info: images/WebSocketDataFrame.pdf used on input line 220.
+Package pdftex.def Info: images/WebSocketDataFrame.pdf used on input line 222.
 (pdftex.def)             Requested size: 271.01183pt x 139.5209pt.
  [12 <./images/WebSocketDataFrame.pdf>]
-[13] (./thesis.bbl [14]
+[13] [14] <images/CorrectMsg.pdf, id=138, 359.57338pt x 148.16554pt>
+File: images/CorrectMsg.pdf Graphic file (type pdf)
+
+<use images/CorrectMsg.pdf>
+Package pdftex.def Info: images/CorrectMsg.pdf used on input line 304.
+(pdftex.def)             Requested size: 287.65909pt x 118.5326pt.
+ (./thesis.bbl [15 <./images/CorrectMsg.pdf>]
 Underfull \hbox (badness 2707) in paragraph at lines 67--70
 []\OT1/cmr/m/n/10.95 Mozilla. (2017) Writ-ing web-socket servers. [On-
  []
@@ -315,27 +321,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--70
 \OT1/cmr/m/n/10.95 line]. Avail-able: https://developer.mozilla.org/en-
  []
 
-) [15
+) [16
 
 ] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 4087 strings out of 493013
- 63559 string characters out of 6135682
- 152333 words of memory out of 5000000
- 7596 multiletter control sequences out of 15000+600000
+ 4093 strings out of 493013
+ 63696 string characters out of 6135682
+ 152502 words of memory out of 5000000
+ 7601 multiletter control sequences out of 15000+600000
  8849 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,8n,51p,1145b,1084s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,8n,51p,1147b,1084s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
 2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on thesis.pdf (15 pages, 314915 bytes).
+Output written on thesis.pdf (16 pages, 326029 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 101 compressed objects within 2 object streams
+ 173 PDF objects out of 1000 (max. 8388607)
+ 107 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
