@@ -292,7 +292,7 @@ In order to send a message as a client, the server must perform the following st
 	%	\caption{WebSocket architecture}\label{fig:WebSocketArchitecture}
 	%\end{figure}
 	
-	\chapter{Implementatie}
+	\chapter{Implementation}
 	
 	
 \section{Communication protocol}
@@ -388,7 +388,11 @@ We then go through listing \ref{lst:matrixMultiplicationApp} which is a basic wa
 
 First, we determine the system time and assign this value to t1. In section \ref{sec:matrixMultiplication}, we explain how matrix multiplication works so this should clear up lines 2-10 in the listing above. After the multiplication is finished we determine another system time and assign this value to t2. If we distract t1 from t2, we know how many milliseconds it took to complete the full multiplication. The result of this app can be seen in figure \ref{fig:resultApp1}.
 
-
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.2]{images/MultiplyApp.pdf}
+\caption{Result of matrixmulitplication performed by Android phone}\label{fig:resultApp1}
+\end{figure}
 
 	\subsection{Bluetooth application}
 This time the SoC stands in for the multiplication of the matrices. 
@@ -422,7 +426,7 @@ The socket requires certain methods that are invoked on a call from the server. 
 14|    @Override
 15|    public void onMessage(String s) {
 16|       if(s.equals("matrixA=")){
-17			t1 = System.currentTimeMillis();
+17|         t1 = System.currentTimeMillis();
 18|         sendMatrixA();
 19|       }
 20|       else if(s.equals("matrixB=")){
@@ -437,7 +441,7 @@ The socket requires certain methods that are invoked on a call from the server. 
 29|       }
 30|       else if(s.equals("done :D")){
 31|          t4 = System.currentTimeMillis();
-32|       displayTimes();
+32|          displayTimes();
 33|       }
 34|       else{
 35|          try{
