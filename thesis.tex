@@ -410,7 +410,7 @@ Just like in the Bluetooth application, the SoC has to solve the matrix multipli
 53|   }
 \end{lstlisting}
 
-The socket requires certain methods that are invoked on a call from the server. For example, if the client connects succesfully with the server, method "OnOpen" is invoked. In this method we print a message to our Log that the phone succesfully connected to the server. The second method required for the WebSocket client is "onMessage". This method is invoked whenever the client receives a message from the server. What happens next depends on the message this method received. All different kind of messages are put into if-statements so we execute different code depending on the received message. You can read more about the messages on line 16, 19 and 23 in subsection \ref{subsec:websocketProtocol} where the transmission protocol is explained. If we receive "matrixA=" or "MatrixB=", we respectively start transfering matrix A and matrix B. But before we start sending them over, we create a timestamp t1 that will measure the system time in milliseconds at that point. We do the same thing for t2 as soon as we start sending matrixB. Having a timestamp for matrixB seems redunant but why this is done will be explained in the results. A third timestamp t3 is defined after receiving the message "matrixR=" which will represents the start of receiving data. The message in the next case is to determing how long.
+The socket requires certain methods that are invoked on a call from the server. For example, if the client connects succesfully with the server, method "OnOpen" is invoked. In this method we print a message to our Log that the phone succesfully connected to the server. The second method required for the WebSocket client is "onMessage". This method is invoked whenever the client receives a message from the server. What happens next depends on the message this method received. All different kind of messages are put into if-statements so we execute different code depending on the received message. You can read more about the messages on line 16, 19 and 23 in subsection \ref{subsec:websocketProtocol} where the transmission protocol is explained. If we receive "matrixA=" or "MatrixB=", we respectively start transferring matrix A and matrix B. But before we start sending them over, we create a timestamp t1 that will measure the system time in milliseconds at that point. We do the same thing for t2 as soon as we start sending matrixB. Having a timestamp for matrixB seems redunant but why this is done will be explained in the results. A third timestamp t3 is defined after receiving the message "matrixR=" which will represents the start of receiving data. The message in the next case is to determing how long.
 
 
 \begin{lstlisting}[caption={Detailed look at creating the WebSocket client},captionpos=b, label={lst:detailWebSocketClient}, language=java, float=h]
@@ -469,7 +469,7 @@ The socket requires certain methods that are invoked on a call from the server. 
 In order to choose the best communication protocol, we have to test both Bluetooth and WebSocket communication preferable with large sized arrays. First, we perform the actual communication in order to find a relation between the arraysize and the elapsed time. When we find this relation we can set up a formula that allows us to calculate an estimate value for the elapsed time for any matrix size.
 
 \subsection{WebSocket transmission}
-We first performed multiple calculations with WebSocket communication. We seperated the elapsed time it took the phone to transmit the data and the elapsed time it took the SoC to transmit the data. (***We are thinking of putting the datasheets of our practical tests in the appendix to refer to, you think this is a good idea or not***)The results in datasheet [reference] represent the elapsed time. If we divide the total number of seperate cifres in one matrix with the elapsed time we know the amount of cifres that are transmitted per second (c/s). For small matrices, the c/s is not reliable since there are background processes that influence these results. Although, these background processes barely affect the c/s with larger matrices. So in order to determine the relation, we will take an average of all the c/s with all matrix sizes, apart from those that are highly affected by background processes. This resulted in a c/s value of 43421,8 for the phone transmission and 127228,7 for the SoC transmission. Knowing these values we can make graph \ref{graph:websocketTime}. In the graph we compare the transmission time for the phone with the time for the SoC. The small dent in 
+We first performed multiple calculations with WebSocket communication. We seperated the elapsed time it took the phone to transmit the data and the elapsed time it took the SoC to transmit the data. (***We are thinking of putting the datasheets of our practical tests in the appendix to refer to, you think this is a good idea or not***)The results in datasheet [reference] represent the elapsed time. If we divide the total number of seperate cifres in one matrix with the elapsed time we know the amount of cifres that are transmitted per second (c/s). For small matrices, the c/s is not reliable since there are background processes that influence these results. Although, these background processes barely affect the c/s with larger matrices. So in order to determine the relation, we will take an average of all the c/s with all matrix sizes, apart from those that are highly affected by background processes. This resulted in a c/s value of 86843,61 for the phone transmission and 127228,7 for the SoC transmission. Knowing these values we can make graph \ref{graph:websocketTime}. In the graph we compare the transmission time for the phone with the time for the SoC. The small dent in 
 the SoC curve is the change in average number length in the matrix from 6 to 7.
 \begin{figure}[ht]
 \centering
@@ -487,7 +487,7 @@ Next we determine the transmission time using the Bluetooth communication. We on
 \end{figure}
 
 \subsection{Bluetooth vs. WebSocket}
-Comparing the s/c and looking at both graph scales, it is very clear that the WebSocket is way more faster than Bluetooth communication. The WebSocket transfer time from the phone to the SoC is around 170 times faster while vice versa the WebSocket is almost 500 times faster. The WebSocket also allowed us to practically transfer much larger matrices aswell making it superior compared to our Bluetooth communication. Graph \ref{graph:bluetoothVsWebsocket} visualizes the difference in scale for both communication protocols. We can clearly see that the WebSocket requires less time to transfer one matrix compared to Bluetooth.
+Comparing the s/c and looking at both graph scales, it is very clear that the WebSocket is way more faster than Bluetooth communication. The WebSocket transfer time from the phone to the SoC is around 340 times faster while vice versa the WebSocket is almost 500 times faster. The WebSocket also allowed us to practically transfer much larger matrices aswell making it superior compared to our Bluetooth communication. Graph \ref{graph:bluetoothVsWebsocket} visualizes the difference in scale for both communication protocols. We can clearly see that the WebSocket requires less time to transfer one matrix compared to Bluetooth.
 
 \begin{figure}[ht]
 \centering
@@ -497,35 +497,17 @@ Comparing the s/c and looking at both graph scales, it is very clear that the We
 
 
 \subsection{WebSocket and SoC vs. Android smartphone}
-As discussed in previous subsection, we can conclude that there is no way of Bluetooth being profitable for this project. Thus, we are only testing the WebSocket protocol combined with the SoC's ability to multiply matrices. Subsection \ref{subsec:compArch} gives us a comparison between the phone and the SoC how fast they can handle with the matrix multiplication. 
+As discussed in previous subsection, we can conclude that there is no way of Bluetooth being worthwhile for this project. Thus, we are only testing the WebSocket protocol combined with the SoC's ability to multiply matrices. Subsection \ref{subsec:compArch} gives us a comparison between the phone and the SoC on how fast they can process the matrix multiplication. Now we want to know at which point the Android phone will be slower than transferring all three matrices and performing the matrix multiplication on the SoC. If we look back at graph figure \ref{grap:openclCalcu}, the orange curve represents the estimate of the total transfer time of all three matrices. While the yellow and gray curves respectively represent the calculation time it takes to perform the multiplication with the SoC and the Mac. The yellow and gray curves are trendlines derived from data we achieved from performing multiple matrix multiplications with different matrix sizes. The equation for the yellow curve trendline is equation \ref{eq:trendlineGlobalSoC} and the grey curve's trendline is equation \ref{eq:trendlineGlobalMac}. Combining these gives us the blue curve which represents the combination of the transfer time and the Mac calculation time, while the green curve shows the combination of the transfer time and the SoC calculation time. If we look at the green curve we see it crosses the black curve, which is the trendline made with equation \ref{eq:trendlineAndroid} around a matrix size value of 2350. If we want a more correct value for this we take a look at the equation that defines both curves. Equation \ref{eq:trendlineAndroid} represents the used function to generate the trend line of the Android phone execution time. Equation \ref{eq:totalTransferTime} is a combination of the data transfer time from both the phone and the SoC. The transfer speed from the phone is 43,42 numbers/second while the SoC can transfer the larger numbers back to the phone at a rate of 18,85 numbers/second. In order to find the the value for the matrix size where the phone execution time will be the same as the full process time from the SoC, we have to find x in y=v+w, with y equal to equation \ref{eq:trendlineAndroid}.
 
+\begin{equation} \label{eq:totalCalcTimeSoC}
+v = -3*10^{-10}*x^4+2*10^{-5}*x^3-0,0021*x^2-0,2801*x+142,83
+\end{equation}
 
+\begin{equation} \label{eq:totalTransferTime}
+w = \frac{2*x^2}{43,42}+\frac{x^2}{18,85}
+\end{equation}
 
-figure\ref{grap:openclCalcu}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if we extract x from y=v+w we get a value of 2338. This means we have an even time for both processes in case we try to do a matrix multiplication with two 2338x2338 matrices.
 
 
 
