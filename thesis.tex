@@ -4,6 +4,8 @@
 \usepackage{subcaption}
 \begin{document}
 
+\chapter{Theoretical background}
+
 \section{parallel computing}
 	\subsection{What is parallel computing}
 The problem when facing large calculations is that they require a lot of computing power and thus time. Performing these calculations can be done with two types of computation, serial and parallel computing. Serial computing means, you have one compute unit (e.g. a single core CPU) available that performs all instructions on a certain set of data. This set of data will be broken into multiple smaller subparts that will be solved by a certain instruction. The single compute unit performs the instruction on every subpart in order to solve the whole part as shown in figure \ref{fig:SerialC}.
@@ -179,7 +181,7 @@ Adopted protocols are protocols developed by other organizations. They are "adop
 \section{Web sockets}
 Web sockets are used for fast, real-time communication between a server and a client. The HTTP model, which is also a communication protocol between a server and a client, allowed the client only to request data from the server, while the server was only able to fulfill these requests. Web sockets on the other hand, allow bidirectional communication, or bidi communication, between the server and the client. This means both client and server can request data and also respond to these requests. The main point of web sockets is to have true concurrency and to focus on the optimization of performance when it comes to communication and exchanging data. The web socket protocol that will be discussed is also known as the RFC6455 model \cite{RFC6455}.
 
-	\subsection{Web socket communication}
+	\subsection{Web socket communication}\label{WebSocketCom}
 		\paragraph{Handshake.}
 To communicate over web socket, the server and the client first have to connect with each other. The establishment of a web socket connection is done by a web socket handshake. Handshaking is the exchange of information between two devices and the agreement about which protocol will be used to exchange data after the connection is established. A well known example of this is the TCP three-way-handshake. The client sends a synchronization message (SYN) to the server as a request to synchronize with the server. If the server receives this message and allows the client to synchronize with it, it will send a similar SYN message and an acknowledgement message (ACK) to let the client know that it has received the request. When the client receives the SYN-ACK message, it will send an ACK message back to the server to acknowledge that it has received the server's message. The TCP connection is established whenever the server receives the ACK message from the client.\\
 The web socket handshake is quite similar. The client sends a handshake request to the server, and the server will respond with a similar handshake request as seen in figure \ref{fig:WebSocketHandshaking}. The desktop, smartphone and tablet in figure \ref{fig:WebSocketHandshaking} represent the clients that are connected to the server. The handshake request from the client-side is shown in listing \ref{lst:clientHandshake}, while the response from the server is shown in listing \ref{lst:serverHandshake}.
@@ -188,7 +190,7 @@ The web socket handshake is quite similar. The client sends a handshake request 
 		\includegraphics[scale=0.5]{images/server.pdf}
 		\caption{Web socket handshaking}\label{fig:WebSocketHandshaking}
 	\end{figure}
-	\begin{lstlisting}[caption={Client's request for websocket handshake},captionpos=b, label={lst:clientHandshake}, language=c, float=h]
+	\begin{lstlisting}[caption={Client's request for WebSocket handshake},captionpos=b, label={lst:clientHandshake}, language=c, float=h]
   1| GET /chat HTTP/1.1
   2| Host: example.com:8000
   3| Upgrade: websocket
@@ -197,7 +199,7 @@ The web socket handshake is quite similar. The client sends a handshake request 
   6| Sec-WebSocket-Version: 13
 	\end{lstlisting}\\
 Listing \ref{lst:clientHandshake}, the handshake request from the client, is a pretty standard HTTP request. It is built with multiple headers, some of which are mandatory for the request to be valid. If one of the headers is not understood, the server will reply with "400 Bad Request" and it will close the socket afterwards. In some cases, it will also give a reason why the handshake failed, although browsers do not display these messages. If there is a problem with version numbers, the server adds a "Sec-WebSocket-Version" header in the HTTP response that contains the version it understands \cite{BadRequest}.
-	\begin{lstlisting}[caption={Server's response for websocket handshake},captionpos=b, label={lst:serverHandshake}, language=c, float=h]
+	\begin{lstlisting}[caption={Server's response for WebSocket handshake},captionpos=b, label={lst:serverHandshake}, language=c, float=h]
   1| HTTP/1.1 101 Switching Protocols
   2| Upgrade: websocket
   3| Connection: Upgrade
@@ -215,7 +217,7 @@ WebSocket defines two URI schemes. You can either use ws or the wss scheme. The 
 The most important components of the ws or wss are the host and its port. The host is determined by the server's IP address, while the port defines which port the server uses for the communication. If there is no specified port, the standard port used for ws is 80, and the standard port used for wss is 443.
 		
 		\paragraph{Data Frames.}
-The main advantage of websockets is bidi communication. So at any point in time, either the client or the server can send a message. Every data frame that is sent from the client to the server, or vice versa, follows the same format as seen in figure \ref{fig:dataFrame}.
+The main advantage of WebSockets is bidi communication. So at any point in time, either the client or the server can send a message. Every data frame that is sent from the client to the server, or vice versa, follows the same format as seen in figure \ref{fig:dataFrame}.
 
 	\begin{figure}[ht]
 		\centering
@@ -230,15 +232,15 @@ Depending on the value of this bit, it either tells the receiving end whether or
 	\begin{itemize}
 		\item {RSV1, RSV2, RSV3:  1 bit each}
 	\end{itemize}
-All of these bits are reserved for websocket extensions. They should be "0" unless the client and server negotiated on whether or not a specific extension requires the use of any of the three bits. If any of these three bits is not zero while the client did not negotiate on any of these bits being non-zero, the receiving end will "fail" the websocket connection.
+All of these bits are reserved for WebSocket extensions. They should be "0" unless the client and server negotiated on whether or not a specific extension requires the use of any of the three bits. If any of these three bits is not zero while the client did not negotiate on any of these bits being non-zero, the receiving end will "fail" the WebSocket connection.
 	\begin{itemize}
 		\item {Opcode:  4 bits}
 	\end{itemize}
-These 4 bits will define how the receiving end should interpret the data. If the receiving end does not understand the opcode it will, as in the previous case, "fail" the websocket connection. The information about the different opcodes is found at \cite{opcode}.
+These 4 bits will define how the receiving end should interpret the data. If the receiving end does not understand the opcode it will, as in the previous case, "fail" the WebSocket connection. The information about the different opcodes is found at \cite{opcode}.
 	\begin{itemize}
 		\item[] {x0: continuation frame; this frame contains data that should be appended to the previous frame}
 		\item[] {x2: binary frame; this frame (and any following) contains binary data}
-		\item[] {x3 - x7: non-control reserved frames; these are reserved for possible websocket extensions}
+		\item[] {x3 - x7: non-control reserved frames; these are reserved for possible WebSocket extensions}
 		\item[] {x8: close frame; this frame should end the connection}
 		\item[] {x9: ping frame}
 		\item[] {xA: pong frame}
@@ -277,7 +279,7 @@ The application data contains the actual data that has be to transmitted. It tak
 In order to send a message as a client, the server must perform the following steps:
 
 	\begin{enumerate}
-		\item The receiving end has to make sure the websocket is in an open state. 
+		\item The receiving end has to make sure the WebSocket is in an open state. 
 		\item last part of web socket that i have to finish......
 	\end{enumerate}
 		
@@ -290,27 +292,243 @@ In order to send a message as a client, the server must perform the following st
 	%	\caption{WebSocket architecture}\label{fig:WebSocketArchitecture}
 	%\end{figure}
 	
+	\chapter{Implementatie}
+	
 	
 \section{Communication protocol}
-If we want to communicate between the devices, we have to define a set of rules that each one of the devices have to follow. These rules should be made in a way that 100\% of the transmitted data will arrive at the receiving end. For example, if data gets lost through transmission, the device on the receiving end will not receive all the necessary data. This can be prevented by adding some sort of characters that will define what the received message should look like. If the received message looks incorrect, the receiving device has to respond by asking to resend this piece of data. We are trying out two different communication technologies so we have to set up a communication protocol for each one of them since they both have different performance aspects.
+If we want to communicate between the devices, we have to define a set of rules that each one of the devices have to follow. These rules should be made in a way that 100\% of the transmitted data will arrive at the receiving end. For example, if data gets lost through transmission, the device on the receiving end will not receive all the necessary data. This can be prevented by adding some sort of characters that will define what the received message should look like. If the received message looks incorrect, the receiving device has to respond by asking to resend this piece of data. We are trying out two different communication technologies so we have to set up a communication protocol for each one of them since they both have different performance aspects. To clarify future images, matrix A and B are the matrices send to the Soc in order to calculate their multiplication. Matrix C is the calculated matrix send back to the phone.
 
-	\subsection{Bluetooth protocol}
+	\subsection{Bluetooth communication protocol}
 To define a set of rules we first analyzed how good the Bluetooth transmission is. We did some testing and came to the conclusion that there was quite a lot of data loss. We first tried sending eight characters at once but nearly 80\% of the time there was atleast one of the characters missing. Missing one number would mean that the matrix we need is incorrect and this would lead to an incorrect outcome. We did some further testing and realized it was the best option to send four numbers at a time. With this we can set up our first rule. The first rule being, we let both devices know that they should always send four numbers at once. Both devices also know they should receive four numbers. If this is not the case we have to resend the message.
 In order to make sure all characters would arrive at the receiving end, we added an extra character ':' at the end of each message. This character lets the receiving end know that it is the end of a message. If we would not define the end of a message and a number would be missing, the receiving end would wait for the next number to come through. The problem is that the next number would be part of the next message causing the all numbers to be messed up with each other. An example of a message would look like this: 4372: .
 Now for the communication, we start off by connecting both devices with Bluetooth. As soon as the devices are connected with each other, the SoC will send message "C" to the Android phone notifying it is ready to receive the two matrices. As soon as the phone receives message "C", it will start sending the first number or in some cases a part of the number. In case the message is received correctly, the SoC sends the message "O" to let the phone know the message was received. Figure \ref{fig:correctMessage} shows an example of how a correct message should look like.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[scale=0.8]{images/CorrectMsg.pdf}
+\includegraphics[scale=0.7]{images/CorrectMsg.pdf}
 \caption{Correct message transfer}\label{fig:correctMessage}
 \end{figure}
 
+In case we are missing a number due to data loss, the receiving end will respond with the message "R" as shown in figure \ref{fig:incorrectMessage}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.7]{images/IncorrectMsg.pdf}
+\caption{Incorrect message transfer}\label{fig:incorrectMessage}
+\end{figure}
+
+There is also the possibility of a device not responding to a request. The receiving end is waiting for a response from its request. If the wait time is too long compared to a predefined waiting time, the receiving end will send a message "R" as seen in figure figure \ref{fig:delayedMessage}.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.7]{images/DelayedMsg.pdf}
+\caption{Delayed message}\label{fig:delayedMessage}
+\end{figure}
+
+As for now, we work with square matrices with a predefined size. Both devices know at the start of the session how large both matrix A and matrix B are. This way the SoC can calculate how many numbers it should receive from the phone. Whenever matrix A is transferred succesfully, the Soc will send message "D" to notify the phone it should start sending matrix B (Figure \ref{fig:shiftMatrix}). The same procedures as mentioned above are applied on matrix B aswell.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.7]{images/ShiftMatrix.pdf}
+\caption{Switch matrix message}\label{fig:shiftMatrix}
+\end{figure}
+
+When both matrices are transferred, the role of transmitter and receiver are switched. The phone will now act as a receiver while the SoC becomes the transmitter. The SoC will transmit matrix C after doing the multiplication of matrices A and B. For this proces, the previous rules are also applicable. Although this time, the phone will start off by sending a message "C" to notify the SoC that it is ready to receive matrix C. The SoC proceeds by sending the data in the same way as the phone did. Whenever the transmission experiences data loss, the phone will send message "R" to the SoC exactly like the SoC does the other way around.
+Message "D" is not used by the phone since there is only one matrix it should receive from the SoC. When the phone received matrix C, the Bluetooth connection between the devices will be suspended.
+
+	\subsection{Web socket communication protocol}\label{subsec:websocketProtocol}
+The web socket communication has to achieve the same goal as the Bluetooth communication being transmitting matrix A and B. Depending on the efficiency and performance of this web socket communication we set up a similar set of rules. Compared to Bluetooth, the web socket transmission is much more efficient. We can easily transmit over eight characters without having any data loss. This means that we do not have to send acknowledgement messages like the "O" or "R" message that were necessary with the Bluetooth communication in order to have a solid data transmission.
+
+If we look at subsection \ref{WebSocketCom} under data frames, we see that the payload length of a message can be either 16 or 64 bits. But this does not mean we are limited to sending messages smaller than 64 bits at a time since the socket will just split up the data in seperate messages. This allows us to basically have any message size. Because of limited memory we chose to use integer numbers between 0-99. Next, we decided to combine 4 numbers and make one message with them. The message now contains 4 integers (16 byte). We convert the integers to strings and add a "0"-string in front of numbers that are smaller than 10 to make sure the full message has a constant length of eight charachters.
+
+In order to have any communication at all, we start of by connecting both devices through web socket technology. As soon as both devices are connected with each other, the SoC will again start of by sending a message. The message will ask the phone to send matrix A. The phone then will start transferring all data from matrix A to the SoC. Whenever matrix A is transmitted completely, the SoC will ask to transfer matrix B and the phone will send matrix B. After the last number of matrix B being transferred, the SoC will confirm that all data has been received. In figure \ref{fig:Matrices} we can see the exact messages needed from the SoC in order to have a correct communication process. The messages from the phone to the SoC are examples of how the messages could look like. The first message "12345678" would be numbers 12, 34, 56 and 78 being transmitted to the SoC.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.7]{images/webSocketCom.pdf}
+\caption{Sending matrix A and B}\label{fig:Matrices}
+\end{figure}
+
+After the SoC sends its last message it will start doing the matrix multiplication of matrix A and B with the outcome being matrixC. When the SoC is ready it will send the message "matrixR =" to notify the phone it will start sending over the values within matrix C. Unlike the phone, the SoC will send each number one by one since the number length varies with the size of the matrix. Figure \ref{fig:ResultMatrix} shows both types of messages being send by the SoC. The phone should receive all numbers without having to give any feedback to the SoC. Whenever the full result matrix is transmitted by the SoC, the web socket connection is terminated and the complete process is finished.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.7]{images/webSocketCom2.pdf}
+\caption{Sending result matrix}\label{fig:ResultMatrix}
+\end{figure}
+
+\section{Android}
+The android phone needs proper software in order to function well in our expirement. To build this software we use Android Studio. It is an easy-to-use java environment with a lot of information that can be found on the internet. We will make three different applications using Android Studio. One application to test the matrix mulitplication with the phone itself to compare the speed with the SoC. A second application is responsible for the Bluetooth communication and a third application is used for the web socket communication.
+
+	\subsection{Matrix multiplication}
+This app will multiply two square matrices that are filled with random integers converted to strings (see subsection \ref{websocketProtocol} why we do this). We start of with creating two matrices. Listing \ref{lst:createMatrix} shows how this is done. We start of by making an array of integers that is "arraySize" large. We start a for loop that will cycle "arraySize" times. In line 4 we create a random integer between value 0 and 99 and put this in the array "matrixA" in the next line. MatrixB is made in exactly the same way.
+
+\begin{lstlisting}[caption={Creating matrix},captionpos=b, label={lst:createMatrix}, language=java, float=h]
+ 1|   matrixA = new Integer[arraySize];
+ 2|   int random;
+ 3|   for (int i=0; i<arraySize;i++){
+ 4|      random = (int) (Math.random()*100);
+ 5|      matrixA[i] = random;
+ 6|   }
+\end{lstlisting}
+We then go through listing \ref{lst:matrixMultiplicationApp} which is a basic way of multiplying two matrices.
+\begin{lstlisting}[caption={Code for matrix multiplication on Android phone},captionpos=b, label={lst:matrixMultiplicationApp}, language=java, float=h]
+ 1|   t1 = (int) System.currentTimeMillis();
+ 2|   for(int i=0; i<arraySize; i++){
+ 3|      for(int j=0; j<arraySize; j++){
+ 4|         sum = 0;
+ 5|         for(int k=0; k<arraySize; k++){
+ 6|            sum = sum + matrixA[i*arraySize+k]*matrixB[k*arraySize+j];
+ 7|         }
+ 8|         matrixC[i*arraySize+j] = sum;
+ 9|      }
+10|   }
+11|   t2 = (int) System.currentTimeMillis();
+\end{lstlisting}
+
+First, we determine the system time and assign this value to t1. In section \ref{sec:matrixMultiplication}, we explain how matrix multiplication works so this should clear up lines 2-10 in the listing above. After the multiplication is finished we determine another system time and assign this value to t2. If we distract t1 from t2, we know how many milliseconds it took to complete the full multiplication. The result of this app can be seen in figure \ref{fig:resultApp1}.
+
+
+
+	\subsection{Bluetooth application}
+This time the SoC stands in for the multiplication of the matrices. 
+
+	\subsection{WebSocket application}
+Just like in the Bluetooth application, the SoC has to solve the matrix multiplication. We define a proper size for both matrices and as always we fill them up with random values from 0 to 99. After this is done we press a button on the homescreen in order to initiate a connection with the WebSocket server. We do this by making a WebSocket client with the code shown in listing \ref{lst:webSocketClient}. Whenever we call the method to initiate the WebSocket client, the URI from the server is required (line 4).  Line 9-51 are shown in listing \ref{lst:detailWebSocketClient} that gives the detailed code on which methods the socket has to contain in order to function properly. In line 52 we then try to establish a connection between the client and the server.
+
+\begin{lstlisting}[caption={Making a WebSocket client},captionpos=b, label={lst:webSocketClient}, language=java, float=h]
+ 1|   public void connectWebSocket() {
+ 2|     URI uri;
+ 3|   try {
+ 4|        uri = new URI("ws://130.230.144.40:8080");
+ 5|     } catch (URISyntaxException e) {
+ 6|        e.printStackTrace();
+ 7|        return;
+ 8|     }
+ 9|      socket = new WebSocketClient(uri, new Draft_17()) {...};
+52|      socket.connect();
+53|   }
+\end{lstlisting}
+
+The socket requires certain methods that are invoked on a call from the server. For example, if the client connects succesfully with the server, method "OnOpen" is invoked. In this method we print a message to our Log that the phone succesfully connected to the server. The second method required for the WebSocket client is "onMessage". This method is invoked whenever the client receives a message from the server. What happens next depends on the message this method received. All different kind of messages are put into if-statements so we execute different code depending on the received message. You can read more about the messages on line 16, 19 and 23 in subsection \ref{subsec:websocketProtocol} where the transmission protocol is explained. If we receive "matrixA=" or "MatrixB=", we respectively start transfering matrix A and matrix B. But before we start sending them over, we create a timestamp t1 that will measure the system time in milliseconds at that point. We do the same thing for t2 as soon as we start sending matrixB. Having a timestamp for matrixB seems redunant but why this is done will be explained in the results. A third timestamp t3 is defined after receiving the message "matrixR=" which will represents the start of receiving data. The message in the next case is to determing how long.
+
+
+\begin{lstlisting}[caption={Detailed look at creating the WebSocket client},captionpos=b, label={lst:detailWebSocketClient}, language=java, float=h]
+ 9| socket = new WebSocketClient(uri, new Draft_17()) {
+10|    @Override
+11|    public void onOpen(ServerHandshake serverHandshake) {
+12|       Log.i(TAG, "Connected to: " + uri.getHost() + uri.getPort());
+13|    }
+14|    @Override
+15|    public void onMessage(String s) {
+16|       if(s.equals("matrixA=")){
+17			t1 = System.currentTimeMillis();
+18|         sendMatrixA();
+19|       }
+20|       else if(s.equals("matrixB=")){
+21|          t2 = System.currentTimeMillis();
+22|          sendMatrixB();
+23|       }
+24|       else if(s.equals("matrixR=")){
+25|          t3 = System.currentTimeMillis();
+26|       }
+27|       else if(s.contains("Execution time in")){
+28|          exeTime=s;
+29|       }
+30|       else if(s.equals("done :D")){
+31|          t4 = System.currentTimeMillis();
+32|       displayTimes();
+33|       }
+34|       else{
+35|          try{
+36|             int i = Integer.parseInt(s);
+37|             matrixC[counter] = i;
+38|             counter++;
+39|          }
+40|          catch(Exception e){}
+41|       }
+42|    }
+43|    @Override
+44|    public void onClose(int i, String s, boolean b) {
+45|       counter = 0;
+46|    }
+47|    @Override
+48|    public void onError(Exception e) {
+49|       //Log.i(TAG, "Error " + e.getMessage());
+50|    }
+51| };
+\end{lstlisting}
 
 
 
 
 
-	
+\chapter{Results}
+
+	\section{Bluetooth vs web socket communication speed}
+In order to choose the best communication protocol, we have to test both Bluetooth and WebSocket communication preferable with large sized arrays. First, we perform the actual communication in order to find a relation between the arraysize and the elapsed time. When we find this relation we can set up a formula that allows us to calculate an estimate value for the elapsed time for any matrix size.
+
+\subsection{WebSocket transmission}
+We first performed multiple calculations with WebSocket communication. We seperated the elapsed time it took the phone to transmit the data and the elapsed time it took the SoC to transmit the data. (***We are thinking of putting the datasheets of our practical tests in the appendix to refer to, you think this is a good idea or not***)The results in datasheet [reference] represent the elapsed time. If we divide the total number of seperate cifres in one matrix with the elapsed time we know the amount of cifres that are transmitted per second (c/s). For small matrices, the c/s is not reliable since there are background processes that influence these results. Although, these background processes barely affect the c/s with larger matrices. So in order to determine the relation, we will take an average of all the c/s with all matrix sizes, apart from those that are highly affected by background processes. This resulted in a c/s value of 43421,8 for the phone transmission and 127228,7 for the SoC transmission. Knowing these values we can make graph \ref{graph:websocketTime}. In the graph we compare the transmission time for the phone with the time for the SoC. The small dent in 
+the SoC curve is the change in average number length in the matrix from 6 to 7.
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.45]{images/WebsocketTransmissionSpeed.pdf}
+\caption{WebSocket transmission time for phone to SoC and vice versa}\label{graph:websocketTime}
+\end{figure}
+
+\subsection{Bluetooth transmission}
+Next we determine the transmission time using the Bluetooth communication. We only mention the practical elapsed time to send over one matrix from the phone to the SoC the elapsed time the other way around was very similar. We were only able to test small matrices (***for an unknown reason***) of up to a size of 20x20. The c/s for this communication protocol was around 258 c/s including a lot of repeated messages due to package loss. Although we are not able to transfer large matrices, we are able to set up a formula that allows us to make an estimate of the elapsed time for higher matrices. The results for this are shown in graph \ref{graph:bluetoothTime}.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.45]{images/BluetoothtransmissionSpeed.pdf}
+\caption{Bluetooth transmission time}\label{graph:bluetoothTime}
+\end{figure}
+
+\subsection{Bluetooth vs. WebSocket}
+Comparing the s/c and looking at both graph scales, it is very clear that the WebSocket is way more faster than Bluetooth communication. The WebSocket transfer time from the phone to the SoC is around 170 times faster while vice versa the WebSocket is almost 500 times faster. The WebSocket also allowed us to practically transfer much larger matrices aswell making it superior compared to our Bluetooth communication. Graph \ref{graph:bluetoothVsWebsocket} visualizes the difference in scale for both communication protocols. We can clearly see that the WebSocket requires less time to transfer one matrix compared to Bluetooth.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.45]{images/BluetoothVsWebsocket.pdf}
+\caption{Bluetooth transfer time vs. WebSocket transfer time}\label{graph:bluetoothVsWebsocket}
+\end{figure}
+
+
+\subsection{WebSocket and SoC vs. Android smartphone}
+As discussed in previous subsection, we can conclude that there is no way of Bluetooth being profitable for this project. Thus, we are only testing the WebSocket protocol combined with the SoC's ability to multiply matrices. Subsection \ref{subsec:compArch} gives us a comparison between the phone and the SoC how fast they can handle with the matrix multiplication. 
+
+
+
+figure\ref{grap:openclCalcu}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \bibliographystyle{IEEEtran}
 \bibliography{References}
