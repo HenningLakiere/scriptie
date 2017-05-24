@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.24)  24 MAY 2017 11:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.24)  24 MAY 2017 11:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -284,37 +284,29 @@ Overfull \hbox (10.93056pt too wide) in paragraph at lines 128--130
 ance-sensitive
  []
 
-[6] <images/OpenCLDevices.pdf, id=88, 399.32487pt x 265.61435pt>
-File: images/OpenCLDevices.pdf Graphic file (type pdf)
-
-<use images/OpenCLDevices.pdf>
-Package pdftex.def Info: images/OpenCLDevices.pdf used on input line 145.
-(pdftex.def)             Requested size: 279.5255pt x 185.92877pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
 
  []
 
-[7 <./images/OpenCLDevices.pdf>]
-<images/scatternet.pdf, id=99, 408.52625pt x 290.08376pt>
+[7] <images/scatternet.pdf, id=93, 408.52625pt x 290.08376pt>
 File: images/scatternet.pdf Graphic file (type pdf)
 
 <use images/scatternet.pdf>
-Package pdftex.def Info: images/scatternet.pdf used on input line 169.
+Package pdftex.def Info: images/scatternet.pdf used on input line 166.
 (pdftex.def)             Requested size: 245.11765pt x 174.05159pt.
- [8]
-<images/bluetoothStack.pdf, id=104, 384.43625pt x 383.4325pt>
+ [8 <./images/scatternet.pdf>]
+<images/bluetoothStack.pdf, id=101, 384.43625pt x 383.4325pt>
 File: images/bluetoothStack.pdf Graphic file (type pdf)
 
 <use images/bluetoothStack.pdf>
-Package pdftex.def Info: images/bluetoothStack.pdf used on input line 179.
+Package pdftex.def Info: images/bluetoothStack.pdf used on input line 176.
 (pdftex.def)             Requested size: 192.21765pt x 191.71577pt.
- [9 <./images/scatternet.pdf>] [10 <./images/bluetoothStack.pdf>] [11] <images/
-server.pdf, id=125, 398.99063pt x 415.5525pt>
+ [9 <./images/bluetoothStack.pdf>] [10]
+<images/server.pdf, id=115, 398.99063pt x 415.5525pt>
 File: images/server.pdf Graphic file (type pdf)
-
-<use images/server.pdf>
-Package pdftex.def Info: images/server.pdf used on input line 222.
+ <use images/server.pdf>
+Package pdftex.def Info: images/server.pdf used on input line 219.
 (pdftex.def)             Requested size: 199.49483pt x 207.77574pt.
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -323,106 +315,107 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
-Overfull \hbox (1.35376pt too wide) in paragraph at lines 238--239
+Overfull \hbox (1.35376pt too wide) in paragraph at lines 235--236
 [][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (13.39537pt too wide) in paragraph at lines 218--242
+Overfull \hbox (13.39537pt too wide) in paragraph at lines 215--239
 \OT1/cmr/m/n/10.95 WebSocket-Key" header and "258EAFA5-E914-47DA-95CA-C5AB0DC85
 B11"
  []
 
+[11]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 244--245
+[12 <./images/server.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 241--242
 
  []
 
-[13 <./images/server.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 246--248
+
+Underfull \hbox (badness 10000) in paragraph at lines 243--245
 
  []
 
-<images/WebSocketDataFrame.pdf, id=137, 542.025pt x 279.0425pt>
+[13] <images/WebSocketDataFrame.pdf, id=130, 542.025pt x 279.0425pt>
 File: images/WebSocketDataFrame.pdf Graphic file (type pdf)
 
 <use images/WebSocketDataFrame.pdf>
-Package pdftex.def Info: images/WebSocketDataFrame.pdf used on input line 256.
+Package pdftex.def Info: images/WebSocketDataFrame.pdf used on input line 253.
 (pdftex.def)             Requested size: 271.01183pt x 139.5209pt.
  [14 <./images/WebSocketDataFrame.pdf>]
 [15] [16]
 Chapter 2.
 [17
 
-] <images/CorrectMsg.pdf, id=154, 348.73184pt x 146.3588pt>
+] <images/CorrectMsg.pdf, id=147, 348.73184pt x 146.3588pt>
 File: images/CorrectMsg.pdf Graphic file (type pdf)
 
 <use images/CorrectMsg.pdf>
-Package pdftex.def Info: images/CorrectMsg.pdf used on input line 340.
+Package pdftex.def Info: images/CorrectMsg.pdf used on input line 337.
 (pdftex.def)             Requested size: 244.11061pt x 102.45044pt.
 
-<images/IncorrectMsg.pdf, id=155, 349.3341pt x 176.4743pt>
+<images/IncorrectMsg.pdf, id=148, 349.3341pt x 176.4743pt>
 File: images/IncorrectMsg.pdf Graphic file (type pdf)
 
 <use images/IncorrectMsg.pdf>
-Package pdftex.def Info: images/IncorrectMsg.pdf used on input line 348.
+Package pdftex.def Info: images/IncorrectMsg.pdf used on input line 345.
 (pdftex.def)             Requested size: 244.5322pt x 123.53116pt.
 
-<images/DelayedMsg.pdf, id=156, 349.93636pt x 176.4743pt>
+<images/DelayedMsg.pdf, id=149, 349.93636pt x 176.4743pt>
 File: images/DelayedMsg.pdf Graphic file (type pdf)
 
 <use images/DelayedMsg.pdf>
-Package pdftex.def Info: images/DelayedMsg.pdf used on input line 356.
+Package pdftex.def Info: images/DelayedMsg.pdf used on input line 353.
 (pdftex.def)             Requested size: 244.95377pt x 123.53116pt.
  [18 <./images/CorrectMsg.pdf> <./images/IncorrectMsg.pdf>] <images/ShiftMatrix
-.pdf, id=172, 349.93636pt x 176.4743pt>
+.pdf, id=165, 349.93636pt x 176.4743pt>
 File: images/ShiftMatrix.pdf Graphic file (type pdf)
 
 <use images/ShiftMatrix.pdf>
-Package pdftex.def Info: images/ShiftMatrix.pdf used on input line 364.
+Package pdftex.def Info: images/ShiftMatrix.pdf used on input line 361.
 (pdftex.def)             Requested size: 244.95377pt x 123.53116pt.
  [19 <./images/DelayedMsg.pdf> <./images/ShiftMatrix.pdf>]
 
-LaTeX Warning: Reference `WebSocketCom' on page 20 undefined on input line 374.
+LaTeX Warning: Reference `WebSocketCom' on page 20 undefined on input line 371.
 
 
-<images/webSocketCom.pdf, id=190, 351.74309pt x 179.48557pt>
+<images/webSocketCom.pdf, id=183, 351.74309pt x 179.48557pt>
 File: images/webSocketCom.pdf Graphic file (type pdf)
 
 <use images/webSocketCom.pdf>
-Package pdftex.def Info: images/webSocketCom.pdf used on input line 380.
+Package pdftex.def Info: images/webSocketCom.pdf used on input line 377.
 (pdftex.def)             Requested size: 246.21848pt x 125.63904pt.
  [20 <./images/webSocketCom.pdf>]
-<images/webSocketCom2.pdf, id=200, 348.73184pt x 146.96104pt>
+<images/webSocketCom2.pdf, id=193, 348.73184pt x 146.96104pt>
 File: images/webSocketCom2.pdf Graphic file (type pdf)
 
 <use images/webSocketCom2.pdf>
-Package pdftex.def Info: images/webSocketCom2.pdf used on input line 388.
+Package pdftex.def Info: images/webSocketCom2.pdf used on input line 385.
 (pdftex.def)             Requested size: 244.11061pt x 102.87202pt.
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 401.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 398.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 401.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 398.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (119.61499pt too wide) in paragraph at lines 413--414
+Overfull \hbox (119.61499pt too wide) in paragraph at lines 410--411
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -431,42 +424,42 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: Reference `sec:matrixMultiplication' on page 21 undefined on inp
-ut line 421.
+ut line 418.
 
 [21 <./images/webSocketCom2.pdf>]
-<images/MultiplyApp.pdf, id=210, 1084.05pt x 866.23625pt>
+<images/MultiplyApp.pdf, id=203, 1084.05pt x 866.23625pt>
 File: images/MultiplyApp.pdf Graphic file (type pdf)
 
 <use images/MultiplyApp.pdf>
-Package pdftex.def Info: images/MultiplyApp.pdf used on input line 425.
+Package pdftex.def Info: images/MultiplyApp.pdf used on input line 422.
 (pdftex.def)             Requested size: 216.80615pt x 173.24417pt.
  [22]
-Overfull \hbox (67.05444pt too wide) in paragraph at lines 444--445
+Overfull \hbox (67.05444pt too wide) in paragraph at lines 441--442
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [23 <./images/MultiplyApp.pdf>]
-Overfull \hbox (1.35376pt too wide) in paragraph at lines 453--454
+Overfull \hbox (1.35376pt too wide) in paragraph at lines 450--451
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (34.2041pt too wide) in paragraph at lines 455--456
+Overfull \hbox (34.2041pt too wide) in paragraph at lines 452--453
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (106.47485pt too wide) in paragraph at lines 456--457
+Overfull \hbox (106.47485pt too wide) in paragraph at lines 453--454
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (7.92383pt too wide) in paragraph at lines 488--489
+Overfull \hbox (7.92383pt too wide) in paragraph at lines 485--486
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-LaTeX Warning: Float too large for page by 20.59999pt on input line 496.
+LaTeX Warning: Float too large for page by 20.59999pt on input line 493.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -477,15 +470,15 @@ Chapter 3.
 
 pdfTeX warning: pdflatex (file ./images/WebsocketTransmissionSpeed.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/WebsocketTransmissionSpeed.pdf, id=230, 963.6pt x 542.025pt>
+<images/WebsocketTransmissionSpeed.pdf, id=223, 963.6pt x 542.025pt>
 File: images/WebsocketTransmissionSpeed.pdf Graphic file (type pdf)
 
 <use images/WebsocketTransmissionSpeed.pdf>
 Package pdftex.def Info: images/WebsocketTransmissionSpeed.pdf used on input li
-ne 512.
+ne 509.
 (pdftex.def)             Requested size: 433.616pt x 243.90898pt.
 
-Overfull \hbox (73.616pt too wide) in paragraph at lines 512--513
+Overfull \hbox (73.616pt too wide) in paragraph at lines 509--510
  [][] 
  []
 
@@ -495,15 +488,15 @@ Overfull \hbox (73.616pt too wide) in paragraph at lines 512--513
 
 pdfTeX warning: pdflatex (file ./images/BluetoothtransmissionSpeed.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/BluetoothtransmissionSpeed.pdf, id=234, 963.6pt x 542.025pt>
+<images/BluetoothtransmissionSpeed.pdf, id=227, 963.6pt x 542.025pt>
 File: images/BluetoothtransmissionSpeed.pdf Graphic file (type pdf)
 
 <use images/BluetoothtransmissionSpeed.pdf>
 Package pdftex.def Info: images/BluetoothtransmissionSpeed.pdf used on input li
-ne 521.
+ne 518.
 (pdftex.def)             Requested size: 433.616pt x 243.90898pt.
 
-Overfull \hbox (73.616pt too wide) in paragraph at lines 521--522
+Overfull \hbox (73.616pt too wide) in paragraph at lines 518--519
  [][] 
  []
 
@@ -511,45 +504,45 @@ Overfull \hbox (73.616pt too wide) in paragraph at lines 521--522
 
 pdfTeX warning: pdflatex (file ./images/BluetoothVsWebsocket.pdf): PDF inclusio
 n: found PDF version <1.7>, but at most version <1.5> allowed
-<images/BluetoothVsWebsocket.pdf, id=235, 963.6pt x 542.025pt>
+<images/BluetoothVsWebsocket.pdf, id=228, 963.6pt x 542.025pt>
 File: images/BluetoothVsWebsocket.pdf Graphic file (type pdf)
 
 <use images/BluetoothVsWebsocket.pdf>
-Package pdftex.def Info: images/BluetoothVsWebsocket.pdf used on input line 530
+Package pdftex.def Info: images/BluetoothVsWebsocket.pdf used on input line 527
 .
 (pdftex.def)             Requested size: 433.616pt x 243.90898pt.
 
-Overfull \hbox (73.616pt too wide) in paragraph at lines 530--531
+Overfull \hbox (73.616pt too wide) in paragraph at lines 527--528
  [][] 
  []
 
 
 LaTeX Warning: Reference `subsec:compArch' on page 27 undefined on input line 5
-36.
+33.
 
 
 LaTeX Warning: Reference `grap:openclCalcu' on page 27 undefined on input line 
-536.
+533.
 
 
 LaTeX Warning: Reference `eq:trendlineGlobalSoC' on page 27 undefined on input 
-line 536.
+line 533.
 
 
 LaTeX Warning: Reference `eq:trendlineGlobalMac' on page 27 undefined on input 
-line 536.
+line 533.
 
 
 LaTeX Warning: Reference `eq:trendlineAndroid' on page 27 undefined on input li
-ne 536.
+ne 533.
 
 
 LaTeX Warning: Reference `eq:trendlineAndroid' on page 27 undefined on input li
-ne 536.
+ne 533.
 
 
 LaTeX Warning: Reference `eq:trendlineAndroid' on page 27 undefined on input li
-ne 536.
+ne 533.
 
 [27 <./images/WebsocketTransmissionSpeed.pdf>] [28 <./images/Bluetoothtransmiss
 ionSpeed.pdf>] (./thesis.bbl [29 <./images/BluetoothVsWebsocket.pdf>]
@@ -570,10 +563,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4336 strings out of 493013
- 67854 string characters out of 6135682
- 170569 words of memory out of 5000000
- 7829 multiletter control sequences out of 15000+600000
+ 4330 strings out of 493013
+ 67703 string characters out of 6135682
+ 170502 words of memory out of 5000000
+ 7824 multiletter control sequences out of 15000+600000
  9455 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,8n,51p,2255b,1277s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -585,10 +578,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmti10.pfb>
-Output written on thesis.pdf (30 pages, 641755 bytes).
+Output written on thesis.pdf (30 pages, 608138 bytes).
 PDF statistics:
- 308 PDF objects out of 1000 (max. 8388607)
- 201 compressed objects within 3 object streams
+ 300 PDF objects out of 1000 (max. 8388607)
+ 197 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
 

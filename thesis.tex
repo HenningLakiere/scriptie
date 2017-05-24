@@ -121,7 +121,7 @@ The total program speedup S can be calculated with Amdahl's law by comparing the
 \subsection{OpenCL}\label{subsec:OpenCL}
 
 Companies worldwide constantly strive to improve computational performance. They start using GPUs, FPGAs and other compute accelerators that behave as a coprocessor to process parallel workload. In order for these heterogeneous architectures to function properly, we need software that supports heterogeneous computing on hardware platforms from different vendors. To make this possible, developers use toolkits such as Threading Building Blocks (TBB), OpenMP, Compute Unified Device Architecture (CUDA), and others \cite{stone2010opencl}. However, some of the existing toolkits were limited to either only being able to use a single microprocessor family or they did not support heterogeneous computing. OpenCL on the other hand provides a set of easy-to-use abstractions and a wide variety of APIs. OpenCL was developed by the Khronos group as a parallel computing API for Apple's OS X release of Snow Leopard back in 2009. This Khronos group is a mixture of people from different hardware vendors like ATI technologies, Intel, Nvidia to name a few \cite{KhronosMembers}.\\
-One of the main reasons companies start using OpenCL is that in the past they would use GPUs, when they should be using FPGAs while others had the problem the other way around. The problem they had is that converting CUDA, which is the parallel computing platform from Nvidia (GPUs), to VHDL is difficult and annoying to do. More reasons on why OpenCL should be used to program FPGAs are listed below and are found in \cite{fpgaForDummies}.
+One of the main reasons companies start using OpenCL is that in the past they would use GPUs, when they should be using FPGAs while others had the problem the other way around. The problem they had is that converting CUDA, which is the parallel computing platform from Nvidia (GPUs), to VHDL is difficult and annoying to do. More reasons on why OpenCL should be used to program FPGAs are listed below \cite{FPGAforDummies}.
 \begin{itemize}
 	\item {Simplicity and ease of development}\\
 	Because most software developers are more familiar with C than low-level HDL language, OpenCL is easy to understand for the vast majority of developers worldwide.
@@ -140,11 +140,8 @@ Since there are multiple devices that are supported by OpenCL, you can reuse you
 
 %\paragraph{Kernels}
 
-\begin{figure}[ht]
-\centering
-\includegraphics[scale=0.7]{images/OpenCLDevices.pdf}
-\caption{hierarchy of devices, compute units and clusters}\label{fig:OpenCLDevices}
-\end{figure}
+
+\section{Android}
 
 
 	

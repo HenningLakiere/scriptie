@@ -12,7 +12,7 @@ Database file #1: References.bib
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 Warning--empty author and editor in Unit2COPC
-Warning--missing publisher in fpgaForDummies
+Warning--missing publisher in FPGAforDummies
 Warning--empty year in bluetoothTech
 
 Done.
