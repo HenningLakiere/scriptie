@@ -1,8 +1,21 @@
-\documentclass[a4paper, 11pt]{report}
+ \documentclass[a4paper, 11pt]{report}
 \usepackage{graphicx}
 \usepackage{listings} 
 \usepackage{subcaption}
 \begin{document}
+
+
+\chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preface}
+
+This thesis is written in order to complete our master education in electronics and ICT engineering at UHasselt Belgium. The development and writing of this thesis has been done in the Tampere University of Technology, Finland. K. Aerts was the supervisor of our home university, Prof. J. Nurmi and PhD student K. Wang supervised us during the exchange period. \\\\
+After several meetings with our supervisors we had a solid idea of what the thesis should be about and what the research question should be. We had some major problems with multiple software versions,  but thanks to dedicated research and trial and error we were able to fix all of these issues.\\
+We would like to thank our supervisors to contribute in our work and keep us motivated along the whole experience.\\\\
+Thanks, to all our family members who visited us here in Finland to provide us with some comfort after surviving the cold winter and to all new friends we met here. Without the other exchange students, this experience would not have been this great.\\\\\\
+Lander Beckers\\
+Henning Lakiere\\\\\\
+Tampere, (Date of last edit)
+
 
 \chapter{Theoretical background}
 
@@ -107,13 +120,32 @@ The total program speedup S can be calculated with Amdahl's law by comparing the
 
 \subsection{OpenCL}\label{subsec:OpenCL}
 
-Companies worldwide constantly strive to improve computational performance. They start using GPUs and other compute accelerators that behave as a coprocessor to process parallel workload. In order for these heterogeneous architectures to function properly, we need software that supports heterogeneous computing on hardware platforms from different vendors. To make this possible, developers use toolkits such as Threading Building Blocks (TBB), OpenMP, Compute Unified Device Architecture (CUDA), and others \cite{stone2010opencl}. However, some of the existing toolkits were limited to either only being able to use a single microprocessor family or they did not support heterogeneous computing. OpenCL on the other hand provides a set of easy-to-use abstractions and a wide variety of APIs. So one thing OpenCL strives for is to be able to support all devices.
-	\subsection{OpenCL history}
+Companies worldwide constantly strive to improve computational performance. They start using GPUs, FPGAs and other compute accelerators that behave as a coprocessor to process parallel workload. In order for these heterogeneous architectures to function properly, we need software that supports heterogeneous computing on hardware platforms from different vendors. To make this possible, developers use toolkits such as Threading Building Blocks (TBB), OpenMP, Compute Unified Device Architecture (CUDA), and others \cite{stone2010opencl}. However, some of the existing toolkits were limited to either only being able to use a single microprocessor family or they did not support heterogeneous computing. OpenCL on the other hand provides a set of easy-to-use abstractions and a wide variety of APIs. OpenCL was developed by the Khronos group as a parallel computing API for Apple's OS X release of Snow Leopard back in 2009. This Khronos group is a mixture of people from different hardware vendors like ATI technologies, Intel, Nvidia to name a few \cite{KhronosMembers}.\\
+One of the main reasons companies start using OpenCL is that in the past they would use GPUs, when they should be using FPGAs while others had the problem the other way around. The problem they had is that converting CUDA, which is the parallel computing platform from Nvidia (GPUs), to VHDL is difficult and annoying to do. More reasons on why OpenCL should be used to program FPGAs are listed below and are found in \cite{fpgaForDummies}.
+\begin{itemize}
+	\item {Simplicity and ease of development}\\
+	Because most software developers are more familiar with C than low-level HDL language, OpenCL is easy to understand for the vast majority of developers worldwide.
+	\item {Code profiling}\\
+OpenCL allows you to determine where exactly the performance-sensitive pieces in your code are. This way it is easy to assign these pieces of code to be executed by hardware accelerators as kernels.
+	\item {Performance \& Efficiency}\\
+Every developer wants to have his software build in the most efficient way to benefit from maximum performance. Due to the FPGA's parallelistic architecture, you only need to generate the logic the device needs to run the software to deliver high performance.
+	\item {Code reuse}\\
+Since there are multiple devices that are supported by OpenCL, you can reuse your already written code on almost any of the other devices without having to change a thing.
+\end{itemize}
+
+%\paragraph{OpenCL programming model.} OpenCL programs are executed on devices containing CPUs, GPUs or other compute accelerators. A device can consist of one or more of these compute units that are all attached to a host processor like in figure \ref{fig:OpenCLDevices}. The programs are written in a language that is understandable by all devices that are supported by OpenCL. This allows developers to accelerate their programs by writing task- or data-parallel computations \cite{stone2010opencl}. A programming language based on C is used to code kernels. These kernels are the functions that are gonna be executed on the devices. As mentioned earlier, OpenCL provide APIs that allow you to run the program on a host device that will launch the kernels on the compute devices that are connected with this host. It also allows to manage the distribution of the devices memory. The next paragraph describes the differents sorts of memory available.
+
+%\paragraph{Memory model.} Managing the device's memory usage is very useful when it comes down to improve the speed and efficiency of all kernels. Some memory types are faster than others while some contain more space to work with. The memory in OpenCL is split up in 2 main parts
 
 
-	\subsection{OpenCL C language}
-	
-	\subsection{•}
+%\paragraph{Kernels}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.7]{images/OpenCLDevices.pdf}
+\caption{hierarchy of devices, compute units and clusters}\label{fig:OpenCLDevices}
+\end{figure}
+
 
 	
 \section{Bluetooth}
@@ -181,7 +213,7 @@ Adopted protocols are protocols developed by other organizations. They are "adop
 \section{Web sockets}
 Web sockets are used for fast, real-time communication between a server and a client. The HTTP model, which is also a communication protocol between a server and a client, allowed the client only to request data from the server, while the server was only able to fulfill these requests. Web sockets on the other hand, allow bidirectional communication, or bidi communication, between the server and the client. This means both client and server can request data and also respond to these requests. The main point of web sockets is to have true concurrency and to focus on the optimization of performance when it comes to communication and exchanging data. The web socket protocol that will be discussed is also known as the RFC6455 model \cite{RFC6455}.
 
-	\subsection{Web socket communication}\label{WebSocketCom}
+	\subsection{WebSocket communication}\label{subsec:WebSocketCom}
 		\paragraph{Handshake.}
 To communicate over web socket, the server and the client first have to connect with each other. The establishment of a web socket connection is done by a web socket handshake. Handshaking is the exchange of information between two devices and the agreement about which protocol will be used to exchange data after the connection is established. A well known example of this is the TCP three-way-handshake. The client sends a synchronization message (SYN) to the server as a request to synchronize with the server. If the server receives this message and allows the client to synchronize with it, it will send a similar SYN message and an acknowledgement message (ACK) to let the client know that it has received the request. When the client receives the SYN-ACK message, it will send an ACK message back to the server to acknowledge that it has received the server's message. The TCP connection is established whenever the server receives the ACK message from the client.\\
 The web socket handshake is quite similar. The client sends a handshake request to the server, and the server will respond with a similar handshake request as seen in figure \ref{fig:WebSocketHandshaking}. The desktop, smartphone and tablet in figure \ref{fig:WebSocketHandshaking} represent the clients that are connected to the server. The handshake request from the client-side is shown in listing \ref{lst:clientHandshake}, while the response from the server is shown in listing \ref{lst:serverHandshake}.
@@ -361,7 +393,7 @@ After the SoC sends its last message it will start doing the matrix multiplicati
 The android phone needs proper software in order to function well in our expirement. To build this software we use Android Studio. It is an easy-to-use java environment with a lot of information that can be found on the internet. We will make three different applications using Android Studio. One application to test the matrix mulitplication with the phone itself to compare the speed with the SoC. A second application is responsible for the Bluetooth communication and a third application is used for the web socket communication.
 
 	\subsection{Matrix multiplication}
-This app will multiply two square matrices that are filled with random integers converted to strings (see subsection \ref{websocketProtocol} why we do this). We start of with creating two matrices. Listing \ref{lst:createMatrix} shows how this is done. We start of by making an array of integers that is "arraySize" large. We start a for loop that will cycle "arraySize" times. In line 4 we create a random integer between value 0 and 99 and put this in the array "matrixA" in the next line. MatrixB is made in exactly the same way.
+This app will multiply two square matrices that are filled with random integers converted to strings (see subsection \ref{subsec:websocketProtocol} on why we do this). We start of with creating two matrices. Listing \ref{lst:createMatrix} shows how this is done. We start of by making an array of integers that is "arraySize" large. We start a for loop that will cycle "arraySize" times. In line 4 we create a random integer between value 0 and 99 and put this in the array "matrixA" in the next line. MatrixB is made in exactly the same way.
 
 \begin{lstlisting}[caption={Creating matrix},captionpos=b, label={lst:createMatrix}, language=java, float=h]
  1|   matrixA = new Integer[arraySize];

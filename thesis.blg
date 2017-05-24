@@ -12,48 +12,49 @@ Database file #1: References.bib
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 Warning--empty author and editor in Unit2COPC
+Warning--missing publisher in fpgaForDummies
 Warning--empty year in bluetoothTech
 
 Done.
-You've used 10 entries,
+You've used 12 entries,
             4087 wiz_defined-function locations,
-            877 strings with 8416 characters,
-and the built_in function-call counts, 3988 in all, are:
-= -- 309
-> -- 52
+            885 strings with 8583 characters,
+and the built_in function-call counts, 4538 in all, are:
+= -- 340
+> -- 57
 < -- 9
-+ -- 27
-- -- 11
-* -- 151
-:= -- 734
-add.period$ -- 20
-call.type$ -- 10
++ -- 30
+- -- 12
+* -- 167
+:= -- 822
+add.period$ -- 22
+call.type$ -- 12
 change.case$ -- 9
 chr.to.int$ -- 18
-cite$ -- 12
-duplicate$ -- 311
-empty$ -- 376
-format.name$ -- 12
-if$ -- 870
+cite$ -- 15
+duplicate$ -- 359
+empty$ -- 448
+format.name$ -- 13
+if$ -- 997
 int.to.chr$ -- 0
-int.to.str$ -- 10
-missing$ -- 66
-newline$ -- 65
-num.names$ -- 9
-pop$ -- 193
+int.to.str$ -- 12
+missing$ -- 77
+newline$ -- 73
+num.names$ -- 10
+pop$ -- 235
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 311
+skip$ -- 356
 stack$ -- 0
 substring$ -- 45
-swap$ -- 196
+swap$ -- 218
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 10
-warning$ -- 2
-while$ -- 13
-width$ -- 12
-write$ -- 114
-(There were 2 warnings)
+type$ -- 12
+warning$ -- 3
+while$ -- 14
+width$ -- 14
+write$ -- 128
+(There were 3 warnings)

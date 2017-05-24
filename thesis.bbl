@@ -40,6 +40,14 @@ J.~E. Stone, D.~Gohara, and G.~Shi, ``Opencl: A parallel programming standard
   for heterogeneous computing systems,'' \emph{Computing in science \&
   engineering}, vol.~12, no.~3, pp. 66--73, 2010.
 
+\bibitem{KhronosMembers}
+\BIBentryALTinterwordspacing
+ [Online]. Available: \url{https://www.khronos.org/members/list}
+\BIBentrySTDinterwordspacing
+
+\bibitem{fpgaForDummies}
+A.~Moore, \emph{The Future: Heterogeneous Computing and OpenCL}, 2017.
+
 \bibitem{bluetoothTech}
 T.~Saggu, ``Bluetooth technology,'' \emph{S.U.S.CET}.
 

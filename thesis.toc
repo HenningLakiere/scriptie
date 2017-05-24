@@ -1,0 +1,41 @@
+\contentsline {chapter}{Preface}{2}
+\contentsline {chapter}{\numberline {1}Theoretical background}{3}
+\contentsline {section}{\numberline {1.1}parallel computing}{3}
+\contentsline {subsection}{\numberline {1.1.1}What is parallel computing}{3}
+\contentsline {subsection}{\numberline {1.1.2}Classification of parallel computing}{4}
+\contentsline {subsection}{\numberline {1.1.3}Amdahl's law}{5}
+\contentsline {subsection}{\numberline {1.1.4}OpenCL}{7}
+\contentsline {subsection}{\numberline {1.1.5}OpenCL history}{7}
+\contentsline {subsection}{\numberline {1.1.6}OpenCL C language}{7}
+\contentsline {subsection}{\numberline {1.1.7}•}{7}
+\contentsline {section}{\numberline {1.2}Bluetooth}{7}
+\contentsline {subsection}{\numberline {1.2.1}Bluetooth benefits}{8}
+\contentsline {paragraph}{Data and voice acces points.}{8}
+\contentsline {paragraph}{Cable replacement.}{8}
+\contentsline {paragraph}{Ad hoc networking.}{8}
+\contentsline {subsection}{\numberline {1.2.2}Master, slave and piconet}{8}
+\contentsline {subsection}{\numberline {1.2.3}Protocol architecture}{9}
+\contentsline {paragraph}{Core protocols.}{9}
+\contentsline {paragraph}{Cable replacement.}{11}
+\contentsline {paragraph}{Telephony control protocols.}{11}
+\contentsline {paragraph}{Adopted protocols.}{11}
+\contentsline {section}{\numberline {1.3}Web sockets}{12}
+\contentsline {subsection}{\numberline {1.3.1}WebSocket communication}{12}
+\contentsline {paragraph}{Handshake.}{12}
+\contentsline {paragraph}{WebSocket URI's}{13}
+\contentsline {paragraph}{Data Frames.}{14}
+\contentsline {paragraph}{Sending and receiving data.}{16}
+\contentsline {chapter}{\numberline {2}Implementation}{17}
+\contentsline {section}{\numberline {2.1}Communication protocol}{17}
+\contentsline {subsection}{\numberline {2.1.1}Bluetooth communication protocol}{17}
+\contentsline {subsection}{\numberline {2.1.2}Web socket communication protocol}{20}
+\contentsline {section}{\numberline {2.2}Android}{21}
+\contentsline {subsection}{\numberline {2.2.1}Matrix multiplication}{21}
+\contentsline {subsection}{\numberline {2.2.2}Bluetooth application}{22}
+\contentsline {subsection}{\numberline {2.2.3}WebSocket application}{22}
+\contentsline {chapter}{\numberline {3}Results}{26}
+\contentsline {section}{\numberline {3.1}Bluetooth vs web socket communication speed}{26}
+\contentsline {subsection}{\numberline {3.1.1}WebSocket transmission}{26}
+\contentsline {subsection}{\numberline {3.1.2}Bluetooth transmission}{27}
+\contentsline {subsection}{\numberline {3.1.3}Bluetooth vs. WebSocket}{27}
+\contentsline {subsection}{\numberline {3.1.4}WebSocket and SoC vs. Android smartphone}{28}
