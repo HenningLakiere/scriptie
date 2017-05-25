@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.24)  25 MAY 2017 14:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.24)  25 MAY 2017 14:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -699,46 +699,35 @@ Overfull \hbox (73.616pt too wide) in paragraph at lines 639--640
 
 
 LaTeX Warning: Reference `subsec:compArch' on page 33 undefined on input line 6
-45.
+44.
 
 
 LaTeX Warning: Reference `grap:openclCalcu' on page 33 undefined on input line 
-645.
+644.
 
 
 LaTeX Warning: Reference `eq:trendlineGlobalSoC' on page 33 undefined on input 
-line 645.
+line 644.
 
 
 LaTeX Warning: Reference `eq:trendlineGlobalMac' on page 33 undefined on input 
-line 645.
+line 644.
 
 
 LaTeX Warning: Reference `eq:trendlineAndroid' on page 33 undefined on input li
-ne 645.
+ne 644.
 
 
 LaTeX Warning: Reference `eq:trendlineAndroid' on page 33 undefined on input li
-ne 645.
+ne 644.
 
 
 LaTeX Warning: Reference `eq:trendlineAndroid' on page 33 undefined on input li
-ne 645.
+ne 644.
 
-[33 <./images/app2resultgraph.pdf>] [34 <./images/WebsocketTransmissionSpeed.pd
-f>] [35 <./images/BluetoothtransmissionSpeed.pdf>] [36 <./images/BluetoothVsWeb
-socket.pdf>] [37
-
-
-]
-Appendix A.
-[38
-
-]
-Appendix B.
-(./thesis.bbl [39
-
-]
+[33 <./images/app2resultgraph.pdf>] (./thesis.bbl [34 <./images/WebsocketTransm
+issionSpeed.pdf>] [35 <./images/BluetoothtransmissionSpeed.pdf>] [36 <./images/
+BluetoothVsWebsocket.pdf>]
 Underfull \hbox (badness 2707) in paragraph at lines 74--77
 []\OT1/cmr/m/n/10.95 Mozilla. (2017) Writ-ing web-socket servers. [On-
  []
@@ -759,7 +748,7 @@ Overfull \hbox (67.44601pt too wide) in paragraph at lines 86--89
 uetoothAdapter.html 
  []
 
-) [40
+) [37
 
 ] (./thesis.aux)
 
@@ -767,10 +756,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4520 strings out of 493013
- 70753 string characters out of 6135682
- 205055 words of memory out of 5000000
- 8003 multiletter control sequences out of 15000+600000
+ 4519 strings out of 493013
+ 70746 string characters out of 6135682
+ 205042 words of memory out of 5000000
+ 8002 multiletter control sequences out of 15000+600000
  9455 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,8n,51p,2255b,1277s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -782,10 +771,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmti10.pfb>
-Output written on thesis.pdf (40 pages, 988014 bytes).
+Output written on thesis.pdf (37 pages, 1293526 bytes).
 PDF statistics:
- 381 PDF objects out of 1000 (max. 8388607)
- 247 compressed objects within 3 object streams
+ 374 PDF objects out of 1000 (max. 8388607)
+ 241 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  146 words of extra memory for PDF output out of 10000 (max. 10000000)
 
