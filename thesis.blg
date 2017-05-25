@@ -8,53 +8,55 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: References.bib
+Warning--entry type for "SmartphoneShares" isn't style-file defined
+--line 76 of file References.bib
+Warning--I didn't find a database entry for "FPGAforDummies"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 Warning--empty author and editor in Unit2COPC
-Warning--missing publisher in FPGAforDummies
 Warning--empty year in bluetoothTech
 
 Done.
-You've used 12 entries,
+You've used 13 entries,
             4087 wiz_defined-function locations,
-            885 strings with 8583 characters,
-and the built_in function-call counts, 4538 in all, are:
-= -- 340
-> -- 57
+            891 strings with 8776 characters,
+and the built_in function-call counts, 4790 in all, are:
+= -- 358
+> -- 58
 < -- 9
-+ -- 30
++ -- 31
 - -- 12
-* -- 167
-:= -- 822
-add.period$ -- 22
-call.type$ -- 12
-change.case$ -- 9
+* -- 172
+:= -- 867
+add.period$ -- 24
+call.type$ -- 13
+change.case$ -- 11
 chr.to.int$ -- 18
 cite$ -- 15
-duplicate$ -- 359
-empty$ -- 448
+duplicate$ -- 393
+empty$ -- 472
 format.name$ -- 13
-if$ -- 997
+if$ -- 1052
 int.to.chr$ -- 0
-int.to.str$ -- 12
-missing$ -- 77
-newline$ -- 73
+int.to.str$ -- 13
+missing$ -- 83
+newline$ -- 76
 num.names$ -- 10
-pop$ -- 235
+pop$ -- 255
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 356
+skip$ -- 371
 stack$ -- 0
-substring$ -- 45
-swap$ -- 218
+substring$ -- 47
+swap$ -- 228
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 12
-warning$ -- 3
+type$ -- 13
+warning$ -- 2
 while$ -- 14
-width$ -- 14
-write$ -- 128
-(There were 3 warnings)
+width$ -- 15
+write$ -- 134
+(There were 4 warnings)

@@ -29,12 +29,6 @@ B.~Barney, ``What is parallel computing,'' \emph{Introduction to Parallel
 \emph{MCSE-011: Parallel Computing}.\hskip 1em plus 0.5em minus 0.4em\relax
   Gullybaba Publishing House, 2008.
 
-\bibitem{amdahlslaw}
-\BIBentryALTinterwordspacing
-J.~Jenkov. (2015) Amdahl's law. [Online]. Available:
-  \url{http://tutorials.jenkov.com/java-concurrency/amdahls-law.html}
-\BIBentrySTDinterwordspacing
-
 \bibitem{stone2010opencl}
 J.~E. Stone, D.~Gohara, and G.~Shi, ``Opencl: A parallel programming standard
   for heterogeneous computing systems,'' \emph{Computing in science \&
@@ -45,8 +39,13 @@ J.~E. Stone, D.~Gohara, and G.~Shi, ``Opencl: A parallel programming standard
  [Online]. Available: \url{https://www.khronos.org/members/list}
 \BIBentrySTDinterwordspacing
 
-\bibitem{FPGAforDummies}
-A.~Moore, \emph{The Future: Heterogeneous Computing and OpenCL}, 2017.
+\bibitem{SmartphoneShares}
+S.~M. Patterson, ``Q1 2017 smartphone shipments: Samsung rebounds, apple goes
+  sideways, chinese makers roar,'' 2017.
+
+\bibitem{OSShares}
+J.~Vincent, ``99.6 percent of new smartphones run android or ios,'' \emph{The
+  Verge}, 2017.
 
 \bibitem{bluetoothTech}
 T.~Saggu, ``Bluetooth technology,'' \emph{S.U.S.CET}.
@@ -80,6 +79,12 @@ Mozilla. (2017) Writing websocket servers. [Online]. Available:
 \BIBentryALTinterwordspacing
 J.~Lawson. (2012) Websockets, a guide. [Online]. Available:
   \url{http://buildnewgames.com/websockets/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{AndroidDeveloper}
+\BIBentryALTinterwordspacing
+Bluetoothadapter. [Online]. Available:
+  \url{https://developer.android.com/reference/android/bluetooth/BluetoothAdapter.html}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}

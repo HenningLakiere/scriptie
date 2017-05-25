@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.24)  24 MAY 2017 11:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.4.24)  25 MAY 2017 14:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -103,33 +103,40 @@ Package caption Info: listings package is loaded.
 )
 \c@subfigure=\count98
 \c@subtable=\count99
+)
+(/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2009/09/02 v1.2b extra appendix facilities
+\c@@pps=\count100
+\c@@ppsavesec=\count101
+\c@@ppsaveapp=\count102
 ) (./thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count100
+\scratchcounter=\count103
 \scratchdimen=\dimen116
 \scratchbox=\box28
-\nofMPsegments=\count101
-\nofMParguments=\count102
+\nofMPsegments=\count104
+\nofMParguments=\count105
 \everyMPshowfont=\toks16
-\MPscratchCnt=\count103
+\MPscratchCnt=\count106
 \MPscratchDim=\dimen117
-\MPnumerator=\count104
-\makeMPintoPDFobject=\count105
+\MPnumerator=\count107
+\makeMPintoPDFobject=\count108
 \everyMPtoPDFconversion=\toks17
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
@@ -180,36 +187,36 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count106
+\c@lstlisting=\count109
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--18
+Underfull \hbox (badness 10000) in paragraph at lines 12--19
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--18
+Underfull \hbox (badness 10000) in paragraph at lines 12--19
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--18
+Underfull \hbox (badness 10000) in paragraph at lines 12--19
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--18
+Underfull \hbox (badness 10000) in paragraph at lines 12--19
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--18
+Underfull \hbox (badness 10000) in paragraph at lines 12--19
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--18
+Underfull \hbox (badness 10000) in paragraph at lines 12--19
 
  []
 
@@ -222,14 +229,14 @@ Chapter 1.
 File: images/serialProblem.pdf Graphic file (type pdf)
 
 <use images/serialProblem.pdf>
-Package pdftex.def Info: images/serialProblem.pdf used on input line 27.
+Package pdftex.def Info: images/serialProblem.pdf used on input line 28.
 (pdftex.def)             Requested size: 242.5017pt x 100.37321pt.
 
 <images/parallelProblem.pdf, id=9, 685.56125pt x 373.395pt>
 File: images/parallelProblem.pdf Graphic file (type pdf)
 
 <use images/parallelProblem.pdf>
-Package pdftex.def Info: images/parallelProblem.pdf used on input line 35.
+Package pdftex.def Info: images/parallelProblem.pdf used on input line 36.
 (pdftex.def)             Requested size: 274.21964pt x 149.35535pt.
  [2
 
@@ -238,75 +245,74 @@ Package pdftex.def Info: images/parallelProblem.pdf used on input line 35.
 File: images/flynnsTaxonomy.pdf Graphic file (type pdf)
 
 <use images/flynnsTaxonomy.pdf>
-Package pdftex.def Info: images/flynnsTaxonomy.pdf used on input line 48.
+Package pdftex.def Info: images/flynnsTaxonomy.pdf used on input line 49.
 (pdftex.def)             Requested size: 234.87692pt x 145.04152pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 54.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 55.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 54.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 55.
  [3 <./images/parallelProblem.pdf>] <images/sisd.pdf, id=34, 401.5pt x 401.5pt>
 File: images/sisd.pdf Graphic file (type pdf)
  <use images/sisd.pdf>
-Package pdftex.def Info: images/sisd.pdf used on input line 77.
+Package pdftex.def Info: images/sisd.pdf used on input line 78.
 (pdftex.def)             Requested size: 120.45091pt x 120.45091pt.
 
 <images/simd.pdf, id=35, 401.5pt x 401.5pt>
 File: images/simd.pdf Graphic file (type pdf)
  <use images/simd.pdf>
-Package pdftex.def Info: images/simd.pdf used on input line 82.
+Package pdftex.def Info: images/simd.pdf used on input line 83.
 (pdftex.def)             Requested size: 120.45091pt x 120.45091pt.
 
 <images/misd.pdf, id=36, 401.5pt x 401.5pt>
 File: images/misd.pdf Graphic file (type pdf)
  <use images/misd.pdf>
-Package pdftex.def Info: images/misd.pdf used on input line 87.
+Package pdftex.def Info: images/misd.pdf used on input line 88.
 (pdftex.def)             Requested size: 120.45091pt x 120.45091pt.
 
 <images/mimd.pdf, id=37, 401.5pt x 401.5pt>
 File: images/mimd.pdf Graphic file (type pdf)
  <use images/mimd.pdf>
-Package pdftex.def Info: images/mimd.pdf used on input line 92.
+Package pdftex.def Info: images/mimd.pdf used on input line 93.
 (pdftex.def)             Requested size: 120.45091pt x 120.45091pt.
- [4 <./images/flynnsTaxonomy.pdf>]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 100.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 100.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 100.
- [5 <./images/sisd.pdf> <./images/simd.pdf> <./images/misd.pdf> <./images/mimd.
-pdf>]
-Overfull \hbox (10.93056pt too wide) in paragraph at lines 128--130
+
+
+LaTeX Warning: Citation `FPGAforDummies' on page 4 undefined on input line 103.
+
+
+[4 <./images/flynnsTaxonomy.pdf>] [5 <./images/sisd.pdf> <./images/simd.pdf> <.
+/images/misd.pdf> <./images/mimd.pdf>]
+Overfull \hbox (10.93056pt too wide) in paragraph at lines 107--109
 \OT1/cmr/m/n/10.95 OpenCL al-lows you to de-ter-mine where ex-actly the perform
 ance-sensitive
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 149--150
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
 
  []
 
-[7] <images/scatternet.pdf, id=93, 408.52625pt x 290.08376pt>
+[7] <images/scatternet.pdf, id=92, 408.52625pt x 290.08376pt>
 File: images/scatternet.pdf Graphic file (type pdf)
 
 <use images/scatternet.pdf>
-Package pdftex.def Info: images/scatternet.pdf used on input line 166.
+Package pdftex.def Info: images/scatternet.pdf used on input line 141.
 (pdftex.def)             Requested size: 245.11765pt x 174.05159pt.
- [8 <./images/scatternet.pdf>]
-<images/bluetoothStack.pdf, id=101, 384.43625pt x 383.4325pt>
+ [8]
+<images/bluetoothStack.pdf, id=96, 384.43625pt x 383.4325pt>
 File: images/bluetoothStack.pdf Graphic file (type pdf)
 
 <use images/bluetoothStack.pdf>
-Package pdftex.def Info: images/bluetoothStack.pdf used on input line 176.
+Package pdftex.def Info: images/bluetoothStack.pdf used on input line 151.
 (pdftex.def)             Requested size: 192.21765pt x 191.71577pt.
- [9 <./images/bluetoothStack.pdf>] [10]
-<images/server.pdf, id=115, 398.99063pt x 415.5525pt>
+ [9 <./images/scatternet.pdf> <./images/bluetoothStack.pdf>] [10] [11] <images/
+server.pdf, id=117, 398.99063pt x 415.5525pt>
 File: images/server.pdf Graphic file (type pdf)
- <use images/server.pdf>
-Package pdftex.def Info: images/server.pdf used on input line 219.
+
+<use images/server.pdf>
+Package pdftex.def Info: images/server.pdf used on input line 194.
 (pdftex.def)             Requested size: 199.49483pt x 207.77574pt.
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -315,247 +321,445 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
-Overfull \hbox (1.35376pt too wide) in paragraph at lines 235--236
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 202.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 202.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 202.
+
+Overfull \hbox (1.35376pt too wide) in paragraph at lines 210--211
 [][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (13.39537pt too wide) in paragraph at lines 215--239
+Overfull \hbox (13.39537pt too wide) in paragraph at lines 190--214
 \OT1/cmr/m/n/10.95 WebSocket-Key" header and "258EAFA5-E914-47DA-95CA-C5AB0DC85
 B11"
  []
-
-[11]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [12 <./images/server.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 241--242
+Underfull \hbox (badness 10000) in paragraph at lines 216--217
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 243--245
+Underfull \hbox (badness 10000) in paragraph at lines 218--220
 
  []
 
-[13] <images/WebSocketDataFrame.pdf, id=130, 542.025pt x 279.0425pt>
+[13] <images/WebSocketDataFrame.pdf, id=129, 542.025pt x 279.0425pt>
 File: images/WebSocketDataFrame.pdf Graphic file (type pdf)
 
 <use images/WebSocketDataFrame.pdf>
-Package pdftex.def Info: images/WebSocketDataFrame.pdf used on input line 253.
+Package pdftex.def Info: images/WebSocketDataFrame.pdf used on input line 228.
 (pdftex.def)             Requested size: 271.01183pt x 139.5209pt.
  [14 <./images/WebSocketDataFrame.pdf>]
 [15] [16]
 Chapter 2.
 [17
 
-] <images/CorrectMsg.pdf, id=147, 348.73184pt x 146.3588pt>
+] <images/CorrectMsg.pdf, id=146, 348.73184pt x 146.3588pt>
 File: images/CorrectMsg.pdf Graphic file (type pdf)
 
 <use images/CorrectMsg.pdf>
-Package pdftex.def Info: images/CorrectMsg.pdf used on input line 337.
+Package pdftex.def Info: images/CorrectMsg.pdf used on input line 312.
 (pdftex.def)             Requested size: 244.11061pt x 102.45044pt.
 
-<images/IncorrectMsg.pdf, id=148, 349.3341pt x 176.4743pt>
+<images/IncorrectMsg.pdf, id=147, 349.3341pt x 176.4743pt>
 File: images/IncorrectMsg.pdf Graphic file (type pdf)
 
 <use images/IncorrectMsg.pdf>
-Package pdftex.def Info: images/IncorrectMsg.pdf used on input line 345.
+Package pdftex.def Info: images/IncorrectMsg.pdf used on input line 320.
 (pdftex.def)             Requested size: 244.5322pt x 123.53116pt.
 
-<images/DelayedMsg.pdf, id=149, 349.93636pt x 176.4743pt>
+<images/DelayedMsg.pdf, id=148, 349.93636pt x 176.4743pt>
 File: images/DelayedMsg.pdf Graphic file (type pdf)
 
 <use images/DelayedMsg.pdf>
-Package pdftex.def Info: images/DelayedMsg.pdf used on input line 353.
+Package pdftex.def Info: images/DelayedMsg.pdf used on input line 328.
 (pdftex.def)             Requested size: 244.95377pt x 123.53116pt.
  [18 <./images/CorrectMsg.pdf> <./images/IncorrectMsg.pdf>] <images/ShiftMatrix
-.pdf, id=165, 349.93636pt x 176.4743pt>
+.pdf, id=164, 349.93636pt x 176.4743pt>
 File: images/ShiftMatrix.pdf Graphic file (type pdf)
 
 <use images/ShiftMatrix.pdf>
-Package pdftex.def Info: images/ShiftMatrix.pdf used on input line 361.
+Package pdftex.def Info: images/ShiftMatrix.pdf used on input line 336.
 (pdftex.def)             Requested size: 244.95377pt x 123.53116pt.
  [19 <./images/DelayedMsg.pdf> <./images/ShiftMatrix.pdf>]
 
-LaTeX Warning: Reference `WebSocketCom' on page 20 undefined on input line 371.
+LaTeX Warning: Reference `WebSocketCom' on page 20 undefined on input line 346.
 
 
-<images/webSocketCom.pdf, id=183, 351.74309pt x 179.48557pt>
+<images/webSocketCom.pdf, id=182, 351.74309pt x 179.48557pt>
 File: images/webSocketCom.pdf Graphic file (type pdf)
 
 <use images/webSocketCom.pdf>
-Package pdftex.def Info: images/webSocketCom.pdf used on input line 377.
+Package pdftex.def Info: images/webSocketCom.pdf used on input line 352.
 (pdftex.def)             Requested size: 246.21848pt x 125.63904pt.
  [20 <./images/webSocketCom.pdf>]
-<images/webSocketCom2.pdf, id=193, 348.73184pt x 146.96104pt>
+<images/webSocketCom2.pdf, id=192, 348.73184pt x 146.96104pt>
 File: images/webSocketCom2.pdf Graphic file (type pdf)
 
 <use images/webSocketCom2.pdf>
-Package pdftex.def Info: images/webSocketCom2.pdf used on input line 385.
+Package pdftex.def Info: images/webSocketCom2.pdf used on input line 360.
 (pdftex.def)             Requested size: 244.11061pt x 102.87202pt.
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 398.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 373.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 398.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 373.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (119.61499pt too wide) in paragraph at lines 410--411
+Overfull \hbox (86.76465pt too wide) in paragraph at lines 385--386
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 LaTeX Warning: Reference `sec:matrixMultiplication' on page 21 undefined on inp
-ut line 418.
+ut line 393.
 
 [21 <./images/webSocketCom2.pdf>]
-<images/MultiplyApp.pdf, id=203, 1084.05pt x 866.23625pt>
-File: images/MultiplyApp.pdf Graphic file (type pdf)
 
-<use images/MultiplyApp.pdf>
-Package pdftex.def Info: images/MultiplyApp.pdf used on input line 422.
-(pdftex.def)             Requested size: 216.80615pt x 173.24417pt.
- [22]
-Overfull \hbox (67.05444pt too wide) in paragraph at lines 441--442
+pdfTeX warning: pdflatex (file ./images/app1layout.pdf): PDF inclusion: found P
+DF version <1.7>, but at most version <1.5> allowed
+<images/app1layout.pdf, id=202, 304.9794pt x 542.025pt>
+File: images/app1layout.pdf Graphic file (type pdf)
+
+<use images/app1layout.pdf>
+Package pdftex.def Info: images/app1layout.pdf used on input line 398.
+(pdftex.def)             Requested size: 121.9896pt x 216.80615pt.
+
+
+pdfTeX warning: pdflatex (file ./images/app3layout.pdf): PDF inclusion: found P
+DF version <1.7>, but at most version <1.5> allowed
+<images/app3layout.pdf, id=203, 304.9794pt x 542.025pt>
+File: images/app3layout.pdf Graphic file (type pdf)
+
+<use images/app3layout.pdf>
+Package pdftex.def Info: images/app3layout.pdf used on input line 402.
+(pdftex.def)             Requested size: 121.9896pt x 216.80615pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 408--417
+
+ []
+
+
+Overfull \hbox (48.32924pt too wide) in paragraph at lines 408--417
+[]$\OML/cmm/m/it/10.95 <$\OT1/cmr/m/n/10.95 uses-permission an-droid:name="andr
+oid.permission.BLUETOOTH[]ADMIN"/$\OML/cmm/m/it/10.95 >$
+ []
+
+
+Overfull \hbox (5.60594pt too wide) in paragraph at lines 408--417
+[]$\OML/cmm/m/it/10.95 <$\OT1/cmr/m/n/10.95 uses-permission android:name="andro
+id.permission.BLUETOOTH"/$\OML/cmm/m/it/10.95 >$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 408--417
+
+ []
+
+[22] [23 <./images/app1layout.pdf> <./images/app3layout.pdf
+
+pdfTeX warning: pdflatex (file ./images/app3layout.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+>]
+Overfull \hbox (14.4939pt too wide) in paragraph at lines 421--422
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[23 <./images/MultiplyApp.pdf>]
-Overfull \hbox (1.35376pt too wide) in paragraph at lines 450--451
-[][][][][][][][][][][][][][][][][][][][][][] 
+
+Overfull \hbox (53.9143pt too wide) in paragraph at lines 425--426
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (34.2041pt too wide) in paragraph at lines 452--453
-[][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (106.47485pt too wide) in paragraph at lines 453--454
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (7.92383pt too wide) in paragraph at lines 485--486
+Overfull \hbox (67.05444pt too wide) in paragraph at lines 430--431
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-LaTeX Warning: Float too large for page by 20.59999pt on input line 493.
+Overfull \hbox (53.9143pt too wide) in paragraph at lines 433--434
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (67.05444pt too wide) in paragraph at lines 449--450
+[][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (67.05444pt too wide) in paragraph at lines 451--452
+[][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (152.46533pt too wide) in paragraph at lines 462--463
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (178.7456pt too wide) in paragraph at lines 464--465
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (47.34424pt too wide) in paragraph at lines 494--495
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 481--499
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 481--499
+
+ []
+
+[24] [25]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (1.35376pt too wide) in paragraph at lines 501--502
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (27.63403pt too wide) in paragraph at lines 503--504
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (132.75513pt too wide) in paragraph at lines 504--505
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+] 
+ []
+
+
+Overfull \hbox (1.35376pt too wide) in paragraph at lines 535--536
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 6.99998pt on input line 543.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[24] [25]
+[26] [27] [28]
 Chapter 3.
 
 
+pdfTeX warning: pdflatex (file ./images/app1result.pdf): PDF inclusion: found P
+DF version <1.7>, but at most version <1.5> allowed
+<images/app1result.pdf, id=236, 304.9794pt x 542.025pt>
+File: images/app1result.pdf Graphic file (type pdf)
+
+<use images/app1result.pdf>
+Package pdftex.def Info: images/app1result.pdf used on input line 563.
+(pdftex.def)             Requested size: 91.49452pt x 162.60875pt.
+
+
+pdfTeX warning: pdflatex (file ./images/app1usage.pdf): PDF inclusion: found PD
+F version <1.7>, but at most version <1.5> allowed
+<images/app1usage.pdf, id=237, 963.6pt x 542.025pt>
+File: images/app1usage.pdf Graphic file (type pdf)
+ <use images/app1usage.pdf>
+Package pdftex.def Info: images/app1usage.pdf used on input line 568.
+(pdftex.def)             Requested size: 289.08223pt x 162.60875pt.
+
+Overfull \hbox (109.08223pt too wide) in paragraph at lines 568--569
+ [][] 
+ []
+
+
+
+pdfTeX warning: pdflatex (file ./images/app1graph.pdf): PDF inclusion: found PD
+F version <1.7>, but at most version <1.5> allowed
+<images/app1graph.pdf, id=238, 963.6pt x 542.025pt>
+File: images/app1graph.pdf Graphic file (type pdf)
+ <use images/app1graph.pdf>
+Package pdftex.def Info: images/app1graph.pdf used on input line 576.
+(pdftex.def)             Requested size: 337.26506pt x 189.71158pt.
+
+[29
+
+]
+
+pdfTeX warning: pdflatex (file ./images/app3usage.pdf): PDF inclusion: found PD
+F version <1.7>, but at most version <1.5> allowed
+<images/app3usage.pdf, id=242, 963.6pt x 542.025pt>
+File: images/app3usage.pdf Graphic file (type pdf)
+ <use images/app3usage.pdf>
+Package pdftex.def Info: images/app3usage.pdf used on input line 587.
+(pdftex.def)             Requested size: 289.08223pt x 162.60875pt.
+
+
+pdfTeX warning: pdflatex (file ./images/app3Log.pdf): PDF inclusion: found PDF 
+version <1.7>, but at most version <1.5> allowed
+<images/app3Log.pdf, id=243, 662.35455pt x 87.32625pt>
+File: images/app3Log.pdf Graphic file (type pdf)
+
+<use images/app3Log.pdf>
+Package pdftex.def Info: images/app3Log.pdf used on input line 593.
+(pdftex.def)             Requested size: 331.17647pt x 43.66301pt.
+
+
+pdfTeX warning: pdflatex (file ./images/app2resultlog.pdf): PDF inclusion: foun
+d PDF version <1.7>, but at most version <1.5> allowed
+<images/app2resultlog.pdf, id=244, 963.6pt x 180.675pt>
+File: images/app2resultlog.pdf Graphic file (type pdf)
+
+<use images/app2resultlog.pdf>
+Package pdftex.def Info: images/app2resultlog.pdf used on input line 603.
+(pdftex.def)             Requested size: 337.26506pt x 63.23718pt.
+
+
+pdfTeX warning: pdflatex (file ./images/app2resultgraph.pdf): PDF inclusion: fo
+und PDF version <1.7>, but at most version <1.5> allowed
+<images/app2resultgraph.pdf, id=245, 963.6pt x 542.025pt>
+File: images/app2resultgraph.pdf Graphic file (type pdf)
+
+<use images/app2resultgraph.pdf>
+Package pdftex.def Info: images/app2resultgraph.pdf used on input line 609.
+(pdftex.def)             Requested size: 337.26506pt x 189.71158pt.
+ [30 <./images/app1result.pdf> <./images/app1usage.pdf
+
+pdfTeX warning: pdflatex (file ./images/app1usage.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+>]
+
 pdfTeX warning: pdflatex (file ./images/WebsocketTransmissionSpeed.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/WebsocketTransmissionSpeed.pdf, id=223, 963.6pt x 542.025pt>
+<images/WebsocketTransmissionSpeed.pdf, id=257, 963.6pt x 542.025pt>
 File: images/WebsocketTransmissionSpeed.pdf Graphic file (type pdf)
 
 <use images/WebsocketTransmissionSpeed.pdf>
 Package pdftex.def Info: images/WebsocketTransmissionSpeed.pdf used on input li
-ne 509.
+ne 621.
 (pdftex.def)             Requested size: 433.616pt x 243.90898pt.
 
-Overfull \hbox (73.616pt too wide) in paragraph at lines 509--510
+Overfull \hbox (73.616pt too wide) in paragraph at lines 621--622
  [][] 
  []
 
-[26
-
-]
+[31 <./images/app1graph.pdf>]
 
 pdfTeX warning: pdflatex (file ./images/BluetoothtransmissionSpeed.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/BluetoothtransmissionSpeed.pdf, id=227, 963.6pt x 542.025pt>
+<images/BluetoothtransmissionSpeed.pdf, id=270, 963.6pt x 542.025pt>
 File: images/BluetoothtransmissionSpeed.pdf Graphic file (type pdf)
 
 <use images/BluetoothtransmissionSpeed.pdf>
 Package pdftex.def Info: images/BluetoothtransmissionSpeed.pdf used on input li
-ne 518.
+ne 630.
 (pdftex.def)             Requested size: 433.616pt x 243.90898pt.
 
-Overfull \hbox (73.616pt too wide) in paragraph at lines 518--519
+Overfull \hbox (73.616pt too wide) in paragraph at lines 630--631
  [][] 
  []
 
+[32 <./images/app3usage.pdf> <./images/app3Log.pdf
 
+pdfTeX warning: pdflatex (file ./images/app3Log.pdf): PDF inclusion: multiple p
+dfs with page group included in a single page
+> <./images/app2resultlog.pdf
+
+pdfTeX warning: pdflatex (file ./images/app2resultlog.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+>]
 
 pdfTeX warning: pdflatex (file ./images/BluetoothVsWebsocket.pdf): PDF inclusio
 n: found PDF version <1.7>, but at most version <1.5> allowed
-<images/BluetoothVsWebsocket.pdf, id=228, 963.6pt x 542.025pt>
+<images/BluetoothVsWebsocket.pdf, id=288, 963.6pt x 542.025pt>
 File: images/BluetoothVsWebsocket.pdf Graphic file (type pdf)
 
 <use images/BluetoothVsWebsocket.pdf>
-Package pdftex.def Info: images/BluetoothVsWebsocket.pdf used on input line 527
+Package pdftex.def Info: images/BluetoothVsWebsocket.pdf used on input line 639
 .
 (pdftex.def)             Requested size: 433.616pt x 243.90898pt.
 
-Overfull \hbox (73.616pt too wide) in paragraph at lines 527--528
+Overfull \hbox (73.616pt too wide) in paragraph at lines 639--640
  [][] 
  []
 
 
-LaTeX Warning: Reference `subsec:compArch' on page 27 undefined on input line 5
-33.
+LaTeX Warning: Reference `subsec:compArch' on page 33 undefined on input line 6
+45.
 
 
-LaTeX Warning: Reference `grap:openclCalcu' on page 27 undefined on input line 
-533.
+LaTeX Warning: Reference `grap:openclCalcu' on page 33 undefined on input line 
+645.
 
 
-LaTeX Warning: Reference `eq:trendlineGlobalSoC' on page 27 undefined on input 
-line 533.
+LaTeX Warning: Reference `eq:trendlineGlobalSoC' on page 33 undefined on input 
+line 645.
 
 
-LaTeX Warning: Reference `eq:trendlineGlobalMac' on page 27 undefined on input 
-line 533.
+LaTeX Warning: Reference `eq:trendlineGlobalMac' on page 33 undefined on input 
+line 645.
 
 
-LaTeX Warning: Reference `eq:trendlineAndroid' on page 27 undefined on input li
-ne 533.
+LaTeX Warning: Reference `eq:trendlineAndroid' on page 33 undefined on input li
+ne 645.
 
 
-LaTeX Warning: Reference `eq:trendlineAndroid' on page 27 undefined on input li
-ne 533.
+LaTeX Warning: Reference `eq:trendlineAndroid' on page 33 undefined on input li
+ne 645.
 
 
-LaTeX Warning: Reference `eq:trendlineAndroid' on page 27 undefined on input li
-ne 533.
+LaTeX Warning: Reference `eq:trendlineAndroid' on page 33 undefined on input li
+ne 645.
 
-[27 <./images/WebsocketTransmissionSpeed.pdf>] [28 <./images/Bluetoothtransmiss
-ionSpeed.pdf>] (./thesis.bbl [29 <./images/BluetoothVsWebsocket.pdf>]
-Underfull \hbox (badness 2707) in paragraph at lines 75--78
+[33 <./images/app2resultgraph.pdf>] [34 <./images/WebsocketTransmissionSpeed.pd
+f>] [35 <./images/BluetoothtransmissionSpeed.pdf>] [36 <./images/BluetoothVsWeb
+socket.pdf>] [37
+
+
+]
+Appendix A.
+[38
+
+]
+Appendix B.
+(./thesis.bbl [39
+
+]
+Underfull \hbox (badness 2707) in paragraph at lines 74--77
 []\OT1/cmr/m/n/10.95 Mozilla. (2017) Writ-ing web-socket servers. [On-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--78
+Underfull \hbox (badness 10000) in paragraph at lines 74--77
 \OT1/cmr/m/n/10.95 line]. Avail-able: https://developer.mozilla.org/en-
  []
 
-) [30
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--89
+[]\OT1/cmr/m/n/10.95 Bluetoothadapter. [On-line]. Avail-able:
+ []
+
+
+Overfull \hbox (67.44601pt too wide) in paragraph at lines 86--89
+\OT1/cmr/m/n/10.95 https://developer.android.com/reference/android/bluetooth/Bl
+uetoothAdapter.html 
+ []
+
+) [40
 
 ] (./thesis.aux)
 
@@ -563,10 +767,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4330 strings out of 493013
- 67703 string characters out of 6135682
- 170502 words of memory out of 5000000
- 7824 multiletter control sequences out of 15000+600000
+ 4520 strings out of 493013
+ 70753 string characters out of 6135682
+ 205055 words of memory out of 5000000
+ 8003 multiletter control sequences out of 15000+600000
  9455 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,8n,51p,2255b,1277s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -578,10 +782,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmti10.pfb>
-Output written on thesis.pdf (30 pages, 608138 bytes).
+Output written on thesis.pdf (40 pages, 988014 bytes).
 PDF statistics:
- 300 PDF objects out of 1000 (max. 8388607)
- 197 compressed objects within 2 object streams
+ 381 PDF objects out of 1000 (max. 8388607)
+ 247 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 
