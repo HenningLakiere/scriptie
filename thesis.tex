@@ -2,7 +2,7 @@
 \usepackage{graphicx}
 \usepackage{listings} 
 \usepackage{subcaption}
-\usepackage[toc,page]{appendix}
+\usepackage[titletoc,title]{appendix}
 \begin{document}
 
 
@@ -273,22 +273,6 @@ The extension data is non-existent unless it was negotiated on the opening hands
 	\end{itemize}
 The application data contains the actual data that has be to transmitted. It takes up the remaining space in the frame after any extension data. The application data is, like the extension data, part of the payload data.
 
-	%\paragraph{Sending and receiving data.}
-%In order to send a message as a client, the server must perform the following steps:
-
-	%\begin{enumerate}
-	%	\item The receiving end has to make sure the WebSocket is in an open state. 
-	%	\item last part of web socket that i have to finish......
-	%\end{enumerate}
-		
-
-	%*\subsection{Web socket architecture}
-	
-	%\begin{figure}[ht]
-	%	\centering
-	%	\includegraphics[scale=0.3]{images/websocketsArchitecture.pdf}
-	%	\caption{WebSocket architecture}\label{fig:WebSocketArchitecture}
-	%\end{figure}
 	
 	\chapter{Implementation}
 	
@@ -608,7 +592,7 @@ The log file in figure \ref{fig:app2log} shows all time intervals mentioned in \
 In order to choose the best communication protocol, we have to test both Bluetooth and WebSocket communication preferable with large sized arrays. First, we perform the actual communication in order to find a relation between the arraysize and the elapsed time. When we find this relation we can set up a formula that allows us to calculate an estimate value for the elapsed time for any matrix size.
 
 	\subsection{WebSocket transmission}
-We first performed multiple calculations with WebSocket communication. We seperated the elapsed time it took the phone to transmit the data and the elapsed time it took the SoC to transmit the data. The results in datasheet [reference] represent the elapsed time. If we divide the total number of seperate cifres in one matrix with the elapsed time we know the amount of symbols that are transmitted per second (sym/s). For small matrices, the sym/s is not reliable since there are background processes that influence these results. Although, these background processes barely affect the sym/s with larger matrices. So in order to determine the relation, we will take an average of all the sym/s with all matrix sizes, apart from those that are highly affected by background processes. This resulted in a sym/s value of 86843,61 for the phone transmission and 127228,7 for the SoC transmission. Knowing these values we can make graph \ref{graph:websocketTime}. In the graph we compare the transmission time for the phone with the time for the SoC. The small dent in 
+We first performed multiple calculations with WebSocket communication. We seperated the elapsed time it took the phone to transmit the data and the elapsed time it took the SoC to transmit the data. If we divide the total number of seperate symbols in one matrix with the elapsed time, we know the amount of symbols that are transmitted per second (sym/s). For small matrices, the sym/s is not reliable since there are background processes that influence these results. Although, these background processes barely affect the sym/s with larger matrices. So in order to determine the relation, we will take an average of all the sym/s with all matrix sizes, apart from those that are highly affected by background processes. This resulted in a sym/s value of 86843,61 for the phone transmission and 127228,7 for the SoC transmission. Knowing these values we can make graph \ref{graph:websocketTime}. In the graph we compare the transmission time for the phone with the time for the SoC. The small dent in 
 the SoC curve is the change in average number length in the matrix from 6 to 7.
 \begin{figure}[ht]
 \centering
@@ -626,7 +610,7 @@ Next we determine the transmission time using the Bluetooth communication. We on
 \end{figure}
 
 \subsection{Bluetooth vs. WebSocket}
-Comparing the s/c and looking at both graph scales, it is very clear that the WebSocket is way more faster than Bluetooth communication. The WebSocket transfer time from the phone to the SoC is around 340 times faster while vice versa the WebSocket is almost 500 times faster. The WebSocket also allowed us to practically transfer much larger matrices aswell making it superior compared to our Bluetooth communication. Graph \ref{graph:bluetoothVsWebsocket} visualizes the difference in scale for both communication protocols. We can clearly see that the WebSocket requires less time to transfer one matrix compared to Bluetooth.
+Comparing the sym/s and looking at both graph scales, it is very clear that the WebSocket is way more faster than Bluetooth communication. The WebSocket transfer time from the phone to the SoC is around 340 times faster while vice versa the WebSocket is almost 500 times faster. The WebSocket also allowed us to practically transfer much larger matrices aswell making it superior compared to our Bluetooth communication. Graph \ref{graph:bluetoothVsWebsocket} visualizes the difference in scale for both communication protocols. We can clearly see that the WebSocket requires less time to transfer one matrix compared to Bluetooth.
 
 \begin{figure}[ht]
 \centering
