@@ -52,25 +52,19 @@ Parallel computing systems can be separated into different classes. According to
 	\end{figure}
 	
 	\begin{itemize}
-		\item SISD
-	\end{itemize}
+		\item SISD\\
+		
 The SISD class will have a single core processor executing a single data stream to operate on data stored in a single memory (figure \ref{fig:sisd}). This means that a parallel compute system cannot be classified as an SISD system, but Flynn's taxonomy was not made for just classifying parallel compute systems. Any traditional single-core processor falls into this category but it is usually old computers or older compute units that can be classified as SISD.
-	
-	\begin{itemize}
-		\item SIMD
-	\end{itemize}
+		\item {SIMD}\\
+		
 Data is distributed amongst multiple processors who all execute the same instruction on this data (figure \ref{fig:simd}). Since we have access to multiple compute units, parallel computing can be categorized in this class. Furthermore, this is the class where we can categorize our subject of the thesis in since we have a large set of data divided over multiple data streams (MD) and only one instruction stream (SI) since all processing units will perform the same instruction on the data. The SIMD class contains the most modern computers, particularly those with a graphics processor unit (GPU).
-
-	\begin{itemize}
-		\item MISD
-	\end{itemize}
+		\item MISD\\
+		
 Each processing unit operates on the data independently via separate instruction streams while a single data stream is fed into multiple processing untis (figure \ref{fig:misd}). This class knows very few applications. An example of an application is the use of multiple cryptography algorithms attempting to crack a single coded message.
-	
-	\begin{itemize}
-		\item MIMD
-	\end{itemize}
+		\item MIMD\\
+		
 This time every processing unit is able to execute a different instruction stream on a different data stream (figure \ref{fig:mimd}). This means that any instruction can be applied on any data package for every compute unit. Most supercomputers, networked parallel computer clusters and "grids" can be classified as a MIMD compute system. Also, many MIMD architectures include SIMD execution sub-components.
-
+		\end{itemize}
 \begin{figure}[ht]
 	\centering
 	\begin{subfigure}[t]{0.4\textwidth}
