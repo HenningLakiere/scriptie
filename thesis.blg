@@ -9,7 +9,7 @@ Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: References.bib
 Warning--entry type for "SmartphoneShares" isn't style-file defined
---line 76 of file References.bib
+--line 77 of file References.bib
 Warning--I didn't find a database entry for "FPGAforDummies"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
@@ -20,37 +20,37 @@ Warning--empty year in bluetoothTech
 Done.
 You've used 13 entries,
             4087 wiz_defined-function locations,
-            891 strings with 8776 characters,
-and the built_in function-call counts, 4790 in all, are:
-= -- 358
+            892 strings with 8790 characters,
+and the built_in function-call counts, 4826 in all, are:
+= -- 364
 > -- 58
 < -- 9
 + -- 31
 - -- 12
 * -- 172
-:= -- 867
+:= -- 876
 add.period$ -- 24
 call.type$ -- 13
-change.case$ -- 11
+change.case$ -- 12
 chr.to.int$ -- 18
 cite$ -- 15
-duplicate$ -- 393
-empty$ -- 472
+duplicate$ -- 395
+empty$ -- 475
 format.name$ -- 13
-if$ -- 1052
+if$ -- 1061
 int.to.chr$ -- 0
 int.to.str$ -- 13
 missing$ -- 83
 newline$ -- 76
 num.names$ -- 10
-pop$ -- 255
+pop$ -- 253
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 371
+skip$ -- 376
 stack$ -- 0
 substring$ -- 47
-swap$ -- 228
+swap$ -- 230
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 5
@@ -58,5 +58,5 @@ type$ -- 13
 warning$ -- 2
 while$ -- 14
 width$ -- 15
-write$ -- 134
+write$ -- 135
 (There were 4 warnings)

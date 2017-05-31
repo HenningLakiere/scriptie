@@ -36,7 +36,7 @@ J.~E. Stone, D.~Gohara, and G.~Shi, ``Opencl: A parallel programming standard
 
 \bibitem{KhronosMembers}
 \BIBentryALTinterwordspacing
- [Online]. Available: \url{https://www.khronos.org/members/list}
+Kronos members. [Online]. Available: \url{https://www.khronos.org/members/list}
 \BIBentrySTDinterwordspacing
 
 \bibitem{SmartphoneShares}
@@ -44,7 +44,7 @@ S.~M. Patterson, ``Q1 2017 smartphone shipments: Samsung rebounds, apple goes
   sideways, chinese makers roar,'' 2017.
 
 \bibitem{OSShares}
-J.~Vincent, ``99.6 percent of new smartphones run android or ios,'' \emph{The
+V.~James, ``99.6 percent of new smartphones run android or ios,'' \emph{The
   Verge}, 2017.
 
 \bibitem{bluetoothTech}
@@ -58,7 +58,7 @@ W.~Stallings. (2001) Introduction to bluetooth. [Online]. Available:
 
 \bibitem{bluetoothStack}
 \BIBentryALTinterwordspacing
-Q.~H. Mahmoud. (2003) Wireless application programming with j2me and bluetooth.
+M.~H. Qusay. (2003) Wireless application programming with j2me and bluetooth.
   [Online]. Available:
   \url{http://www.oracle.com/technetwork/systems/index-156651.html}
 \BIBentrySTDinterwordspacing
